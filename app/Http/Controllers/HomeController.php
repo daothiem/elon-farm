@@ -16,6 +16,7 @@ use App\Models\Slider;
 use App\Models\Tags;
 use App\Models\Url;
 use App\Models\User;
+use App\Traits\HandleFile;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -28,6 +29,7 @@ use function GuzzleHttp\Promise\all;
 
 class HomeController extends Controller
 {
+    use HandleFile;
     /**
      * Create a new controller instance.
      *
@@ -239,16 +241,18 @@ class HomeController extends Controller
     public function uploadImage(Request $request, $module): string
     {
         $findName = $request->file('gallery')[0]->getClientOriginalName();
-        $listFindName = scandir(public_path().'/images/'.$module);
-        $find = array_search($findName, $listFindName);
+        $find = false;
+        $path = public_path().'/images/'.$module;
+        if (is_dir($path)) {
+            $listFindName = scandir($path);
+            $find = array_search($findName, $listFindName);
+        }
 
-        if ($request->has('gallery') && $find === false) {
+        if ($request->has('gallery') && !$find) {
             $image = $request->file('gallery')[0];
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
-            $imagePath = public_path('/images/'.$module. '/');
-            $image->move($imagePath, $imageName);
 
-            return '/images/products/'.$imageName;
+            $responsiveAvatar = $this->uploadAndConvertImage($image, '/images/'.$module);
+            return $responsiveAvatar->getData()->path;
         }
 
         return '/images/products/'.$findName;

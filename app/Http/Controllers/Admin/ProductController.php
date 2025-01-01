@@ -3,17 +3,21 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Amenity;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use App\Models\ProductColor;
 use App\Models\Tags;
+use App\Models\TourPlan;
 use App\Models\Url;
 use Faker\Core\Color;
 use \Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
 use App\Traits\HandleFile;
+use function GuzzleHttp\Promise\all;
+
 class ProductController extends Controller
 {
     use HandleFile;
@@ -29,107 +33,56 @@ class ProductController extends Controller
             $query = $query->where('name', 'like', '%' . $request->get('name') . '%');
         }
         $selected = '';
-        if ($request->get('root_id')) {
-            $cateIds = [];
-            $parentCate = Category::find($request->get('root_id'));
-            if ($parentCate) {
-                foreach ($parentCate->child as $cate) {
-                    $cateIds[] = $cate->id;
-                }
-            }
-            $productCate = ProductCategory::whereIn('category_id', $cateIds)->get()->toArray();
-            $proId = array_map(function ($item) {
-                return $item['product_id'];
-            }, $productCate);
-
-            $selected = $request->get('root_id');
-            $query = $query->whereIn('id', $proId);
-        }
-        $selectedCate = '';
-        if ($request->get('cate_id')) {
-            $selectedCate = $request->get('cate_id');
-            $category = Category::find($selectedCate);
-            $proIds = [];
-            if ($category) {
-                $productCategory = $category->products()->get()->toArray();
-                $proIds = array_map(function ($item) {
-                    return $item['id'];
-                }, $productCategory);
-            }
-            if (count($proIds)) {
-                $query = $query->whereIn('id', $proIds);
-            }
-        }
         if ($request->get('ordering')) {
             $query = $query->orderBy('ordering', $request->get('ordering'));
         } else {
             $query = $query->orderBy('ordering', "ASC");
         }
         $data = $query->paginate($limit)->withQueryString();
-        $categoryParent = Category::where('id', '>=', 0)->where('parent_id', '')->orWhere('parent_id', null)->get();
-        $categoryParentHtml = \App\Helper\StringHelper::getSelectOption($categoryParent, $selected);
-        $categories = Category::where('id', '>=', 0)->where('parent_id', '<>', '')->where('parent_id', '<>', null)->get();
-        $categoriesHtml = \App\Helper\StringHelper::getSelectOption($categories, $selectedCate);
 
-        return view('admin.product.index', compact('data', 'input', 'categoryParentHtml', 'categoriesHtml'));
-    }
-
-    function getParentCategory() {
-        return Category::where('parent_id', '')->orWhere('parent_id', null)->get();
+        return view('admin.product.index', compact('data', 'input'));
     }
     public function create() {
-        $categories = $this->getParentCategory();
-        $category_html = \App\Helper\StringHelper::getSelectOption($categories, '', 'Vui lòng chọn', false, false);
+        $amenitiesAll = Amenity::where('id', '>=', 0)->select('id', 'name as text')->get()->toArray();
 
         $rowCounter = 0;
-        return view('admin.product.create', compact(['category_html', 'rowCounter']));
+        $isCreate = true;
+        return view('admin.product.create', compact(['rowCounter', 'isCreate', 'amenitiesAll']));
     }
     public function store(Request $request) {
         $input = $request->all();
-        $thumbnailPath = '';
-        if ($request->has('thumbnail')) {
-            $response = $this->uploadAndConvertImage($request->file('thumbnail'), '/images/products');
-            $thumbnailPath = $response->getData()->path;
+        $images = '';
+        if (isset($input['gallery'])) {
+            $images = implode(',', $input['gallery']);
         }
-        $input['avatar'] = $thumbnailPath;
-        $input['ordering'] = $input['ordering'] ?? 100;
-        $input['images'] = '';
-        $input['is_hot'] = (isset($input['is_hot']) && $input['is_hot']  === 'on') ? 1 : 0;
+
         $tags = [];
         if (isset($input['tags'])) {
             $tags = $this->conventTag($input['tags']);
         }
         DB::beginTransaction();
         /*try {*/
-            $product = Product::create($input);
-            if (isset($input['category_id'])) {
-                $product->categories()->sync($input['category_id']);
-            }
+            $inputProduct = $request->only(['name', 'alias', 'map_google_address', 'description', 'content', 'meta_title', 'meta_description', 'meta_key_word']);
+            $inputProduct['images'] = $images;
+            $product = Product::create($inputProduct);
             if (isset($input['tags'])) {
                 $product->tags()->sync($tags);
+            }
+            if (isset($input['amenity_ids'])) {
+                $product->amenities()->sync($input['amenity_ids']);
             }
 
             $url['module'] = 'Product';
             $url['alias'] = $input['alias'];
             Url::create($url);
-            foreach ($input['colors'] as $color) {
-                // Gọi hàm upload và chuyển đổi ảnh
-                $response = $this->uploadAndConvertImage($color['image'], '/images/products');
-                // Kiểm tra response
-                if (!$response->getData()->success) {
-                    throw new \Exception($response->getData()->message ?? 'Image upload failed.');
-                }
-
+            foreach ($input['plans'] as $plan) {
                 // Tạo đối tượng ProductColor mới
-                $colorModel = new ProductColor();
-                $colorModel->product_id = $product->id;
-                $colorModel->name = $color['name'];
-                $colorModel->price = $color['price'];
-                $colorModel->price_discount = $color['price_discount'];
-                $colorModel->image = $response->getData()->path;
-
+                $planModel = new TourPlan();
+                $planModel->product_id = $product->id;
+                $planModel->name = $plan['name'];
+                $planModel->content = $plan['content'];
                 // Lưu vào database
-                $colorModel->save();
+                $planModel->save();
             }
 
             DB::commit();
@@ -142,17 +95,19 @@ class ProductController extends Controller
 
     public function edit($id) {
         $product = Product::find($id);
-        $rowCounter = count($product->colors);
+        $rowCounter = count($product->tourPlans);
         if (isset($product)) {
-            $categories = Category::all();
-            $categoriesTemp = $product->categories()->select('categories.id as category_id')->get()->toArray();
-            $categoriesSelected = [];
-            foreach ($categoriesTemp as $categoryId) {
-                $categoriesSelected[] = $categoryId['category_id'];
-            }
-            $category_html = \App\Helper\StringHelper::getSelectOption($categories,$categoriesSelected , 'Vui lòng chọn', false, false);
+            $amenitiesAll = Amenity::where('id', '>=', 0)->select('id', 'name as text')->get()->toArray();
+            foreach ($product->amenities as $amenity) {
+                $find = array_search($amenity->id, array_column($amenitiesAll, 'id'));
 
-            return view('admin.product.create', compact('category_html', 'product', 'rowCounter'));
+                if ($find >= 0) {
+                    $amenitiesAll[$find]['selected'] = true;
+                }
+            }
+
+            $isCreate = false;
+            return view('admin.product.create', compact('amenitiesAll', 'product', 'rowCounter', 'isCreate'));
         } else {
             return redirect()->route('admin.products.index')->with('error','Sản phẩm không tồn tại');
         }
@@ -177,69 +132,58 @@ class ProductController extends Controller
     public function update(Request $request, $id) {
         $product = Product::find($id);
         $input = $request->all();
-        if ($input['tags']) {
+        if (isset($input['tags'])) {
             $input['tags'] = $this->conventTag($input['tags']);
         }
         if ($product) {
-            $input['avatar'] = $product->avatar;
-            if ($request->has('thumbnail')) {
-                $this->deleteFile($product->avatar);
-                $thumbnail = $request->file('thumbnail');
-                $responsiveAvatar = $this->uploadAndConvertImage($thumbnail, '/images/products');
-                $input['avatar'] = $responsiveAvatar->getData()->path;
-            }
-            $input['is_hot'] = (isset($input['is_hot']) && $input['is_hot']  === 'on') ? 1 : 0;
-
             DB::beginTransaction();
             try {
                 if($product->alias != $input['alias']){
                     Url::where('alias',$product->alias)->update(['alias'=>$input['alias']]);
                 }
-                //dd($input['tags'],$input['category_id']);
+                if (isset($input['gallery'])) {
+                    $images = implode(',', $input['gallery']);
+                    $input['images'] = $images;
+                }
                 $product->update($input);
-                $product->categories()->sync($input['category_id']);
-                $product->tags()->sync($input['tags']);
-                if ($input['colors']) {
-                    foreach ($input['colors'] as $colorInput) {
-                        if (isset($colorInput['id']) && $colorInput['id']) {
-                            $color = ProductColor::find($colorInput['id']);
-                            if ($color) {
-                                $color->name = $colorInput['name'] ?? $color->name;
-                                $color->price = $colorInput['price'] ?? $color->price;
-                                $color->price_discount = $colorInput['price_discount'] ?? $color->price_discount;
+                if (isset($input['amenity_ids']) && is_array($input['amenity_ids'])) {
+                    $product->amenities()->sync($input['amenity_ids']);
+                } else {
+                    $product->amenities()->detach();
+                }
+                if (isset($input['tags'])) {
+                    $product->tags()->sync($input['tags']);
+                }
 
-                                if (isset($colorInput['image']) && $colorInput['image'] instanceof UploadedFile) {
-                                    $this->deleteFile($color->image);
-                                    $response_color = $this->uploadAndConvertImage($colorInput['image'], '/images/products');
-                                    $color->image = $response_color->getData()->path;
-                                }
-                                $color->save();
+                if (isset($input['plans'])) {
+                    foreach ($input['plans'] as $plan) {
+                        if (isset($plan['id']) && $plan['id']) {
+                            $tourPlan = TourPlan::find($plan['id']);
+                            if ($tourPlan) {
+                                $tourPlan->name = $plan['name'] ?? $tourPlan->name;
+                                $tourPlan->content = $plan['content'] ?? $tourPlan->content;
+
+                                $tourPlan->save();
                             }
                         } else {
-                            $color = new ProductColor();
+                            $tourPlan = new TourPlan();
 
-                            $color->product_id = $product->id;
-                            $color->name = $colorInput['name'];
-                            $color->price = $colorInput['price'];
-                            $color->price_discount = $colorInput['price_discount'];
-                            if (isset($colorInput['image']) && $colorInput['image'] instanceof UploadedFile) {
-                                $response_color = $this->uploadAndConvertImage($colorInput['image'], '/images/products');
-                                $color->image = $response_color->getData()->path;
-                            }
+                            $tourPlan->product_id = $product->id;
+                            $tourPlan->name = $plan['name'];
+                            $tourPlan->content = $plan['content'];
 
-                            $color->save();
+                            $tourPlan->save();
                         }
                     }
                 }
 
-                if (isset($input['deleted_product_color_id']) && $input['deleted_product_color_id']) {
-                    $colorIds = explode(',', $input['deleted_product_color_id']);
+                if (isset($input['deleted_product_plan_id']) && $input['deleted_product_plan_id']) {
+                    $tourPlanIds = explode(',', $input['deleted_product_plan_id']);
 
-                    foreach ($colorIds as $colorId) {
-                        $color_delete = ProductColor::find($colorId);
-                        if ($color_delete) {
-                            $this->deleteFile($color_delete->image);
-                            $color_delete->delete();
+                    foreach ($tourPlanIds as $planId) {
+                        $plan_delete = TourPlan::find($planId);
+                        if ($plan_delete) {
+                            $plan_delete->delete();
                         }
                     }
                 }
@@ -262,11 +206,10 @@ class ProductController extends Controller
             DB::beginTransaction();
             try {
                 Url::where('alias',$product->alias)->delete();
-                $product->categories()->sync([]);
+                $product->amenities()->sync([]);
                 $product->tags()->sync([]);
-                foreach ($product->colors as $color) {
-                    $this->deleteFile($color->image);
-                    $color->delete();
+                foreach ($product->tourPlans as $plan) {
+                    $plan->delete();
                 }
                 $product->delete();
 

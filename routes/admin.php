@@ -31,12 +31,19 @@ Route::middleware(['backend'])->group(function () {
             Route::delete('/{id}/danh-muc', ['uses' => 'Admin\CategoryController@destroy'])->name('admin.categories.destroy');
             Route::get('/danh-muc-root', ['uses' => 'Admin\CategoryController@categoryRoot'])->name('admin.categories.category-root');
 
-            Route::get('/san-pham', ['uses' => 'Admin\ProductController@index'])->name('admin.products.index');
-            Route::get('/them-moi/san-pham', ['uses' => 'Admin\ProductController@create'])->name('admin.products.create');
-            Route::post('/them-moi/san-pham', ['uses' => 'Admin\ProductController@store'])->name('admin.products.store');
-            Route::put('/{id}/san-pham', ['uses' => 'Admin\ProductController@update'])->name('admin.products.update');
-            Route::get('/{id}/san-pham', ['uses' => 'Admin\ProductController@edit'])->name('admin.products.edit');
-            Route::delete('/{id}/san-pham', ['uses' => 'Admin\ProductController@destroy'])->name('admin.products.destroy');
+            Route::get('/tour', ['uses' => 'Admin\ProductController@index'])->name('admin.products.index');
+            Route::get('/create/tour', ['uses' => 'Admin\ProductController@create'])->name('admin.products.create');
+            Route::post('/create/tour', ['uses' => 'Admin\ProductController@store'])->name('admin.products.store');
+            Route::put('/{id}/tour', ['uses' => 'Admin\ProductController@update'])->name('admin.products.update');
+            Route::get('/{id}/tour', ['uses' => 'Admin\ProductController@edit'])->name('admin.products.edit');
+            Route::delete('/{id}/tour', ['uses' => 'Admin\ProductController@destroy'])->name('admin.products.destroy');
+
+            Route::get('/amenity', ['uses' => 'Admin\AmenityController@index'])->name('admin.amenities.index');
+            Route::get('/create/amenity', ['uses' => 'Admin\AmenityController@create'])->name('admin.amenities.create');
+            Route::post('/create/amenity', ['uses' => 'Admin\AmenityController@store'])->name('admin.amenities.store');
+            Route::put('/{id}/amenity', ['uses' => 'Admin\AmenityController@update'])->name('admin.amenities.update');
+            Route::get('/{id}/amenity', ['uses' => 'Admin\AmenityController@edit'])->name('admin.amenities.edit');
+            Route::delete('/{id}/amenity', ['uses' => 'Admin\AmenityController@destroy'])->name('admin.amenities.destroy');
 
             Route::get('/about-us', ['uses' => 'Admin\AboutUsController@view'])->name('admin.about_us.view');
             Route::put('/about-us/update', ['uses' => 'Admin\AboutUsController@update'])->name('admin.about_us.update');

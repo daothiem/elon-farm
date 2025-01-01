@@ -1,15 +1,16 @@
 @extends('admin.layouts.master')
-@section('title') Quản lý sản phẩm @endsection
+@section('title')
+    Quản lý tiện ích
+@endsection
 @section('css')
     <link href="{{ URL::asset('assets/libs/dropzone/dropzone.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-    <link href="{{ URL::asset('/assets/css/select2/select2.min.css') }}" rel="stylesheet">
 @endsection
 @section('content')
     <div class="card rounded-3">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <h6 class="mb-0">Danh sách tour</h6>
-            <a href="/admin/create/tour" class="btn btn-dark waves-effect waves-light w-sm pt-2 pb-2">Thêm mới</a>
+            <h6 class="mb-0">Danh sách tiện ích</h6>
+            <a href="/admin/create/amenity" class="btn btn-dark waves-effect waves-light w-sm pt-2 pb-2">Thêm mới</a>
         </div>
     </div>
     <div class="mt-2" style="padding: 0 !important;">
@@ -26,22 +27,24 @@
     </div>
     <div class="card mt-2">
         <div class="card-body">
-            <form action="/admin/tour" method="get">
-                @foreach(request()->query() as $key => $value)
-                    @if($key != 'name' && $key != 'root_id')
-                        <input type="hidden" name="{{ $key }}" value="{{ $value }}">
-                    @endif
-                @endforeach
-                <div class="form-search row align-items-end">
-                    <div class="col-12 col-md-3">
-                        <label for="search-name" class="m-0">Tên</label>
-                        <input class="form-control" value="@if(isset($input['name'])){{$input['name']}}@endif" placeholder="Nhập tên tour" name="name" id="search-name"/>
-                    </div>
-                    <div class="col-4 col-md-2 mt-2">
-                        <button type="submit" class="btn btn-primary btn-search"><i class="bx bx-search fs-17"></i>Tìm kiếm</button>
-                    </div>
-                    <div class="col-3 col-md-4 d-flex align-items-center justify-content-end gap-3">
-                        <div>
+            <div id="customerList">
+                <form action="/admin/amenity" method="get">
+                    <div class="form-search row align-items-center row-gap-3">
+                        <div class="col-6 col-md-4 d-flex align-items-center gap-3">
+                            <label for="search-name" class="m-0">Tên</label>
+                            @foreach(request()->query() as $key => $value)
+                                @if($key != 'name' && $key != 'root_id')
+                                <input type="hidden" name="{{ $key }}" value="{{ $value }}">
+                                @endif
+                            @endforeach
+                            <input class="form-control" value="@if(isset($input['name'])){{$input['name']}}@endif" placeholder="Nhập tên tiện ích" name="name" id="search-name"/>
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <button type="submit" class="btn btn-primary btn-search">
+                                <i class="bx bx-search fs-17"></i>
+                                Tìm kiếm</button>
+                        </div>
+                        <div class="col-3 col-md-2 d-flex align-items-center gap-3">
                             <label for="ordering" class="form-label" style="clear: both; display: inline-block">Sắp xếp thứ tự </label>
                             <select class="form-select select_ordering" name="ordering" id="ordering">
                                 <option value="ASC" @if((isset($input['ordering']) && $input['ordering'] === 'ASC') || !isset($input['ordering'])) selected @endif>Tăng dần</option>
@@ -49,56 +52,54 @@
                             </select>
                         </div>
                     </div>
-                </div>
-            </form>
-            <div class="table-responsive table-card mt-3 mb-1">
-                <table class="table align-middle table-nowrap" id="customerTable">
-                    <thead class="table-light">
-                    <tr>
-                        <th>#</th>
-                        <th  data-sort="customer_name">Tên sản phẩm</th>
-                        <th  data-sort="address">Đường dẫn</th>
-                        <th  data-sort="action">Thao tác</th>
-                    </tr>
-                    </thead>
-                    <tbody class="list form-check-all">
-                    @foreach($data as $index => $item)
+                </form>
+                <div class="table-responsive table-card mt-3 mb-1">
+                    <table class="table align-middle table-nowrap" id="customerTable">
+                        <thead class="table-light">
                         <tr>
-                            <td class="customer_name">{{ ++$index }}</td>
-                            <td class="customer_name">{{ $item->name }}</td>
-                            <td class="customer_name">{{ $item->alias }}</td>
-                            <td>
-                                <div class="d-flex gap-2">
-                                    <div class="edit">
-                                        <button onclick="window.location='/admin/{{$item->id}}/tour'" class="btn btn-sm btn-success edit-item-btn" >Cập nhật</button>
-                                    </div>
-                                    <div class="remove">
-                                        <button
-                                            value="{{ $item->id }}"
-                                            class="btn btn-sm btn-danger remove-item-btn"
-                                        >Xoá</button>
-                                    </div>
-                                </div>
-                            </td>
+                            <th >#</th>
+                            <th  data-sort="customer_name">Tên tiện ích</th>
+                            <th  data-sort="action">Thao tác</th>
                         </tr>
-                    @endforeach
-                    </tbody>
-                </table>
-                <div class="noresult" style="@if(isset($data) && count($data) === 0) display: grid @else display: none @endif">
-                    <div class="text-center">
-                        <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
-                                   colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px">
-                        </lord-icon>
-                        <h5 class="mt-2">Không tìm thấy bản ghi nào.</h5>
+                        </thead>
+                        <tbody class="list form-check-all">
+                        @foreach($data as $index => $item)
+                            <tr>
+                                <td class="customer_name">{{ ++$index }}</td>
+                                <td class="customer_name">{{ $item->name }}</td>
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <div class="edit">
+                                            <button onclick="window.location='/admin/{{$item->id}}/amenity'" class="btn btn-sm btn-success edit-item-btn" >Cập nhật</button>
+                                        </div>
+                                        <div class="remove">
+                                            <button
+                                                value="{{ $item->id }}"
+                                                class="btn btn-sm btn-danger remove-item-btn"
+                                            >Xoá</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                    <div class="noresult" style="@if(isset($data) && count($data) === 0) display: grid @else display: none @endif">
+                        <div class="text-center">
+                            <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
+                                       colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px">
+                            </lord-icon>
+                            <h5 class="mt-2">Không tìm thấy bản ghi nào.</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="d-flex justify-content-right">
-                {!! $data->links('pagination::bootstrap-4') !!}
-            </div>
-        </div>
-    </div>
+                <div class="d-flex justify-content-right">
+                    {!! $data->links('pagination::bootstrap-4') !!}
+                </div>
 
+            </div>
+        </div><!-- end card -->
+    </div>
     <!-- Modal delete -->
     <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -130,6 +131,7 @@
         </div>
     </div>
     <!--end modal delete -->
+
 @endsection
 @section('script')
     <script src="{{ URL::asset('assets/libs/prismjs/prismjs.min.js') }}"></script>
@@ -138,11 +140,9 @@
     <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
     <script src="{{ URL::asset('assets/libs/prismjs/prismjs.min.js') }}"></script>
     <script src="{{ URL::asset('assets/libs/list.pagination.js/list.pagination.js.min.js') }}"></script>
-    <script src="{{ URL::asset('/assets/js/select2/select2.min.js') }}"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.ckeditor.com/4.5.11/full-all/ckeditor.js"></script>
-    <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
     <script src="{{ URL::asset('backend/assets/js/checkUrl.js') }}"></script>
     <script>
         $(document).ready(function () {
@@ -155,7 +155,7 @@
             $('#delete-record').click(function () {
                 const item_id = $('#record_id').val()
                 const form = $('#form-delete');
-                form.attr('action', '/admin/'+ item_id+'/tour');
+                form.attr('action', '/admin/'+ item_id+'/amenity');
                 form.submit();
             });
         })
