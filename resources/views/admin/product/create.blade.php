@@ -9,18 +9,17 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
 
     <link href="{{ URL::asset('assets/libs/filepond/filepond.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css') }}"
-          rel="stylesheet">
+    <link href="{{ URL::asset('assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css') }}" rel="stylesheet">
 @endsection
 @section('content')
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                <h4 class="mb-sm-0">Quản lý sản phẩm</h4>
+                <h4 class="mb-sm-0">Quản lý tour</h4>
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item">
-                            <a href="/admin/san-pham">Danh sách sản phẩm</a>
+                            <a href="/admin/tour">Danh sách tour</a>
                         </li>
                         <li class="breadcrumb-item">
                             @if(isset($product))
@@ -73,146 +72,81 @@
                     <div class="tab-pane active" id="home1" role="tabpanel">
                         <input type="hidden" id="product_id" name="product_id"
                                value="@if(isset($product)){{$product->id}}@endif">
-                        <input name="deleted_product_color_id" type="hidden">
+                        <input name="deleted_product_plan_id" type="hidden">
                         <input type="hidden" name="created_by" value='{{\Auth::user()->id}}'>
-                        <div class="col-lg-12">
-                            <label class="form-label p-2">Ảnh đại diện sản phẩm</label>
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <div class="profile-user position-relative d-inline-block mx-auto h-100 w-100 mb-4"
-                                         style="max-height: 200px">
-                                        <img src="@if(isset($product)) {{ URL::asset($product->avatar) }} @else {{ URL::asset('assets/images/verification-img.png') }} @endif "
-                                             class="h-100 img-thumbnail user-profile-image" alt="user-profile-image"
-                                             style="max-height: 200px"
-                                        >
-                                        <div class="avatar-xs p-0 rounded-circle profile-photo-edit">
-                                            <input id="profile-img-file-input" name="thumbnail" type="file"
-                                                   class="profile-img-file-input"
-                                                   accept="image/png, image/gif, image/jpeg"
-                                            >
-                                            <label for="profile-img-file-input" class="profile-photo-edit avatar-xs">
-                                        <span class="avatar-title rounded-circle bg-light text-body">
-                                            <i class="ri-camera-fill"></i>
-                                        </span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- <label class="form-label p-2">Gallery</label>
-                             <div class="row">
-                                 <div class="col-lg-8 offset-lg-2">
-                                     <input
-                                         type="file" name="gallery[]" multiple accept="image/png, image/gif, image/jpeg"
-                                     />
-                                     <p class="help-block">{{ $errors->first('gallery.*') }}</p>
-                                 </div>
-                             </div>--}}
-
-                        </div>
-                        {{--<div class="row">
+                        <div class="row">
                             <div class="col-lg-8 offset-lg-2">
                                 <input
                                         type="file" name="gallery[]" multiple accept="image/png, image/gif, image/jpeg"
                                 />
                                 <p class="help-block">{{ $errors->first('gallery.*') }}</p>
                             </div>
-                        </div>--}}
+                        </div>
                         <div class="row">
                             <div
                                 style="border: 1px solid rgba(0, 0, 0, .125);
                                 border-radius: 0.25rem;" class="col-12 col-sm-12 col-xl-7"
                             >
-                                <div class="mb-3">
+                                <div class="mb-3 pt-3">
                                     <label class="form-label" for="name">Tên sản phẩm <span class="text-danger">*</span></label>
                                     <input type="text" id="name" class="form-control"
                                            value="@if(isset($product)){{$product->name}}@endif" name="name"
                                            placeholder="Nhập tiêu đề" required>
                                 </div>
                                 <div class="row mb-3">
-                                    <div class="col-9">
+                                    <div class="col-12">
                                         <label class="form-label" for="alias">Đường dẫn</label>
                                         <input type="text" id="alias"
                                                value="@if(isset($product)){{$product->alias}}@endif"
                                                class="form-control" name="alias" readonly required>
                                     </div>
-                                    <div class="col-3">
-                                        <div class="form-check form-switch form-switch-md mb-3 text-center d-flex flex-column align-items-start p-0"
-                                             dir="ltr">
-                                            <label class="form-label" for="news-index">Sp Nổi bật</label>
-                                            <input type="checkbox" style="left: 0 !important;"
-                                                   class="form-check-input m-0"
-                                                   @if(isset($product) && $product->is_hot) checked @endif name="is_hot"
-                                                   id="news-index">
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-12">
                                         <div class="mb-3 mb-lg-0">
-                                            <label class="form-label" for="subtitle">Phụ đề</label>
-                                            <input type="text" name="subtitle" id="subtitle"
-                                                   value="@if(isset($product)){{$product->subtitle}}@endif"
-                                                   class="form-control" placeholder="Nhập phụ tiêu đề">
-                                        </div>
-                                    </div>
-                                    {{--<div class="col-2">
-                                        <div class="mb-3 mb-lg-0">
-                                            <label class="form-label" for="priceText">Giá tiền</label>
-                                            <input type="text" class="form-control class-price" value="@if(isset($product)){{ number_format($product->price) }}@endif" placeholder="Chỉ nhập số" required>
-                                            <input type="hidden" class="form-control" value="@if(isset($product)){{ $product->price }}@endif" name="price" placeholder="Chỉ nhập số" required>
-                                        </div>
-                                    </div>--}}
-                                    <div class="col-lg-4">
-                                        <div class="mb-3 mb-lg-0">
-                                            <label class="form-label" for="project-title-input">Vị trí</label>
-                                            <input maxlength="10" type="number" name="ordering" id="ordering"
-                                                   value="@if(isset($product)){{$product->ordering}}@endif"
-                                                   class="form-control" placeholder="Nhập vị trí">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-lg-5">
-                                        <div class="mb-3 mb-lg-0">
-                                            <label for="choices-sex-input" class="form-label">Danh mục <span
-                                                        class="text-danger">*</span></label>
-                                            <select class="form-select select2_select-categories" name="category_id"
-                                                    id="category_id" required>
-                                                {!! $category_html !!}
+                                            <label for="choices-sex-input" class="form-label">Tiện ích</label>
+                                            <select class="form-select select2_select-categories" name="amenity_ids[]" id="amenity_ids">
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-lg-7">
+                                </div>
+
+                                <div class="row mb-3 gap-3">
+                                    <div class="col-lg-12">
                                         <div>
                                             <label for="datepicker-deadline-input" class="form-label">Từ khóa</label>
                                             <select id="select-tags" class="form-control select2_select-tags"
                                                     multiple="multiple" name="tags[]"></select>
                                         </div>
                                     </div>
+                                    <div class="col-lg-12">
+                                        <label class="form-label" for="google_map">Link google map </label>
+                                        <input type="text" id="google_map" class="form-control" value="@if(isset($product)){{$product->map_google_address}}@endif" name="map_google_address" placeholder="Nhập link url map" required>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <label class="form-label" for="project-title-input">Mô tả</label>
+                                        <textarea
+                                                type="text"
+                                                class="form-control"
+                                                id="description"
+                                                name="description"
+                                                placeholder="Nhập mô tả" required
+                                        >
+                                            @if(isset($product))
+                                                {!! $product->description !!}
+                                            @endif
+                                        </textarea>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <label class="form-label" for="content">Giới thiệu sản phẩm</label>
+                                        <textarea type="text" class="form-control" id="content" name="content"
+                                                  placeholder="Nhập nội dung giới thiệu sản phẩm">
+                                        @if(isset($product))
+                                                {!! $product->content !!}
+                                            @endif
+                                    </textarea>
+                                    </div>
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="project-title-input">Mô tả</label>
-                                    <textarea type="text" class="form-control" id="description" name="description"
-                                              placeholder="Nhập mô tả" required>@if(isset($product))
-                                            {!! $product->description !!}
-                                        @endif</textarea>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label" for="content">Giới thiệu sản phẩm</label>
-                                    <textarea type="text" class="form-control" id="content" name="content"
-                                              placeholder="Nhập nội dung giới thiệu sản phẩm">@if(isset($product))
-                                            {!! $product->content !!}
-                                        @endif</textarea>
-                                </div>
-                                {{--<div class="mb-3">
-                                    <label class="form-label" for="content">Hướng dẫn sử dụng</label>
-                                    <textarea type="text" class="form-control" id="note" name="note"
-                                              placeholder="Nhập nội dụng lưu ý với sản phẩm">@if(isset($product))
-                                            {!! $product->note !!}
-                                        @endif</textarea>
-                                </div>--}}
                             </div>
                             <div class="col-12 col-sm-12 col-xl-5">
                                 <div
@@ -227,115 +161,62 @@
                                     </div>
 
                                     @if(isset($product))
-                                        @foreach($product->colors as $key => $color)
+                                        @foreach($product->tourPlans as $key => $tourPlan)
                                             <div class="row border-bottom-dash mt-3" id="row-{{$key}}">
-                                                <input type="hidden" name="colors[{{$key}}][id]" value="{{$color->id}}">
-                                                <div class="col-6 col-lg-6 col-xl-4">
-                                                    <div>
-                                                        <label for="name-color" class="form-label">Tên màu</label>
-                                                        <input type="text" id="name-color" class="form-control"
-                                                               value="{{$color->name}}" name="colors[{{$key}}][name]"
-                                                               placeholder="Nhập tên" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-lg-6 col-xl-4">
-                                                    <div class="mb-3 mb-lg-0">
-                                                        <label class="form-label" for="priceText">Giá tiền</label>
-                                                        <input type="text" class="form-control class-price" value="{{ number_format($color->price) }}" placeholder="Chỉ nhập số" required>
-                                                        <input type="hidden" class="form-control price-hidden" value="{{$color->price}}" name="colors[{{$key}}][price]" placeholder="Chỉ nhập số" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-lg-6 col-xl-4">
-                                                    <div class="mb-3 mb-lg-0">
-                                                        <label class="form-label" for="priceText">Giá tiền discount</label>
-                                                        <input type="text" class="form-control class-price" value="{{ number_format($color->price_discount) }}" placeholder="Chỉ nhập số" required>
-                                                        <input type="hidden" class="form-control price-hidden" value="{{$color->price_discount}}" name="colors[{{$key}}][price_discount]" placeholder="Chỉ nhập số" required>
-                                                    </div>
-                                                </div>
+                                                <input type="hidden" name="plans[{{$key}}][id]" value="{{$tourPlan->id}}">
                                                 <div class="col-12 col-lg-12">
-                                                    <div class="row">
-                                                        <div class="col-9 col-sm-9">
-                                                            <label class="form-label p-2">Ảnh sản phẩm</label>
-                                                            <div class="card-body p-2 container-image">
-                                                                <div class="text-center">
-                                                                    <div class="profile-user position-relative d-inline-block mx-auto h-100 w-100 mb-4">
-                                                                        <img src="{{URL::asset($color->image)}}"
-                                                                             class="h-100 img-thumbnail color-image-image" alt="user-profile-image"
-                                                                             style="max-height: 70px"
-                                                                             id="preview-color-image-input-{{$key}}"
-                                                                        >
-                                                                        <div class="avatar-xs p-0 rounded-circle profile-photo-edit">
-                                                                            <input id="color-image-input-{{$key}}" name="colors[{{$key}}][image]" type="file"
-                                                                                   class="profile-img-file-input file-{{$key}}"
-                                                                                   accept="image/png, image/gif, image/jpeg"
-                                                                            >
-                                                                            <label for="color-image-input-{{$key}}" class="profile-photo-edit avatar-xs">
-                                                                                <span class="avatar-title rounded-circle bg-light text-body">
-                                                                                    <i class="ri-camera-fill"></i>
-                                                                                </span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-3 col-sm-3 d-flex justify-content-center align-items-center">
-                                                            <div>
-                                                                <button type="button" class="btn btn-danger delete-color" data-row="{{$key}}" data-product_color_id="{{$color->id}}">
-                                                                    <i class="bi bi-trash"></i>
-                                                                </button>
-                                                            </div>
-                                                        </div>
+                                                    <div>
+                                                        <label for="name-plan" class="form-label">Tên plan <span class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control"
+                                                               value="{{$tourPlan->name}}" name="plans[{{$key}}][name]"
+                                                               placeholder="Nhập tên plan" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-11 col-lg-11">
+                                                    <div>
+                                                        <label for="name-plan" class="form-label">Nội dung</label>
+                                                        <textarea
+                                                                type="text"
+                                                                class="form-control"
+                                                                id="content_{{$key}}"
+                                                                name="plans[{{$key}}][content]"
+                                                                placeholder="Nhập mô tả"
+                                                        >
+                                                            {!! $tourPlan->content !!}
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1 col-sm-1 d-flex justify-content-center align-items-center">
+                                                    <div>
+                                                        <button type="button" class="btn btn-danger delete-color" data-row="{{$key}}" data-product_color_id="{{$tourPlan->id}}">
+                                                            <i class="bi bi-trash"></i>
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
                                         @endforeach
                                     @else
                                         <div class="row border-bottom-dash" id="row-0">
-                                            <div class="col-6 col-lg-6 col-xl-4">
-                                                <div>
-                                                    <label for="name-color" class="form-label">Tên màu</label>
-                                                    <input type="text" id="name-color" class="form-control"
-                                                           value=""  name="colors[0][name]"
-                                                           placeholder="Nhập tên" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-lg-6 col-xl-4">
-                                                <div class="mb-3 mb-lg-0">
-                                                    <label class="form-label" for="priceText">Giá tiền</label>
-                                                    <input type="text" class="form-control class-price" value="0" placeholder="Chỉ nhập số" required>
-                                                    <input type="hidden" class="form-control price-hidden" value="0" name="colors[0][price]" placeholder="Chỉ nhập số" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-lg-6 col-xl-4">
-                                                <div class="mb-3 mb-lg-0">
-                                                    <label class="form-label" for="priceText">Giá tiền discount</label>
-                                                    <input type="text" class="form-control class-price" value="" placeholder="Chỉ nhập số" required>
-                                                    <input type="hidden" class="form-control price-hidden" value="" name="colors[0][price_discount]" placeholder="Chỉ nhập số" required>
-                                                </div>
-                                            </div>
                                             <div class="col-12 col-lg-12">
-                                                <label class="form-label p-2">Ảnh sản phẩm</label>
-                                                <div class="card-body p-2 container-image">
-                                                    <div class="text-center">
-                                                        <div class="profile-user position-relative d-inline-block mx-auto h-100 w-100 mb-4">
-                                                            <img src=""
-                                                                 class="h-100 img-thumbnail color-image-image" alt="user-profile-image"
-                                                                 style="max-height: 70px"
-                                                                 id="preview-color-image-input-0"
-                                                            >
-                                                            <div class="avatar-xs p-0 rounded-circle profile-photo-edit">
-                                                                <input id="color-image-input-0" name="colors[0][image]" type="file"
-                                                                       class="profile-img-file-input file-0"
-                                                                       accept="image/png, image/gif, image/jpeg">
-                                                                <label for="color-image-input-0" class="profile-photo-edit avatar-xs">
-                                                                <span class="avatar-title rounded-circle bg-light text-body">
-                                                                    <i class="ri-camera-fill"></i>
-                                                                </span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                <div>
+                                                    <label for="name-color" class="form-label">Tên plan <span class="text-danger">*</span></label>
+                                                    <input type="text" id="name-color" class="form-control"
+                                                           value=""
+                                                           name="plans[0][name]"
+                                                           placeholder="Nhập tên plan" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-12 mt-3">
+                                                <div class="mb-3 mb-lg-0">
+                                                    <label class="form-label" for="priceText">Nội dung</label>
+                                                    <textarea
+                                                            type="text"
+                                                            class="form-control"
+                                                            id="content_plan"
+                                                            name="plans[0][content]"
+                                                            placeholder="Nhập mô tả"
+                                                    >
+                                                    </textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -386,18 +267,21 @@
     <script src="{{ URL::asset('assets/libs/filepond/filepond.min.js') }}"></script>
 
     <script type="text/javascript">
+        const options = {
+            filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+            filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=' + document.querySelector('meta[name="csrf-token"]').content,
+            filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+            filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token=' + document.querySelector('meta[name="csrf-token"]').content
+        };
         $(document).ready(function () {
-            var options = {
-                filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-                filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=' + document.querySelector('meta[name="csrf-token"]').content,
-                filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-                filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token=' + document.querySelector('meta[name="csrf-token"]').content
-            };
             CKEDITOR.disableAutoInline = true;
             CKEDITOR.config.versionCheck = false;
             CKEDITOR.config.disableNativeSpellChecker = false;
             CKEDITOR.replace('content', options);
-            CKEDITOR.replace('note', options);
+            let isCreate = {!! json_encode($isCreate) !!};
+            if (isCreate) {
+                CKEDITOR.replace('content_plan', options);
+            }
             CKEDITOR.replace('description', options);
 
             $('#name').focusout(async function (e) {
@@ -437,8 +321,9 @@
             });
 
             $('.select2_select-categories').select2({
-                multiple: false,
-                placeholder: 'Chọn danh mục sản phẩm',
+                multiple: true,
+                placeholder: 'Chọn tiện ích',
+                data: {!! json_encode($amenitiesAll) !!}
             });
 
             $('body').delegate('.class-price', 'keyup', function () {
@@ -452,76 +337,49 @@
     <script>
         let rowCounter = {!! json_encode($rowCounter) !!};
         $(document).ready(function () {
+            for (let i = 0; i < rowCounter; i++) {
+                CKEDITOR.replace('content_'+i, options);
+            }
             $(document).on('click', '.add-color', function () {
                 rowCounter++;
                 const uniqueId = `row-${rowCounter}`;
                 // Tạo một row mới
                 var newRow = `
             <div class="row mt-3 border-bottom-dash" id="${uniqueId}">
-                <div class="col-6 col-lg-6 col-xl-4">
+                <div class="col-11 col-lg-12">
                     <div>
-                        <label for="name-color" class="form-label">Tên màu</label>
-                        <input type="text" id="name-color" class="form-control"
-                               value="" name="colors[${rowCounter}][name]"
-                               placeholder="Nhập tên" required>
+                        <label for="name-color" class="form-label">Tên plan</label>
+                        <input type="text" class="form-control"
+                               value="" name="plans[${rowCounter}][name]"
+                               placeholder="Nhập tên plan" required>
                     </div>
                 </div>
-                <div class="col-6 col-lg-6 col-xl-4">
-                    <div class="mb-3 mb-lg-0">
-                        <label class="form-label" for="priceText">Giá tiền</label>
-                        <input type="text" class="form-control class-price" value="" placeholder="Chỉ nhập số" required>
-                        <input type="hidden" class="form-control price-hidden" value="" name="colors[${rowCounter}][price]" placeholder="Chỉ nhập số" required>
+                <div class="col-11 col-lg-11">
+                    <div class="mb-3 mt-3 mb-lg-0">
+                        <label class="form-label" for="priceText">Nội dung</label>
+                        <textarea
+                                id="content_${rowCounter}"
+                                type="text"
+                                class="form-control"
+                                name="plans[${rowCounter}][content]"
+                                placeholder="Nhập mô tả"
+                        >
+                        </textarea>
                     </div>
                 </div>
-                <div class="col-6 col-lg-6 col-xl-4">
-                    <div class="mb-3 mb-lg-0">
-                        <label class="form-label" for="priceText">Giá tiền discount</label>
-                        <input type="text" class="form-control class-price" value="0" placeholder="Chỉ nhập số" required>
-                        <input type="hidden" class="form-control price-hidden" value="0" name="colors[${rowCounter}][price_discount]" placeholder="Chỉ nhập số" required>
+                 <div class="col-1 col-sm-1 d-flex justify-content-center align-items-center">
+                    <div>
+                        <button type="button" class="btn btn-danger delete-color" data-row="${rowCounter}">
+                            <i class="bi bi-trash"></i>
+                        </button>
                     </div>
-                </div>
-
-                <div class="col-12 col-lg-12">
-                    <div class="row">
-                        <div class="col-9 col-sm-9">
-                               <label class="form-label p-2">Ảnh sản phẩm</label>
-                                <div class="card-body p-2 container-image">
-                                    <div class="text-center">
-                                        <div class="profile-user position-relative d-inline-block mx-auto h-100 w-100 mb-4">
-                                            <img src=""
-                                                 class="h-100 img-thumbnail color-image-image" alt="user-profile-image"
-                                                 style="max-height: 70px"
-                                                 id="preview-color-image-input-${uniqueId}"
-                                            >
-                                            <div class="avatar-xs p-0 rounded-circle profile-photo-edit">
-                                                <input id="color-image-input-${uniqueId}" name="colors[${rowCounter}][image]" type="file"
-                                                       class="profile-img-file-input file-${uniqueId}"
-                                                       accept="image/png, image/gif, image/jpeg">
-                                                <label for="color-image-input-${uniqueId}" class="profile-photo-edit avatar-xs">
-                                                    <span class="avatar-title rounded-circle bg-light text-body">
-                                                        <i class="ri-camera-fill"></i>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="col-3 col-sm-3 d-flex justify-content-center align-items-center">
-                            <div>
-                                <button type="button" class="btn btn-danger delete-color" data-row="${rowCounter}">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-
                 </div>
             </div>`;
 
                 // Thêm row mới vào cuối thẻ div .list-color
                 $('.list-color').append(newRow);
+
+                CKEDITOR.replace('content_'+rowCounter, options);
             });
 
             // Xử lý sự kiện thay đổi file
@@ -552,17 +410,63 @@
                 const data_row = $(this).data('row');
                 $(`#row-${data_row}`).remove();
                 if (typeof product_color !== 'undefined') {
-                    let currentValue = $('input[name="deleted_product_color_id"]').val();
+                    let currentValue = $('input[name="deleted_product_plan_id"]').val();
                     let idArray = currentValue ? currentValue.split(',') : [];
 
                     if (!idArray.includes(product_color.toString())) {
                         idArray.push(product_color);
                     }
 
-                    $('input[name="deleted_product_color_id"]').val(idArray.join(','));
+                    $('input[name="deleted_product_plan_id"]').val(idArray.join(','));
                 }
             })
 
         });
+    </script>
+
+    <script>
+        FilePond.registerPlugin(FilePondPluginImagePreview);
+        //FilePond.create(document.querySelector('input[name="gallery[]"]'), {chunkUploads: true});
+        $(document).ready(function () {
+            const productId = $('#product_id').val();
+            let dataImage = '';
+            if (productId.length) {
+                getImagesProduct(productId).then((data) => {
+                    dataImage = data;
+                });
+
+
+            }
+            setTimeout(() => {
+                FilePond.create(
+                    document.querySelector('input[name="gallery[]"]'),
+                    {
+                        multiple: true,
+                        chunkUploads: true,
+                        labelIdle: 'Kéo và thả ảnh của bạn hoặc chọn từ thư mục',
+                        imagePreviewHeight: 170,
+                        imageCropAspectRatio: 0.5,
+                        imageResizeTargetWidth: 200,
+                        imageResizeTargetHeight: 200,
+                        styleLoadIndicatorPosition: 'center bottom',
+                        styleProgressIndicatorPosition: 'right bottom',
+                        styleButtonRemoveItemPosition: 'left bottom',
+                        styleButtonProcessItemPosition: 'right bottom',
+                        maxFileSize: '7MB',
+                        acceptedFileTypes: ['image/png', 'image/jpeg'],
+                        files: dataImage['data'],
+                    }
+                );
+            }, 200)
+            FilePond.setOptions({
+                server: {
+                    //load: '/api/upload-image/products',
+                    url: "/api/upload-image/products",
+                    headers: {
+                        'X-CSRF-TOKEN': "{{ @csrf_token() }}",
+                    },
+                }
+            });
+        })
     </script>
 @endsection

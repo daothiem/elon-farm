@@ -14,7 +14,7 @@ class Product extends Model
     protected $fillable = ['avatar', 'images', 'alias', 'name',
         'is_deleted', 'available', 'order_by', 'is_hot', 'price', 'price_delivery','price_discount', 'created_by',
         'happy_price', 'tax', 'order_by_special', 'is_new', 'meta_title', 'meta_description', 'meta_key_word', 'description', 'ordering', 'content',
-        'note', 'questions', 'subtitle', 'priceText'
+        'note', 'questions', 'subtitle', 'priceText', 'map_gif', 'map_google_address'
     ];
 
     public function categories(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
@@ -33,8 +33,13 @@ class Product extends Model
     }
 
 
-    public function colors(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function tourPlans(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(ProductColor::class, 'product_id', 'id');
+        return $this->hasMany(TourPlan::class, 'product_id');
+    }
+
+    public function amenities(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    {
+        return $this->belongsToMany(Amenity::class, 'tour_amenities', 'product_id', 'amenity_id');
     }
 }

@@ -34,23 +34,14 @@
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarCategoryAll">
                         <ul class="nav nav-sm flex-column">
-                            {{--<li class="nav-item">
-                                <a href="/admin/danh-muc-root" class="nav-link">Phân loại sản phẩm</a>
-                            </li>--}}
                             <li class="nav-item">
-                                <a href="/admin/danh-muc" class="nav-link">Danh mục sản phẩm</a>
+                                <a href="/admin/tour" class="nav-link">Danh sách tour</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/admin/san-pham" class="nav-link">Danh sách sản phẩm</a>
-                            </li>
-                           {{-- <li class="nav-item">
-                                <a href="/admin/don-hang" class="nav-link">Danh sách đơn hàng</a>
-                            </li>--}}
-                            <li class="nav-item">
-                                <a href="/admin/khach-hang" class="nav-link">Danh sách khách hàng</a>
+                                <a href="/admin/amenity" class="nav-link">Danh sách tiện ích</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/admin/dich-vu" class="nav-link">Danh sách dịch vụ</a>
+                                <a href="/admin/order" class="nav-link">Danh sách đơn hàng</a>
                             </li>
                             <li class="nav-item">
                                 <a href="/admin/about-us" class="nav-link">Thông tin cơ bản</a>
