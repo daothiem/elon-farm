@@ -19343,7 +19343,7 @@ li:hover .footer-three__contact__list__icon {
 .main-slider-four__title {
   position: relative;
   display: inline-block;
-  font-size: var(--trevlo-size-14xl, 80px);
+  font-size: var(--trevlo-size-11xl, 80px);
   color: var(--trevlo-white, #ffffff);
   line-height: 1.125;
   text-transform: capitalize;
