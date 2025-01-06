@@ -6,7 +6,8 @@
             <div class="footer-three__top">
                 <div class="footer-three__logo">
                     <a href="index.html">
-                        <img src="assets/frontend/images/logo-light-2.png" alt="logo" width="187">
+                        <img src="assets/frontend/images/logo_footer.png" alt="Elon Farm HTML" width="187"
+                         class="main-header__logo__1">
                     </a>
                 </div><!-- /.footer-three__logo -->
                 <div class="footer-three__contact">
@@ -15,13 +16,13 @@
                                     <span class="footer-three__contact__list__icon">
                                         <i class="trevlo-one-icon-maps-and-flags"></i>
                                     </span><!-- /.footer-three__contact__list__icon -->
-                            6391 Elgin St. Celina, Delaware <br> New York. USA
+                            Lam Ha, Lam Dong, Vietnam
                         </li>
                         <li>
                                     <span class="footer-three__contact__list__icon">
                                         <i class="trevlo-one-icon-telephone"></i>
                                     </span><!-- /.footer-three__contact__list__icon -->
-                            <a href="tel:+1234567890">+123 456 7890</a>
+                            <a href="tel:+84969285991">+84 969285991</a>
                         </li>
                     </ul><!-- /.footer-three__contact__list -->
                     <div class="footer-three__newsletter">
@@ -41,10 +42,9 @@
                 <div class="col-xl-3 col-md-6 wow animated fadeInUp" data-wow-delay="0s" data-wow-duration="1500ms">
                     <div class="footer-widget footer-widget--about">
                         <h2 class="footer-widget__title">About us</h2><!-- /.footer-widget__title -->
-                        <p class="footer-widget__about-text">There are many variations of passages of Lorem Ipsum
-                            available, but the majority have suffered</p><!-- /.footer-widget__about-text -->
+                        <p class="footer-widget__about-text">Promoting sustainable and innovative farming practices to create a greener, healthier future for all.</p><!-- /.footer-widget__about-text -->
                         <div class="social-links">
-                            <a href="https://facebook.com/">
+                            <a href="https://www.facebook.com/elonfarm">
                                 <i class="fab fa-facebook-f" aria-hidden="true"></i>
                                 <span class="sr-only">Facebook</span>
                             </a>
@@ -52,7 +52,7 @@
                                 <i class="fab fa-twitter" aria-hidden="true"></i>
                                 <span class="sr-only">Twitter</span>
                             </a>
-                            <a href="https://instagram.com/">
+                            <a href="https://www.instagram.com/elonfarm/profilecard/?igsh=MTljc3l3Z3Jtd2pidA==">
                                 <i class="fab fa-instagram" aria-hidden="true"></i>
                                 <span class="sr-only">Instagram</span>
                             </a>
@@ -60,14 +60,22 @@
                                 <i class="fab fa-youtube" aria-hidden="true"></i>
                                 <span class="sr-only">Youtube</span>
                             </a>
-
+                        </div><!-- /.social-links -->
+                        <div class="d-flex text-white multi-language gap-3 mt-3">
+                            <a href="#">
+                                <span class="">English</span>
+                            </a>
+                            <a href="#">
+                                <span class="">Tiếng Việt</span>
+                            </a>
+                            
                         </div><!-- /.social-links -->
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-xl-3 col-md-6 -->
                 <div class="col-xl-3 col-md-3 wow animated fadeInUp" data-wow-delay="0.1s"
                      data-wow-duration="1500ms">
                     <div class="footer-widget footer-widget--links footer-widget--links-1">
-                        <h2 class="footer-widget__title">useful links</h2><!-- /.footer-widget__title -->
+                        <h2 class="footer-widget__title">Useful links</h2><!-- /.footer-widget__title -->
                         <ul class="footer-widget__links">
                             <li><a href="login.html">Account</a></li>
                             <li><a href="tour-listing-1.html">Tour Listings</a></li>
@@ -95,42 +103,42 @@
                         <h2 class="footer-widget__title">Our Gallery</h2><!-- /.footer-widget__title -->
                         <div class="footer-widget__gallery">
                             <a href="gallery.html" class="footer-widget__gallery__link">
-                                <img src="assets/frontend/images/gallery/footer-widget-gallery-1.jpg"
+                                <img src="assets/frontend/images/gallery/footer-widget-gallery-1.png"
                                      alt="footer-widget-gallery">
                                 <span class="footer-widget__gallery__icon">
                                             <i class="icon-plus"></i>
                                         </span>
                             </a><!-- /.footer-widget__gallery__link -->
                             <a href="gallery.html" class="footer-widget__gallery__link">
-                                <img src="assets/frontend/images/gallery/footer-widget-gallery-2.jpg"
+                                <img src="assets/frontend/images/gallery/footer-widget-gallery-2.png"
                                      alt="footer-widget-gallery">
                                 <span class="footer-widget__gallery__icon">
                                             <i class="icon-plus"></i>
                                         </span>
                             </a><!-- /.footer-widget__gallery__link -->
                             <a href="gallery.html" class="footer-widget__gallery__link">
-                                <img src="assets/frontend/images/gallery/footer-widget-gallery-3.jpg"
+                                <img src="assets/frontend/images/gallery/footer-widget-gallery-3.png"
                                      alt="footer-widget-gallery">
                                 <span class="footer-widget__gallery__icon">
                                             <i class="icon-plus"></i>
                                         </span>
                             </a><!-- /.footer-widget__gallery__link -->
                             <a href="gallery.html" class="footer-widget__gallery__link">
-                                <img src="assets/frontend/images/gallery/footer-widget-gallery-4.jpg"
+                                <img src="assets/frontend/images/gallery/footer-widget-gallery-4.png"
                                      alt="footer-widget-gallery">
                                 <span class="footer-widget__gallery__icon">
                                             <i class="icon-plus"></i>
                                         </span>
                             </a><!-- /.footer-widget__gallery__link -->
                             <a href="gallery.html" class="footer-widget__gallery__link">
-                                <img src="assets/frontend/images/gallery/footer-widget-gallery-5.jpg"
+                                <img src="assets/frontend/images/gallery/footer-widget-gallery-5.png"
                                      alt="footer-widget-gallery">
                                 <span class="footer-widget__gallery__icon">
                                             <i class="icon-plus"></i>
                                         </span>
                             </a><!-- /.footer-widget__gallery__link -->
                             <a href="gallery.html" class="footer-widget__gallery__link">
-                                <img src="assets/frontend/images/gallery/footer-widget-gallery-6.jpg"
+                                <img src="assets/frontend/images/gallery/footer-widget-gallery-6.png"
                                      alt="footer-widget-gallery">
                                 <span class="footer-widget__gallery__icon">
                                             <i class="icon-plus"></i>
@@ -148,7 +156,7 @@
         <div class="container">
             <div class="footer-three__bottom__inner">
                 <p class="footer-three__copyright">
-                    &copy; Copyright <span class="dynamic-year"></span> by Trevlo HTML Template.
+                    &copy; Copyright <span class="dynamic-year"></span> by Elon Farm
                 </p>
             </div><!-- /.footer-three__inner -->
         </div><!-- /.container -->
