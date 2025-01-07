@@ -12,6 +12,6 @@ class PreviewTour extends Model
     protected $table = 'preview_tours';
 
     protected $fillable = [
-        'product_id','avatar', 'title','content'
+        'product_id','avatar', 'title','content', 'first_name', 'host_name', 'localized_date', 'content_vi'
     ];
 }

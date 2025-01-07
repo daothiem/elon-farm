@@ -31,6 +31,8 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
 });
 
 Route::middleware(['frontend'])->group(function () {
+    Route::get('lang/{locale}', [App\Http\Controllers\HomeController::class, 'lang'])->name('frontend.changeLanguage');
+
     Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
     Route::get('/san-pham/search', ['uses' => 'Frontend\FrontendController@product_search'])->name('frontend.product_search');
     Route::get('/ve-chung-toi', ['uses' => 'Frontend\FrontendController@aboutUs'])->name('frontend.aboutUs');

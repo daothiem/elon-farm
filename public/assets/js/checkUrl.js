@@ -54,6 +54,10 @@ async function getData(url, param = '') {
     });
 }
 
+async function getPreview(data) {
+    return await $.post('/api/get-preview', data);
+}
+
 async function insertTag(name) {
     return $.post('/api/create/tag', name);
 }

@@ -8,6 +8,7 @@ use App\Models\District;
 use App\Models\Order;
 use App\Models\OrderDetail;
 use App\Models\Poster;
+use App\Models\PreviewTour;
 use App\Models\Product;
 use App\Models\Promotion;
 use App\Models\Province;
@@ -23,6 +24,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use function GuzzleHttp\Promise\all;
@@ -106,6 +108,88 @@ class HomeController extends Controller
             return redirect()->back()->with('locale', $locale);
         } else {
             return redirect()->back();
+        }
+    }
+    public function getPreview(Request $request) {
+        $product_id = $request->get('productId');
+        $product = Product::find($product_id);
+        //$product->previews()->delete();
+        $url = 'https://www.airbnb.com/api/v3/ExperiencesPdpReviews/c2e483a512971b1e4a3b324039d1706bd8591ea1589f2c4e93534479fdd7c582';
+
+        $headers = [
+            'X-Airbnb-API-Key' => 'd306zoyjsyarp7ifhu67rjxn52tv0t20',
+            'X-Airbnb-Supports-Airlock-V2' => 'true',
+            'sec-ch-ua-platform' => '"macOS"',
+            'viewport-width' => '1920',
+            'X-Airbnb-GraphQL-Platform-Client' => 'minimalist-niobe',
+            'device-memory' => '8',
+            'sec-ch-ua' => '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
+            'sec-ch-ua-mobile' => '?0',
+            'X-Niobe-Short-Circuited' => 'true',
+            'X-Airbnb-GraphQL-Platform' => 'web',
+            'Content-Type' => 'application/json',
+            'X-CSRF-Without-Token' => '1',
+            'X-CSRF-Token' => '',
+            'ect' => '4g',
+            'Referer' => 'https://www.airbnb.com/experiences/805010?fbclid=IwZXh0bgNhZW0CMTEAAR3rAXgHw8Xhff-RJK3UO59CR1dcEa4hrcCSXAPd5ks6bQYhFnivyGSTe2g_aem_fvbUZrRGhZcPZStR_KDh_A&modal=REVIEWS',
+            'dpr' => '1',
+            'x-client-request-id' => '11knt3p1swz6c10i6ntqw14xd42v',
+            'X-Client-Version' => 'b86b3c5d47fd2c1b12d53e2f5a03f7300e379026',
+            'User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+            'sec-ch-ua-platform-version' => '"14.4.0"',
+        ];
+
+        $queryParams = [
+            'operationName' => 'ExperiencesPdpReviews',
+            //'locale' => 'vi',
+            'locale' => 'en',
+            'currency' => 'VND',
+            'variables' => json_encode([
+                'request' => [
+                    'fieldSelector' => 'for_p3_translation_only',
+                    'entityId' => 'ExperienceListing:805010',
+                    'offset' => '1',
+                    'limit' => 50,
+                    'first' => 50,
+                    'showingTranslationButton' => false,
+                    'after' => 'X192aWFkdWN0OmlkeDo5',
+                ],
+            ]),
+            'extensions' => json_encode([
+                'persistedQuery' => [
+                    'version' => 1,
+                    'sha256Hash' => 'c2e483a512971b1e4a3b324039d1706bd8591ea1589f2c4e93534479fdd7c582',
+                ],
+            ]),
+        ];
+
+        try {
+            $response = Http::withHeaders($headers)->get($url, $queryParams);
+
+            if ($response->successful()) {
+                $data = $response->json()['data']['merlin']['pdpReviews']['reviews'];
+                foreach ($data as $item) {
+                    $preview = new PreviewTour();
+                    $preview->product_id = $product_id;
+                    $preview->avatar = $item['reviewer']['pictureUrl'];
+                    $preview->first_name = $item['reviewer']['firstName'];
+                    $preview->host_name = $item['reviewer']['hostName'];
+                    $preview->localized_date = $item['localizedDate'];
+                    $preview->content = !is_null($item['localizedReview']) ? $item['localizedReview']['comments'] : $item['comments'];
+                    $preview->save();
+                }
+                return $response->json(); // Return the response as JSON
+            }
+
+            return [
+                'error' => true,
+                'message' => 'Request failed with status code ' . $response->status(),
+            ];
+        } catch (\Exception $e) {
+            return [
+                'error' => true,
+                'message' => 'An error occurred: ' . $e->getMessage(),
+            ];
         }
     }
 

@@ -13,7 +13,7 @@
 		"loop": true,
 		"smartSpeed": 700,
 		"animateOut": "fadeOut",
-		"autoplayTimeout": 5000, 
+		"autoplayTimeout": 5000,
 		"nav": true,
 		"navText": ["<span class=\"icon-left-arrow\"></span>","<span class=\"icon-right-arrow\"></span>"],
 		"dots": false,
@@ -61,7 +61,7 @@
                         </div><!-- /.row -->
                     </div>
                 </div><!-- end item 2 -->
-                
+
                 <div class="item">
                     <div class="main-slider-four__image" style="background-image: url(assets/frontend/images/backgrounds/slider-5-3.jpeg);"></div>
                     <div class="container">
@@ -124,7 +124,7 @@
                         </div><!-- /.row -->
                     </div>
                 </div><!-- end item 5 -->
-                
+
             </div><!-- banner-slider -->
             <div class="banner-form banner-form--two banner-form--three wow fadeInUp" data-wow-delay="300ms">
             <div class="container">
@@ -198,7 +198,7 @@
                         </div>
                         <div class="banner-form__col banner-form__col--5">
                             <button type="submit" aria-label="search submit" class="trevlo-btn trevlo-btn--base">
-                                <span>Book Now</span>
+                                <span>Book Now @lang('translation.menu')</span>
                             </button>
                         </div>
                     </div>
