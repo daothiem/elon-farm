@@ -47,6 +47,9 @@
         @endif
         @csrf
         <div class="mb-3 d-flex justify-content-end">
+            {{--<button type="button" class="btn btn-primary waves-effect waves-light sync-comment">
+                <a><i class="las la-save"></i>Đồng bộ comment</a>
+            </button>--}}
             <button class="btn btn-primary waves-effect waves-light">
                 <a><i class="las la-save"></i> Lưu</a>
             </button>
@@ -101,6 +104,32 @@
                                                class="form-control" name="alias" readonly required>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-3">
+                                        <label class="form-label" for="duration">Duration</label>
+                                        <input type="text" id="duration" class="form-control"
+                                               value="@if(isset($product)){{$product->duration}}@endif" name="duration"
+                                               placeholder="vd: 2 days">
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-3">
+                                        <label class="form-label" for="activity">Hoạt động</label>
+                                        <input type="text" id="activity" class="form-control"
+                                               value="@if(isset($product)){{$product->activity}}@endif" name="activity"
+                                               placeholder="vd: Coffee Experience">
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-3">
+                                        <label class="form-label" for="nature">Nature</label>
+                                        <input type="text" id="nature" class="form-control"
+                                               value="@if(isset($product)){{$product->nature}}@endif" name="nature"
+                                               placeholder="vd: Adventure & Fun">
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-3">
+                                        <label class="form-label" for="nature">Location</label>
+                                        <input type="text" id="location" class="form-control"
+                                               value="@if(isset($product)){{$product->location}}@endif" name="location"
+                                               placeholder="vd: Elon Farm, Lam Ha, Lam Dong, Vietnam">
+                                    </div>
+                                </div>
                                 <div class="row mb-3">
                                     <div class="col-lg-12">
                                         <div class="mb-3 mb-lg-0">
@@ -149,6 +178,15 @@
                                 </div>
                             </div>
                             <div class="col-12 col-sm-12 col-xl-5">
+                                <div class="row mb-3">
+                                    <div class="col-12">
+                                        <label class="form-label" for="alias">Tiêu đề kế hoạch</label>
+                                        <input type="text"
+                                               placeholder="Điền tiêu đề kế hoạch"
+                                               value="@if(isset($product)){{$product->title_plan}}@endif"
+                                               class="form-control" name="title_plan" required>
+                                    </div>
+                                </div>
                                 <div
                                     style="border: 1px solid rgba(0, 0, 0, .125);
                                     border-radius: 0.25rem; padding: 0 15px 15px 15px"
@@ -293,8 +331,14 @@
                 if (!res) $('#alias').val(alias);
                 else $('#alias').val(alias + `-${res}`)
             });
-
             const productId = $('#product_id').val();
+            $('.sync-comment').click(function () {
+                getPreview({productId: productId}).then((data) => {
+                    dataProduct = data
+                });
+            })
+
+
             let dataProduct = ''
             getData('/api/options/Product/tags', productId).then((data) => {
                 dataProduct = data

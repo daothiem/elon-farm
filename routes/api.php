@@ -31,3 +31,4 @@ Route::post('/create-order',['uses' => 'HomeController@createOrder'])->name('api
 Route::post('/change-status-order',['uses' => 'HomeController@changeStatusOrder'])->name('api.change-status-order');
 Route::post('/promotion/{id}',['uses' => 'HomeController@getPromotion'])->name('api.get-promotion');
 Route::post('/modules/product/ajax/ajax',['uses' => 'HomeController@getColor'])->name('api.get-color');
+Route::post('/get-preview', ['uses' => 'HomeController@getPreview'])->name('api.get-preview');
