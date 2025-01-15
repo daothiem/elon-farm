@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\News;
+use App\Models\AboutUs;
 use App\Models\Customer;
 use App\Models\District;
 use App\Models\Order;
@@ -76,26 +77,13 @@ class HomeController extends Controller
 
     public function root()
     {
-        $categories = Category::where('id', '>', 0)->orderBy('ordering', 'ASC')->get();
-
-        $data = [];
-        foreach ($categories as $key => $category) {
-            if ($key === 5) {
-                break;
-            }
-            $products = $category->products()
-                ->orderBy('ordering', 'ASC')
-                ->take(5)
-                ->get();
-
-            $data[$category->title] = $products;
-        }
-        $sliders = Slider::where('is_show', true)->orderBy('ordering', 'ASC')->get();
-        $first_poster = Poster::where('is_show', true)->orderBy('ordering', 'ASC')->take(4)->get();
-        $second_poster = Poster::where('is_show', true)->orderBy('ordering', 'ASC')->skip(4)->take(1)->first();
-        $customers = Customer::where('id', '>', 0)->orderBy('ordering', 'ASC')->get();
-
-        return view('frontend.index', compact(['data', 'categories', 'sliders', 'first_poster', 'second_poster', 'customers']));
+        $news = News::where('id', '>', 0)
+                    ->orderBy('ordering', 'ASC')
+                    ->with('createdBy')
+                    ->get();
+        $aboutUs = AboutUs::where('id', '>', 0)
+                    ->first();
+        return view('frontend.index', compact(['news', 'aboutUs']));
     }
 
     /*Language Translation*/

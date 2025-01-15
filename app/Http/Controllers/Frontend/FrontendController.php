@@ -79,6 +79,7 @@ class FrontendController extends Controller
             return view('frontend.404');
         }
         $dataSeo = [];
+        
         $model_name = $model->module;
         $view = 'frontend.'.strtolower($model_name).'.index';
         $model = '\\App\Models\\'.ucfirst($model_name);
@@ -134,8 +135,10 @@ class FrontendController extends Controller
         if (!isset($data->meta_key_word) || $data->meta_key_word !== 'null') {
             $dataSeo['keywords'] = $data->meta_key_word;
         }
-        //dd($data);
-        return view($view, compact(['data', 'dataSeo']));
+        
+        $tagIds = DB::table('tag_news')->where('news_id', '=', $data->id)->pluck('tag_id')->toArray();;
+        $tagNames = DB::table('tags')->whereIn('id', $tagIds)->pluck('name')->toArray();
+        return view($view, compact(['data', 'dataSeo', 'tagNames']));
     }
 
     public function product_search(Request $request) {
