@@ -512,13 +512,14 @@
                 </div><!-- /.row -->
             </div><!-- /.blog-three__top -->
             <div class="row gutter-y-30">
+                @if(isset($news[0]))
                 <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                     <div class="blog-three__card blog-three__card--one">
                         <div class="blog-three__card__image">
-                            <img src="assets/frontend/images/about/tab-1-1.png" alt="tab">
+                            <img src="{{ asset($news[0]['avatar']) }}" alt="{{ $news[0]['title'] }}">
                             <div class="blog-three__card__date">
-                                <span class="blog-three__card__date__day">25</span>
-                                <span class="blog-three__card__date__month">june</span>
+                                <span class="blog-three__card__date__day">{{ \Carbon\Carbon::parse($news[0]['created_at'])->format('d') }}</span>
+                                <span class="blog-three__card__date__month">{{ \Carbon\Carbon::parse($news[0]['created_at'])->format('M') }}</span>
                             </div>
                         </div><!-- /.blog-three__card__image -->
                         <div class="blog-three__card__content">
@@ -528,28 +529,22 @@
                                         <span class="blog-three__card__meta__icon">
                                             <i class="trevlo-one-icon-user"></i>
                                         </span>
-                                        by Admin
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="blog-three__card__meta__icon">
-                                            <i class="trevlo-one-icon-comment"></i>
-                                        </span>
-                                        2 Comments
+                                        by {{ $news[0]['createdBy']['name'] }}
                                     </a>
                                 </li>
                             </ul>
-                            <h3 class="blog-three__card__title"><a href="blog-details-right.html">Collaboratively pontificate bleeding edge resources with inexpensive methodologies</a></h3><!-- /.blog-three__card__title -->
+                            <h3 class="blog-three__card__title"><a href="blog-details-right.html">{{ $news[0]['title'] }}</a></h3><!-- /.blog-three__card__title -->
                         </div><!-- /.blog-three__card__content -->
                     </div><!-- /.blog-three__card -->
                 </div><!-- /.col-lg-6 -->
+                @endif
                 <div class="col-lg-6">
                     <div class="blog-three__inner">
                         <div class="blog-three__inner__card">
+                            @foreach(array_slice($news->toArray(), 1, 2) as $item)
                             <div class="blog-three__card blog-three__card--two wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                                 <div class="blog-three__card__image">
-                                    <img src="assets/frontend/images/about/blog-1.png" alt="tab">
+                                    <img src="{{ asset($item['avatar']) }}" alt="{{ $item['title'] }}">
                                 </div><!-- /.blog-three__card__image -->
                                 <div class="blog-three__card__content">
                                     <ul class="list-unstyled blog-three__card__meta">
@@ -558,55 +553,18 @@
                                                 <span class="blog-three__card__meta__icon">
                                                     <i class="trevlo-one-icon-user"></i>
                                                 </span>
-                                                by Admin
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="blog-three__card__meta__icon">
-                                                    <i class="trevlo-one-icon-comment"></i>
-                                                </span>
-                                                2 Comments
+                                                by {{ $item['created_by']['name'] ?? 'Unknown' }}
                                             </a>
                                         </li>
                                     </ul>
-                                    <h3 class="blog-three__card__title"><a href="blog-details-right.html">Copy And Paste From Stack Overflow Can You Put It Into</a></h3><!-- /.blog-three__card__title -->
+                                    <h3 class="blog-three__card__title"><a href="blog-details-right.html">{{ $item['title'] }}</a></h3><!-- /.blog-three__card__title -->
                                     <div class="blog-three__card__date">
-                                        <span class="blog-three__card__date__day">25</span>
-                                        <span class="blog-three__card__date__month">june</span>
+                                        <span class="blog-three__card__date__day">{{ \Carbon\Carbon::parse($item['created_at'])->format('d') }}</span>
+                                        <span class="blog-three__card__date__month">{{ \Carbon\Carbon::parse($item['created_at'])->format('M') }}</span>
                                     </div>
                                 </div><!-- /.blog-three__card__content -->
                             </div><!-- /.blog-three__card -->
-                            <div class="blog-three__card blog-three__card--two wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
-                                <div class="blog-three__card__image">
-                                    <img src="assets/frontend/images/about/blog-1.png" alt="tab">
-                                </div><!-- /.blog-three__card__image -->
-                                <div class="blog-three__card__content">
-                                    <ul class="list-unstyled blog-three__card__meta">
-                                        <li>
-                                            <a href="#">
-                                                <span class="blog-three__card__meta__icon">
-                                                    <i class="trevlo-one-icon-user"></i>
-                                                </span>
-                                                by Admin
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="blog-three__card__meta__icon">
-                                                    <i class="trevlo-one-icon-comment"></i>
-                                                </span>
-                                                2 Comments
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <h3 class="blog-three__card__title"><a href="blog-details-right.html">Catching And Not Too Giant, Yet Drink From The Firehose</a></h3><!-- /.blog-three__card__title -->
-                                    <div class="blog-three__card__date">
-                                        <span class="blog-three__card__date__day">25</span>
-                                        <span class="blog-three__card__date__month">june</span>
-                                    </div>
-                                </div><!-- /.blog-three__card__content -->
-                            </div><!-- /.blog-three__card -->
+                            @endforeach
                         </div><!-- /.blog-three__inner__card -->
                     </div><!-- /.blog-three__inner -->
                 </div><!-- /.col-lg-6 -->

@@ -22,7 +22,7 @@
                                     <span class="footer-three__contact__list__icon">
                                         <i class="trevlo-one-icon-telephone"></i>
                                     </span><!-- /.footer-three__contact__list__icon -->
-                            <a href="tel:+84969285991">+84 969285991</a>
+                            <a href="tel:+84969285991">{{$about_us->phone_number}}</a>
                         </li>
                     </ul><!-- /.footer-three__contact__list -->
                     <div class="footer-three__newsletter">
