@@ -32,7 +32,6 @@ class ProductController extends Controller
         if ($request->get('name')) {
             $query = $query->where('name', 'like', '%' . $request->get('name') . '%');
         }
-        $selected = '';
         if ($request->get('ordering')) {
             $query = $query->orderBy('ordering', $request->get('ordering'));
         } else {
@@ -61,7 +60,7 @@ class ProductController extends Controller
             $tags = $this->conventTag($input['tags']);
         }
         DB::beginTransaction();
-        /*try {*/
+        try {
             $inputProduct = $request->only(['name', 'alias', 'map_google_address', 'description', 'content', 'meta_title', 'meta_description', 'meta_key_word']);
             $inputProduct['images'] = $images;
             $product = Product::create($inputProduct);
@@ -87,10 +86,10 @@ class ProductController extends Controller
 
             DB::commit();
             return redirect()->route('admin.products.index')->with('success','Thêm mới sản phẩm thành công');
-        /*} catch (\Exception $e) {
+        } catch (\Exception $e) {
             DB::rollBack();
             return redirect()->route('admin.products.index')->with('error','Thêm mới sản phẩm không thành công');
-        }*/
+        }
     }
 
     public function edit($id) {
@@ -134,6 +133,8 @@ class ProductController extends Controller
         $input = $request->all();
         if (isset($input['tags'])) {
             $input['tags'] = $this->conventTag($input['tags']);
+        } else {
+            $input['tags'] = [];
         }
         if ($product) {
             DB::beginTransaction();
@@ -151,9 +152,7 @@ class ProductController extends Controller
                 } else {
                     $product->amenities()->detach();
                 }
-                if (isset($input['tags'])) {
-                    $product->tags()->sync($input['tags']);
-                }
+                $product->tags()->sync($input['tags']);
 
                 if (isset($input['plans'])) {
                     foreach ($input['plans'] as $plan) {
