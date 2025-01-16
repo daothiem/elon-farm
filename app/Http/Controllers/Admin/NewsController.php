@@ -80,38 +80,38 @@ class NewsController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        $thumbnailName = 'verification-img.png';
         $thumbnailPath = public_path('/images/news');
+        $thumbnailName = 'verification-img.png';
 
-        if ($request->has('thumbnail')) {
+        if ($request->hasFile('thumbnail')) {
             $thumbnail = $request->file('thumbnail');
             $thumbnailName = time() . '.' . $thumbnail->getClientOriginalExtension();
             $thumbnail->move($thumbnailPath, $thumbnailName);
         }
 
-        $input['avatar'] ='/images/news/' . $thumbnailName;
-        $input['is_hot'] = (isset($input['is_hot']) && $input['is_hot']  === 'on') ? 1 : 0;
+        $input['avatar'] = '/images/news/' . $thumbnailName;
+        $input['is_hot'] = $request->boolean('is_hot', false);
+        $input['tags'] = $request->filled('tags') ? $this->conventTag($input['tags']) : [];
+
         DB::beginTransaction();
         try {
             $news = News::create($input);
-            $input['tags'] = $this->conventTag($input['tags']);
-            foreach ($input['tags'] as $tagId) {
-                $inputTagNews['tag_id'] = (int)$tagId;
-                $inputTagNews['news_id'] = $news->id;
 
-                TagNews::create($inputTagNews);
-            }
-            $url['module'] = 'News';
-            $url['alias'] = $input['alias'];
-            Url::create($url);
+            $news->tags()->sync($input['tags']);
+
+            Url::create([
+                'module' => 'News',
+                'alias' => $input['alias']
+            ]);
 
             DB::commit();
-            return redirect()->route('admin.news.index')->with('success','Thêm mới thành công');
+            return redirect()->route('admin.news.index')->with('success', 'Thêm mới thành công');
         } catch (\Exception $e) {
             DB::rollBack();
-            return redirect()->route('admin.news.index')->with('error','Thêm mới không thành công');
+            return redirect()->route('admin.news.index')->with('error', 'Thêm mới không thành công');
         }
     }
+
 
     /**
      * Display the specified resource.
@@ -169,37 +169,41 @@ class NewsController extends Controller
     public function update(Request $request, $id)
     {
         $news = News::find($id);
-        if ($news) {
-            $input = $request->all();
-            $imageOld = $news->avatar;
-            $thumbnailName = explode('/', $imageOld)[count(explode('/', $imageOld)) - 1];
-            $thumbnailPath = public_path('/images/news');
+        if (!$news) {
+            return redirect()->route('admin.news.index')->with('error', 'Tin tức không tồn tại');
+        }
 
-            if ($request->has('thumbnail')) {
-                $thumbnail = $request->file('thumbnail');
-                $thumbnailName = time() . '.' . $thumbnail->getClientOriginalExtension();
-                $thumbnail->move($thumbnailPath, $thumbnailName);
+        $input = $request->all();
+        $thumbnailPath = public_path('/images/news');
+        $thumbnailName = basename($news->avatar);
+        $input['is_hot'] = $request->boolean('is_hot', false);
+
+        if ($request->hasFile('thumbnail')) {
+            $thumbnail = $request->file('thumbnail');
+            $thumbnailName = time() . '.' . $thumbnail->getClientOriginalExtension();
+            $thumbnail->move($thumbnailPath, $thumbnailName);
+        }
+        $input['avatar'] = '/images/news/' . $thumbnailName;
+        $input['tags'] = $request->filled('tags') ? $this->conventTag($input['tags']) : [];
+
+        DB::beginTransaction();
+
+        try {
+            if ($news->alias !== $input['alias']) {
+                Url::where('alias', $news->alias)->update(['alias' => $input['alias']]);
             }
-            $input['is_hot'] = (isset($input['is_hot']) && $input['is_hot']  === 'on') ? 1 : 0;
-            $input['avatar'] ='/images/news/' . $thumbnailName;
-            DB::beginTransaction();
-            $input['tags'] = $this->conventTag($input['tags']);
-            try {
-                if($news->alias != $input['alias']){
-                    Url::where('alias',$news->alias)->update(['alias'=>$input['alias']]);
-                }
-                $news->update($input);
-                $news->tags()->sync($input['tags']);
-                DB::commit();
-                return redirect()->route('admin.news.index')->with('success','Cập nhật thành công');
-            } catch (\Exception $e) {
-                DB::rollBack();
-                return redirect()->route('admin.news.index')->with('error','Cập nhật không thành công');
-            }
-        } else {
-            return redirect()->route('admin.news.index')->with('error','Tin tức không tồn tại');
+
+            $news->update($input);
+            $news->tags()->sync($input['tags']);
+
+            DB::commit();
+            return redirect()->route('admin.news.index')->with('success', 'Cập nhật thành công');
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return redirect()->route('admin.news.index')->with('error', 'Cập nhật không thành công');
         }
     }
+
 
     /**
      * Remove the specified resource from storage.

@@ -59,46 +59,19 @@
                                 <div class="flex-grow-1 overflow-hidden">
                                     <p
                                         class="text-uppercase fw-bold text-white-50 text-truncate mb-0">
-                                        Tổng số sản phẩm</p>
+                                        Tổng số tours</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-end justify-content-between mt-4">
                                 <div>
                                     <h4 class="fs-22 fw-bold ff-secondary text-white mb-4"><span
-                                            class="counter-value" data-target="{{$countProduct}}">0</span> Sản phẩm
+                                            class="counter-value" data-target="{{$countProduct}}">0</span> Tours
                                     </h4>
-                                    <a href="/admin/san-pham" class="text-decoration-underline text-white-50">Chi tiết</a>
+                                    <a href="/admin/tour" class="text-decoration-underline text-white-50">Detail ...</a>
                                 </div>
                                 <div class="avatar-sm flex-shrink-0">
                                     <span class="avatar-title bg-soft-light rounded fs-3">
                                         <i class="bx bx-shopping-bag text-white"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div><!-- end card body -->
-                    </div><!-- end card -->
-                </div><!-- end col -->
-
-                <div class="col-xl-3 col-md-6">
-                    <!-- card -->
-                    <div class="card card-animate bg-secondary">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-grow-1 overflow-hidden">
-                                    <p
-                                        class="text-uppercase fw-bold text-white-50 text-truncate mb-0">
-                                        Danh mục sản phẩm</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-end justify-content-between mt-4">
-                                <div>
-                                    <h4 class="fs-22 fw-bold ff-secondary text-white mb-4"><span
-                                            class="counter-value" data-target="{{$categoryCount}}">0</span> Loại</h4>
-                                    <a href="/admin/danh-muc" class="text-decoration-underline text-white-50">Chi tết</a>
-                                </div>
-                                <div class="avatar-sm flex-shrink-0">
-                                    <span class="avatar-title bg-soft-light rounded fs-3">
-                                        <i class="ri-share-line text-white"></i>
                                     </span>
                                 </div>
                             </div>
@@ -114,15 +87,15 @@
                                 <div class="flex-grow-1 overflow-hidden">
                                     <p
                                         class="text-uppercase fw-bold text-white-50 text-truncate mb-0">
-                                        Bài blogs</p>
+                                        Blogs</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-end justify-content-between mt-4">
                                 <div>
                                     <h4 class="fs-22 fw-bold ff-secondary text-white mb-4"><span
-                                            class="counter-value" data-target="{{$blogCount}}">0</span> Bài
+                                            class="counter-value" data-target="{{$blogCount}}">0</span> Blogs
                                     </h4>
-                                    <a href="/admin/tin-tuc" class="text-decoration-underline text-white-50">Chi tết</a>
+                                    <a href="/admin/tin-tuc" class="text-decoration-underline text-white-50">Detail ...</a>
                                 </div>
                                 <div class="avatar-sm flex-shrink-0">
                                     <span class="avatar-title bg-soft-light rounded fs-3">
