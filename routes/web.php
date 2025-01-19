@@ -42,7 +42,7 @@ Route::middleware(['frontend'])->group(function () {
     Route::get('/cua-hang', ['uses' => 'Frontend\FrontendController@store'])->name('frontend.store');
     //Route::get('/tin-tuc', ['uses' => 'Frontend\FrontendController@listNews'])->name('frontend.news.list');
     Route::get('/danh-muc-san-pham', ['uses' => 'Frontend\FrontendController@listCategory'])->name('frontend.categories.list');
-    Route::get('/danh-sach-san-pham', ['uses' => 'Frontend\FrontendController@listProduct'])->name('frontend.products.list');
+    Route::get('/list-tour', ['uses' => 'Frontend\FrontendController@listProduct'])->name('frontend.products.list');
     Route::get('/dich-vu-sua-chua', ['uses' => 'Frontend\FrontendController@repairService'])->name('frontend.repair_service');
     Route::get('/{alias}', ['uses' => 'Frontend\FrontendController@view'])->name('frontend.view');
 });

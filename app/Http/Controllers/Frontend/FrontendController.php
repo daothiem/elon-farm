@@ -176,24 +176,23 @@ class FrontendController extends Controller
     }
 
     public function listProduct(Request $request) {
-        $search = $request->get('s');
         $query =  Product::where('id', '>', 0);
-        if ($search) {
-            $query = $query->where('name', 'like', '%' . $search . '%');
-        }
+
         $limit = $request->get('limit') ? $request->get('limit') : 12;
         $products = $query->paginate($limit)->withQueryString();
-        foreach ($products as $product) {
-            $all_image = $this->filterVideo($product->images);
-            $product['allImage'] = $all_image['images'];
-        }
 
-        return view('frontend.list_product', compact(['products', 'search', 'limit']));
+
+        return view('frontend.list_product', compact(['products']));
     }
     public function cart() {
         $provinces = Province::all();
         $province_html = \App\Helper\StringHelper::getSelectOptionPlace($provinces, '', 'Vui lòng chọn thành phố', false, true);
 
         return view('frontend.cart', compact(['province_html']));
+    }
+    public function listTour() {
+        $products =  Product::where('id', '>', 0)->get();
+        dd($products);
+        return view('frontend.list_tour', compact(['products']));
     }
 }
