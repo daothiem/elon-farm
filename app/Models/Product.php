@@ -40,7 +40,7 @@ class Product extends Model
 
     public function amenities(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
-        return $this->belongsToMany(Amenity::class, 'tour_amenities', 'product_id', 'amenity_id');
+        return $this->belongsToMany(Amenity::class, 'tour_amenities', 'product_id', 'amenity_id')->orderBy('id', 'ASC');
     }
 
     public function previews() {

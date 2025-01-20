@@ -10,7 +10,8 @@ use App\Models\NewsCategory;
 use App\Models\Poster;
 use App\Models\Product;
 use App\Models\Province;
-use App\Models\Staff;
+use App\Models\TourPlan;
+use App\Models\Amenity;
 use App\Models\Url;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -84,14 +85,15 @@ class FrontendController extends Controller
         $view = 'frontend.'.strtolower($model_name).'.index';
         $model = '\\App\Models\\'.ucfirst($model_name);
         $data = $model::where('alias',$alias)->first();
+        
         if ($model_name === 'Product') {
-            $data['staffs'] = Staff::where('id', '>', 0)->orderBy('ordering', "ASC")->get();
-            $data['category'] = $data->categories[0];
-            foreach ($data['category']->products as $product) {
-                $all_image = $this->filterVideo($product->images);
-                $product['allImage'] = $all_image['images'];
-            }
-            $data['imageVideo'] = $this->filterVideo($data->images);
+            $data['tour_plan'] = TourPlan::where('product_id', '=', $data->id)->get();
+            $data['similar_tour'] = Product::where('id', '!=', $data->id)->get();
+            // foreach ($data['category']->products as $product) {
+            //     $all_image = $this->filterVideo($product->images);
+            //     $product['allImage'] = $all_image['images'];
+            // }
+            // $data['imageVideo'] = $this->filterVideo($data->images);
         }
         if ($model_name === 'Category') {
             $data['current_alias'] = $alias;
