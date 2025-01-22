@@ -62,13 +62,12 @@
                             </a>
                         </div><!-- /.social-links -->
                         <div class="d-flex text-white multi-language gap-3 mt-3">
-                            <a href="#">
+                            <a href="/lang/en">
                                 <span class="">English</span>
                             </a>
-                            <a href="#">
+                            <a href="/lang/vi">
                                 <span class="">Tiếng Việt</span>
                             </a>
-                            
                         </div><!-- /.social-links -->
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-xl-3 col-md-6 -->

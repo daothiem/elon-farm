@@ -104,6 +104,13 @@
                                                class="form-control" name="alias" readonly required>
                                     </div>
                                 </div>
+                                <div class="row mb-3">
+                                    <div class="col-12">
+                                        <label class="form-label" for="priceText">Giá tiền</label>
+                                        <input type="text" class="form-control class-price" value="@if(isset($product)){{ number_format($product->price) }}@endif" placeholder="Chỉ nhập số" required>
+                                        <input type="hidden" class="form-control price-hidden" value="@if(isset($product)){{ $product->price }}@endif" name="price" placeholder="Chỉ nhập số" required>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-12 col-sm-12 col-md-3">
                                         <label class="form-label" for="duration">Duration</label>
@@ -153,7 +160,7 @@
                                         <input type="text" id="google_map" class="form-control" value="@if(isset($product)){{$product->map_google_address}}@endif" name="map_google_address" placeholder="Nhập link url map" required>
                                     </div>
                                     <div class="col-lg-12">
-                                        <label class="form-label" for="project-title-input">Mô tả</label>
+                                        <label class="form-label" for="project-title-input">Mô tả ngắn</label>
                                         <textarea
                                                 type="text"
                                                 class="form-control"
@@ -167,7 +174,7 @@
                                         </textarea>
                                     </div>
                                     <div class="col-lg-12">
-                                        <label class="form-label" for="content">Giới thiệu sản phẩm</label>
+                                        <label class="form-label" for="content">Giới thiệu chi tiết tour</label>
                                         <textarea type="text" class="form-control" id="content" name="content"
                                                   placeholder="Nhập nội dung giới thiệu sản phẩm">
                                         @if(isset($product))
@@ -246,7 +253,7 @@
                                             </div>
                                             <div class="col-12 col-lg-12 mt-3">
                                                 <div class="mb-3 mb-lg-0">
-                                                    <label class="form-label" for="priceText">Nội dung</label>
+                                                    <label class="form-label" for="content_plan">Nội dung</label>
                                                     <textarea
                                                             type="text"
                                                             class="form-control"
@@ -337,7 +344,6 @@
                     dataProduct = data
                 });
             })
-
 
             let dataProduct = ''
             getData('/api/options/Product/tags', productId).then((data) => {

@@ -149,7 +149,7 @@
   content: "\e916";
 }
 .icon-low-price:before {
-  content: "\e917";
+  content: url(../../images/about/capa_1.png);
 }
 .icon-lowest-price-1-1:before {
   content: "\e918";
@@ -179,7 +179,7 @@
   content: "\e920";
 }
 .icon-safety-First:before {
-  content: "\e921";
+  content: url(../../images/about/leaves.png);
 }
 .icon-safety:before {
   content: "\e922";
