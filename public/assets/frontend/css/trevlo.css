@@ -7042,6 +7042,19 @@ body.megamenu-popup-active .mobile-nav__content {
   background-image: url(../images/backgrounds/new-bg.png);
   opacity: 0.4;
 }
+.page-header__bg_about-us {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  background-image: url(../images/backgrounds/about-us-cover.png);
+}
 .page-header__bg1 {
   width: 100%;
   height: 100%;
@@ -9073,11 +9086,10 @@ body.megamenu-popup-active .mobile-nav__content {
   z-index: -1;
   transform: scale(0);
   transition: transform 400ms ease;
-  background-color: var(--trevlo-primary, #2D2330);
-  background-color: var(--trevlo-base, #FF5956);
+  background-color: #e6cebf;
 }
 .why-choose-two__box__title {
-  font-size: 20px;
+  font-size: 15px;
   line-height: 30px;
   margin: 0;
 }
@@ -10013,7 +10025,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 
 /*-----------------------------------------
-# Offer Two 
+# Offer Two
 -----------------------------------------*/
 .offer-two {
   background-color: var(--trevlo-white, #ffffff);
@@ -10124,7 +10136,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 
 /*-----------------------------------------
-# Offer Three 
+# Offer Three
 -----------------------------------------*/
 .offer-three {
   position: relative;
@@ -10364,6 +10376,13 @@ body.megamenu-popup-active .mobile-nav__content {
 .counter-one {
   background-color: var(--trevlo-white, #ffffff);
 }
+.counter-one__bg-box_about-us {
+  position: relative;
+  z-index: 1;
+  background-color: #f1e1d4;
+  height: 107px;
+}
+
 .counter-one__bg-box {
   position: relative;
   z-index: 1;
@@ -10373,6 +10392,9 @@ body.megamenu-popup-active .mobile-nav__content {
 @media (max-width: 575px) {
   .counter-one__bg-box {
     height: 146px;
+  }
+  .counter-one__bg-box_about-us {
+    height: 67px;
   }
 }
 .counter-one__main-content {
@@ -10397,6 +10419,10 @@ body.megamenu-popup-active .mobile-nav__content {
   .counter-one__container {
     padding-left: 30px;
     padding-right: 30px;
+  }
+}@media (min-width: 1199px) {
+  .destination-two__card-img-box img {
+    height: 460px;
   }
 }
 @media (max-width: 500px) {
@@ -10772,6 +10798,10 @@ body.megamenu-popup-active .mobile-nav__content {
     width: 50px;
     height: 50px;
   }
+}
+.title-about-us {
+  font-weight: 700;
+  font-size: 20px;
 }
 .gallery-single__btn:hover {
   background-color: var(--trevlo-white, #ffffff);
@@ -14995,6 +15025,7 @@ body.megamenu-popup-active .mobile-nav__content {
 .destination-two {
   position: relative;
   padding: 120px 0 110px;
+  background: #F1E1D4;
 }
 @media (max-width: 767px) {
   .destination-two {
@@ -20670,4 +20701,13 @@ body.boxed-wrapper .main-header__booking-btn {
 .alert-form-a{
   font-size: 14px;
   color: #FA3939;
+}
+.about-contact div {
+  font-size: 14px;
+  color: #232323CC;
+}
+.about-contact p {
+  font-size: 18px;
+  color: #232323;
+  font-weight: bold;
 }
