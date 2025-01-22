@@ -468,7 +468,7 @@ path {
   }
 }
 .section-space {
-  padding-top: var(--trevlo-sec-space, 120px);
+  padding-top: 120px;
   padding-bottom: var(--trevlo-sec-space, 120px);
 }
 
@@ -5493,11 +5493,11 @@ path {
 }
 .main-header--three .main-menu .main-menu__list > li.current > a,
 .main-header--three .main-menu .main-menu__list > li:hover > a {
-  color: var(--trevlo-base, #FF5956);
+  border-bottom: 2px solid white;
 }
 .main-header--three .main-header__user:hover,
 .main-header--three .main-header__search:hover {
-  color: var(--trevlo-base, #FF5956);
+  border-bottom: 2px solid white;
 }
 @media (min-width: 1200px) and (max-width: 1299px) {
   .main-header--three .mobile-nav__btn {
@@ -5812,7 +5812,7 @@ path {
 }
 .main-header--five .main-menu .main-menu__list > li.current > a,
 .main-header--five .main-menu .main-menu__list > li:hover > a {
-  color: var(--trevlo-base, #FF5956);
+  border-bottom: 2px solid white;
 }
 .main-header--five .mobile-nav__btn {
   position: relative;
@@ -6005,7 +6005,7 @@ path {
 }
 .main-menu .main-menu__list > li.current > a,
 .main-menu .main-menu__list > li:hover > a {
-  color: var(--trevlo-primary, #2D2330);
+  color: var(--trevlo-white, #2D2330);
   text-shadow: 0 0 0.5px currentColor;
 }
 .main-menu .main-menu__list li ul {
@@ -8595,9 +8595,6 @@ body.megamenu-popup-active .mobile-nav__content {
     margin-left: -20px;
   }
 }
-.about-six__image__two img {
-  border: 10px solid var(--trevlo-white, #ffffff);
-}
 .about-six__image__two .video-btn {
   position: absolute;
   top: 50%;
@@ -8662,6 +8659,7 @@ body.megamenu-popup-active .mobile-nav__content {
   margin-bottom: 41px;
   font-weight: normal;
   line-height: 1.75;
+  color: #344054;
 }
 .about-six__inner {
   margin-bottom: 51px;
@@ -8709,7 +8707,7 @@ body.megamenu-popup-active .mobile-nav__content {
   top: 50%;
   right: -28.5px;
   transform: translateY(-50%);
-  background-color: var(--trevlo-border-color);
+  background-color: #E2C1A5;
 }
 @media (max-width: 390px) {
   .about-six__box__icon::after {
@@ -8735,6 +8733,7 @@ body.megamenu-popup-active .mobile-nav__content {
   margin: 0;
   font-weight: normal;
   line-height: 1.75;
+  color: #344054;
 }
 .about-six__bottom {
   display: flex;
@@ -19516,6 +19515,11 @@ li:hover .footer-three__contact__list__icon {
   transform: translateY(0);
   transition-delay: 600ms;
 }
+.main-slider-four__carousel .active .main-slider-five__button {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 600ms;
+}
 .main-slider-five__carousel .active .main-slider-five__cloud {
   bottom: 25px;
   opacity: 0.15;
@@ -20619,11 +20623,6 @@ body.boxed-wrapper .main-header__booking-btn {
   color: white;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0, 0.4);
-}
-.main-slider-four__row .main-slider-five__button {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 600ms;
 }
 .main-slider-four__row .custom-slider-button{
   width: 219px;

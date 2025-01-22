@@ -81,9 +81,12 @@ class HomeController extends Controller
                     ->orderBy('ordering', 'ASC')
                     ->with('createdBy')
                     ->get();
+        $tours = Product::where('id', '>', 0)
+                    ->orderBy('ordering', 'ASC')
+                    ->get();
         $aboutUs = AboutUs::where('id', '>', 0)
                     ->first();
-        return view('frontend.index', compact(['news', 'aboutUs']));
+        return view('frontend.index', compact(['news', 'aboutUs', 'tours']));
     }
 
     /*Language Translation*/

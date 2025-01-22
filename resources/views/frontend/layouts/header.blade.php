@@ -2,7 +2,7 @@
     <div class="container">
         <div class="main-header__inner">
             <div class="main-header__logo">
-                <a href="index.html">
+                <a href="/">
                     <img src="assets/frontend/images/logo_header.png" alt="Elon Farm HTML" width="187"
                          class="main-header__logo__1">
                 </a>
@@ -11,20 +11,20 @@
                 <nav class="main-header__nav main-menu">
                     <ul class="main-menu__list">
                         <li>
-                            <a href="about.html">Home</a>
+                            <a href="/">Home</a>
                         </li>
                         <li>
-                            <a href="about.html">Robusta Vietnam</a>
+                            <a href="robusta-vietnam">Robusta Vietnam</a>
                         </li>
                         <li>
-                            <a href="about.html">Farm Tour</a>
+                            <a href="list-tour">Farm Tour</a>
                         </li>
                         <li>
-                            <a href="about.html">About Us</a>
+                            <a href="about-us">About Us</a>
                         </li>
                     </ul>
                 </nav><!-- /.main-header__nav -->
-                <a href="tour-listing-side-filter-right.html"
+                <a href="list-tour"
                    class="main-header__button trevlo-btn trevlo-btn--two trevlo-btn--base">
                     <span>Start Booking</span>
                     <i class="trevlo-one-icon-up-right-arrow"></i>

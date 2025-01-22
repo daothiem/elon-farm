@@ -30,7 +30,7 @@
                 @foreach($products as $item)
                 <div class="col-xl-4 col-md-4 wow animated fadeInUp" data-wow-delay="0.5s" data-wow-duration="1500ms">
                     <div class="tour-listing__card">
-                        <a href="tour-listing-details-right.html" class="tour-listing__card-image-box">
+                        <a href="/{{ $item['alias'] }}" class="tour-listing__card-image-box">
                             <img src="{{ asset($item['images']) }}" alt="{{ $item['alias'] }}" class="tour-listing__card-image">
                             <div class="tour-listing__card-btn-group">
                                 <div class="tour-listing__card-featured">Featured</div>
@@ -47,8 +47,8 @@
                                     <span class="icon-video-camera-1-1"></span>
                                 </a>
                             </div><!-- /.tour-listing__card-camera-group -->
-                            <h3 class="tour-listing__card-title"><a href="tour-listing-details-right.html">{{ $item['name'] }}</a></h3>
-                            <p class="tour-listing__card-text text-small">{{ $item['subtitle'] }}</p>
+                            <h3 class="tour-listing__card-title"><a href="/{{ $item['alias'] }}">{{ $item['name'] }}</a></h3>
+                            <p class="tour-listing__card-text text-small">{{ $item['description'] }}</p>
                             <div class="tour-listing__card-inner-content">
                                 <div class="tour-listing__card-review-box">
                                     <span class="icon-star"></span>
@@ -67,7 +67,7 @@
                                         </div><!-- /.tour-listing__card-day -->
                                     </div><!-- /.tour-listing__card-bottom-left -->
                                     <div class="tour-listing__card-bottom-right">
-                                        <h4 class="tour-listing__card-price">{{ number_format($item['price'], 0, ',', '.') }}₫</h4>
+                                        <h4 class="tour-listing__card-price">{{ number_format($item['price'], 0, ',', '.') }}đ</h4>
                                     </div><!-- /.tour-listing__card-bottom-right -->
                                 </div><!-- /.tour-listing__card-bottom -->
                             </div><!-- /.tour-listing__card-inner-content -->

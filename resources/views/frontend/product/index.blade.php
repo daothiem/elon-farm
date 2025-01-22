@@ -62,29 +62,21 @@
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
                                 <img src="assets/frontend/images/about/gallery-1-5.png" alt="gallery">
-                                <div class="tour-listing-details__top-carousel-overlay">
-                                </div><!-- /.tour-listing-details__top-carousel-overlay -->
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
                                 <img src="assets/frontend/images/about/gallery-1-5.png" alt="gallery">
-                                <div class="tour-listing-details__top-carousel-overlay">
-                                </div><!-- /.tour-listing-details__top-carousel-overlay -->
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
                                 <img src="assets/frontend/images/about/gallery-1-5.png" alt="gallery">
-                                <div class="tour-listing-details__top-carousel-overlay">
-                                </div><!-- /.tour-listing-details__top-carousel-overlay -->
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
                                 <img src="assets/frontend/images/about/gallery-1-5.png" alt="gallery">
-                                <div class="tour-listing-details__top-carousel-overlay">
-                                </div><!-- /.tour-listing-details__top-carousel-overlay -->
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                 </div><!-- /.tour-listing-details__top-carousel-wrapper -->
@@ -95,7 +87,7 @@
                         <div class="col-xl-4 wow animated fadeInLeft" data-wow-delay="0.1s" data-wow-duration="1500ms">
                             <div class="tour-listing-details__destination-left">
                                 <h3 class="tour-listing-details__dastination-title">{{ $data['name'] }}</h3>
-                                <h4 class="tour-listing-details__dastination-price"><span>{{ number_format($data['price'], 0, ',', '.') }}₫</span><span class="tour-listing-details__dastination-person">/ Per Person</span></h4>
+                                <h4 class="tour-listing-details__dastination-price"><span>{{ number_format($data['price'], 0, ',', '.') }}đ</span><span class="tour-listing-details__dastination-person">/ Per Person</span></h4>
                             </div><!-- /.tour-listing-details__daetination-left -->
                         </div><!-- /.col-xl-4 -->
                         <div class="col-xl-8">
@@ -220,7 +212,7 @@
                                                         
                                                     </div><!-- /.tour-listing__card-bottom-left -->
                                                     <div class="tour-listing__card-bottom-right">
-                                                        <h4 class="tour-listing__card-price">{{ number_format($similarTour['price'], 0, ',', '.') }}₫</h4>
+                                                        <h4 class="tour-listing__card-price">{{ number_format($similarTour['price'], 0, ',', '.') }}đ</h4>
                                                     </div><!-- /.tour-listing__card-bottom-right -->
                                                 </div><!-- /.tour-listing__card-bottom -->
                                             </div><!-- /.tour-listing__card-inner-content -->
