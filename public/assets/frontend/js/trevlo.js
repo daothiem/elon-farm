@@ -463,6 +463,19 @@
         .val(+$(this).next().val() - 1);
     }
   });
+  $(".addPax").on("click", function (e) {
+    e.preventDefault();
+    if ($('#guests').val() < 999) {
+      $('#guests')
+        .val(+$('#guests').val() + 1);
+    }
+  });
+  $(".minusPax").on("click", function (e) {
+    e.preventDefault();
+      if ($('#guests').val() > 0)
+       $('#guests')
+        .val(+$('#guests').val() - 1);
+  });
 
   if ($(".tabs-box").length) {
     $(".tabs-box .tab-buttons .tab-btn").on("click", function (e) {

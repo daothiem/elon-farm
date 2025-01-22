@@ -459,7 +459,7 @@ path {
 }
 .section-space {
   padding-top: var(--trevlo-sec-space, 120px);
-  padding-bottom: var(--trevlo-sec-space, 120px);
+  padding-bottom: 90px;
 }
 
 .section-space-top {

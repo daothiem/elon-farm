@@ -26,11 +26,11 @@
                             <div class="col-xl-9 col-lg-8 w-100 px-5">
                                 <div class="main-slider-four__content text-center">
                                     <h3 class="main-slider-four__title">Elon Farm with love from Center highland</h3>
-                                    <p class="main-slider-four__text mb-3">At Elon Farm, we blend the art of cultivating premium coffee with
+                                    <p class="main-slider-four__text mb-5">At Elon Farm, we blend the art of cultivating premium coffee with
                                          immersive farm-stay tours. Sip, stay, and savor the natural
                                          beauty of our vibrant farm</p><!-- /.main-slider-four__text -->
                                     <div class="main-slider-five__button">
-                                        <a href="tour-listing-side-filter-right.html"
+                                        <a href="/robusta-vietnam"
                                         class="trevlo-btn trevlo-btn--two trevlo-btn--base custom-slider-button">
                                             <span>Explore Our Farm</span>
                                             <i class="trevlo-one-icon-up-right-arrow"></i>
@@ -48,9 +48,9 @@
                             <div class="col-xl-9 col-lg-8 w-100 px-5">
                                 <div class="main-slider-four__content text-center">
                                     <h3 class="main-slider-four__title">Cultivating Quality, Harvesting Happiness</h3>
-                                    <p class="main-slider-four__text mb-3">We believe that each coffee region offers a unique experience. Nestled in the fertile hills of Nam Ban at over 1000 meters above sea level, we produce Robusta coffee rich in flavor and tradition. With sustainable farming practices and a dedication to quality, we’re proud to share Vietnamese coffee from Nam Bạn with coffee lovers. Come and explore! </p><!-- /.main-slider-four__text -->
+                                    <p class="main-slider-four__text mb-5">We believe that each coffee region offers a unique experience. Nestled in the fertile hills of Nam Ban at over 1000 meters above sea level, we produce Robusta coffee rich in flavor and tradition. With sustainable farming practices and a dedication to quality, we’re proud to share Vietnamese coffee from Nam Bạn with coffee lovers. Come and explore! </p><!-- /.main-slider-four__text -->
                                     <div class="main-slider-five__button">
-                                        <a href="tour-listing-side-filter-right.html"
+                                        <a href="/robusta-vietnam"
                                         class="trevlo-btn trevlo-btn--two trevlo-btn--base custom-slider-button">
                                             <span>Explore Our Farm</span>
                                             <i class="trevlo-one-icon-up-right-arrow"></i>
@@ -69,9 +69,9 @@
                             <div class="col-xl-9 col-lg-8 w-100 px-5">
                                 <div class="main-slider-four__content text-center">
                                     <h3 class="main-slider-four__title">The Heart of Robusta Excellence</h3>
-                                    <p class="main-slider-four__text mb-3">Discover the story behind our Robusta coffee. We love to share our coffee production process with you. Visit our farm to learn, experience, and enjoy the journey from bean to cup.  </p><!-- /.main-slider-four__text -->
+                                    <p class="main-slider-four__text mb-5">Discover the story behind our Robusta coffee. We love to share our coffee production process with you. Visit our farm to learn, experience, and enjoy the journey from bean to cup.  </p><!-- /.main-slider-four__text -->
                                     <div class="main-slider-five__button">
-                                        <a href="tour-listing-side-filter-right.html"
+                                        <a href="/robusta-vietnam"
                                         class="trevlo-btn trevlo-btn--two trevlo-btn--base custom-slider-button">
                                             <span>Explore Our Farm</span>
                                             <i class="trevlo-one-icon-up-right-arrow"></i>
@@ -90,9 +90,9 @@
                             <div class="col-xl-9 col-lg-8 w-100 px-5">
                                 <div class="main-slider-four__content text-center">
                                     <h3 class="main-slider-four__title">Beyond Coffee: Live the Local Life</h3>
-                                    <p class="main-slider-four__text mb-3">Visit our vibrant coffee farm and immerse yourself in the local culture. Not only will you experience our coffee, but you’ll also have the opportunity to explore the local culture through silk worm raising activities, visiting Linh An Pagoda, and viewing the majestic Elephant Waterfall.  </p><!-- /.main-slider-four__text -->
+                                    <p class="main-slider-four__text mb-5">Visit our vibrant coffee farm and immerse yourself in the local culture. Not only will you experience our coffee, but you’ll also have the opportunity to explore the local culture through silk worm raising activities, visiting Linh An Pagoda, and viewing the majestic Elephant Waterfall.  </p><!-- /.main-slider-four__text -->
                                     <div class="main-slider-five__button">
-                                        <a href="tour-listing-side-filter-right.html"
+                                        <a href="/robusta-vietnam"
                                         class="trevlo-btn trevlo-btn--two trevlo-btn--base custom-slider-button">
                                             <span>Explore Our Farm</span>
                                             <i class="trevlo-one-icon-up-right-arrow"></i>
@@ -111,9 +111,9 @@
                             <div class="col-xl-9 col-lg-8 w-100 px-5">
                                 <div class="main-slider-four__content text-center">
                                     <h3 class="main-slider-four__title">More Than a Tour—This is a Local Experience </h3>
-                                    <p class="main-slider-four__text mb-3">At Elon Farm, we offer more than just a tour. Immerse yourself in Vietnam’s coffee heritage. Wander through our plantations, learn about local life alongside our coffee processing, and enjoy fresh brews. Join us for an experience where we share our knowledge and passion for coffee. </p><!-- /.main-slider-four__text -->
+                                    <p class="main-slider-four__text mb-5">At Elon Farm, we offer more than just a tour. Immerse yourself in Vietnam’s coffee heritage. Wander through our plantations, learn about local life alongside our coffee processing, and enjoy fresh brews. Join us for an experience where we share our knowledge and passion for coffee. </p><!-- /.main-slider-four__text -->
                                     <div class="main-slider-five__button">
-                                        <a href="tour-listing-side-filter-right.html"
+                                        <a href="/robusta-vietnam"
                                         class="trevlo-btn trevlo-btn--two trevlo-btn--base custom-slider-button">
                                             <span>Explore Our Farm</span>
                                             <i class="trevlo-one-icon-up-right-arrow"></i>
@@ -132,20 +132,15 @@
                       action="https://bracketweb.com/trevlo-html/tour-listing-top-search.html">
                     <div class="row m-0">
                         <div class="banner-form__col banner-form__col--1 margin-24">
-                            <div class="banner-form__control banner-form__control--location d-flex gap-3">
+                            <div class="banner-form__control banner-form__control--traveler d-flex gap-3">
                                 <div class="banner-form__icon">
                                     <img src="assets/frontend/images/about/tour-icon.svg" alt="about">
                                 </div><!-- /.banner-form__icon -->
                                 <div class="flex-fill">
                                     <label for="location">Tour</label>
                                     <select name="location" class="selectpicker" id="location">
-                                        <option value="">Select Tour</option>
-                                        <option value="spain">Spain</option>
-                                        <option value="africa">Africa</option>
-                                        <option value="europe">Europe</option>
-                                        <option value="thailand">Thailand</option>
-                                        <option value="dubai">Dubai</option>
-                                        <option value="swizerlan">Swizerlan</option>
+                                        <option value="fullDay">Full-Day Tour</option>
+                                        <option value="halfDay">Half-Day Tour</option>
                                     </select>
                                 </div>
                             </div>
@@ -163,25 +158,26 @@
                                 <span class="trevlo-one-icon-chevron-down banner-form__datepicker-icon position-relative"></span>
                             </div>
                         </div>
-                        <div class="banner-form__col banner-form__col--3 banner-form__control--type margin-24">
-                            <div class="banner-form__control d-flex gap-3">
+                        <div class="banner-form__col banner-form__col--3  margin-24">
+                            <div class="banner-form__control banner-form__control--traveler d-flex gap-3">
                                 <div class="banner-form__icon">
                                     <img src="assets/frontend/images/about/pax-icon.svg" alt="about">
-                                </div><!-- /.banner-form__icon -->
+                                </div>
                                 <div class="flex-fill">
                                     <label for="guests">Pax</label>
                                     <input id="guests" type="number" value="2" name="guests" placeholder="2">
                                 </div>
                                 <div class="d-flex gap-1">
-                                    <button class="banner-form__qty-minus sub position-relative">
+                                    <button class="banner-form__qty-minus sub minusPax position-relative">
                                         <i class="icon-minus-3"></i>
                                     </button>
-                                    <button class="banner-form__qty-plus add position-relative">
+                                    <button class="banner-form__qty-plus add addPax position-relative">
                                         <i class="icon-plus-3"></i>
                                     </button>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="banner-form__col banner-form__col--4 margin-24">
                             <div class="banner-form__control d-flex gap-3">
                                 <div class="banner-form__icon">
@@ -215,10 +211,10 @@
                 <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
                     <div class="about-six__image">
                         <div class="about-six__image__one">
-                            <img src="assets/frontend/images/about/about-6-1.png" alt="about">
+                            <img src="assets/frontend/images/about/about-6-3.png" alt="about">
                         </div><!-- /.about-six__image__one -->
                         <div class="about-six__image__two">
-                            <img src="assets/frontend/images/about/about-6-2.png" alt="about">
+                            <img src="assets/frontend/images/about/about-6-4.png" alt="about">
                             <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="video-btn video-popup">
                                 <i class="fas fa-play"></i>
                                 <span></span>
@@ -255,7 +251,7 @@
                                     <p class="about-six__box__text">Through immersive agritourism experiences, we introduce high-quality Vietnamese Robusta to new audiences while rekindling appreciation among longtime fans. These efforts aim to showcase the unique qualities of Robusta and build deeper connections with coffee lovers worldwide.</p>
                                 </div><!-- /.about-six__box__content -->
                             </div><!-- /.about-box -->
-                            <a href="about.html" class="trevlo-btn trevlo-btn--two trevlo-btn--base w-50">
+                            <a href="/robusta-vietnam" class="trevlo-btn trevlo-btn--two trevlo-btn--base w-50">
                                 <span>more about us</span>
                                 <i class="trevlo-one-icon-up-right-arrow"></i>
                             </a><!-- /.trevlo-btn -->
@@ -267,7 +263,7 @@
                                 </div>
                                 <div class="about-six__phone__text">
                                     <p class="about-six__phone__title">Chat on WhatsApp</p>
-                                    <h4 class="about-six__phone__number"><a href="tel:+208-555-0112">(+84) 969285991</a>
+                                    <h4 class="about-six__phone__number"><a href="tel:+84969285991">(+84) 969285991</a>
                                     </h4>
                                 </div>
                             </div><!-- /.about-six__phone -->
@@ -277,7 +273,7 @@
                                 </div>
                                 <div class="about-six__phone__text">
                                     <p class="about-six__phone__title">Chat on Zalo</p>
-                                    <h4 class="about-six__phone__number"><a href="tel:+208-555-0112">(+84) 397529379</a>
+                                    <h4 class="about-six__phone__number"><a href="tel:+84397529379">(+84) 397529379</a>
                                     </h4>
                                 </div>
                             </div><!-- /.about-six__phone -->
@@ -287,8 +283,6 @@
             </div><!-- /.row gutter-y-40 -->
         </div><!-- /.container -->
         <img src="assets/frontend/images/shapes/about-mountain-6-1.png" alt="mountain" class="about-six__mountain">
-        <img src="assets/frontend/images/shapes/about-parashoot-6-1.png" alt="mountain" class="about-six__parashoot">
-
         <section class="gallery-one gallery-one--home-two position-absolute w-100">
             <div class="container">
                 <div class="gallery-one__carousel trevlo-owl__carousel trevlo-owl__carousel--basic-nav owl-carousel" data-owl-options='{
@@ -365,7 +359,7 @@
                     <p class="sec-title__tagline">Our Story</p>
                     <h2 class="sec-title__title title-made-by">Made By Us</h2>
                 </div>
-                <a href="blog-details-right.html" class="h-fit-content ">
+                <a href="/robusta-vietnam" class="h-fit-content ">
                     <span>Read more about our process</span>
                     <i class="trevlo-one-icon-up-right-arrow"></i>
                 </a><!-- /.trevlo-btn -->
@@ -503,7 +497,7 @@
                     </div><!-- /.col-lg-8 -->
                     <div class="col-lg-4">
                         <div class="blog-three__button">
-                            <a href="blog-details-right.html" class="h-fit-content ">
+                            <a href="#" class="h-fit-content ">
                                 <span>View All Blogs</span>
                                 <i class="trevlo-one-icon-up-right-arrow"></i>
                             </a><!-- /.trevlo-btn -->
@@ -525,7 +519,7 @@
                         <div class="blog-three__card__content">
                             <ul class="list-unstyled blog-three__card__meta">
                                 <li>
-                                    <a href="#">
+                                    <a href="/{{ $news[0]['alias'] }}">
                                         <span class="blog-three__card__meta__icon">
                                             <i class="trevlo-one-icon-user"></i>
                                         </span>
@@ -533,7 +527,7 @@
                                     </a>
                                 </li>
                             </ul>
-                            <h3 class="blog-three__card__title"><a href="blog-details-right.html">{{ $news[0]['title'] }}</a></h3><!-- /.blog-three__card__title -->
+                            <h3 class="blog-three__card__title"><a href="/{{ $news[0]['alias'] }}">{{ $news[0]['title'] }}</a></h3><!-- /.blog-three__card__title -->
                         </div><!-- /.blog-three__card__content -->
                     </div><!-- /.blog-three__card -->
                 </div><!-- /.col-lg-6 -->
@@ -549,7 +543,7 @@
                                 <div class="blog-three__card__content">
                                     <ul class="list-unstyled blog-three__card__meta">
                                         <li>
-                                            <a href="#">
+                                            <a href="/{{ $item['alias'] }}">
                                                 <span class="blog-three__card__meta__icon">
                                                     <i class="trevlo-one-icon-user"></i>
                                                 </span>
@@ -557,7 +551,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <h3 class="blog-three__card__title"><a href="blog-details-right.html">{{ $item['title'] }}</a></h3><!-- /.blog-three__card__title -->
+                                    <h3 class="blog-three__card__title"><a href="/{{ $item['alias'] }}">{{ $item['title'] }}</a></h3><!-- /.blog-three__card__title -->
                                     <div class="blog-three__card__date">
                                         <span class="blog-three__card__date__day">{{ \Carbon\Carbon::parse($item['created_at'])->format('d') }}</span>
                                         <span class="blog-three__card__date__month">{{ \Carbon\Carbon::parse($item['created_at'])->format('M') }}</span>
@@ -668,6 +662,76 @@
             </div><!-- /.thm-owl__slider -->
         </div><!-- /.container -->
     </section><!-- /.testimonial-three section-space-bottom -->
+
+    <section class="tour-listing-four section-space" id="tour">
+        <div class="container">
+            <div class="tour-listing-four__top">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sec-title sec-title--two text-left">
+
+                            <p class="sec-title__tagline">Our Tours</p><!-- /.sec-title__tagline -->
+
+                            <h2 class="sec-title__title">Select your desired tour</h2><!-- /.sec-title__title -->
+                        </div><!-- /.sec-title -->
+                    </div><!-- /.col-lg-12 -->
+                </div><!-- /.row -->
+            </div><!-- /.tour-listing-four__top -->
+            <div class="tour-listing-four__inner">
+                @foreach($tours as $tour)
+                <div class="tour-listing-four__row">
+                    <div class="tour-listing-four__content tour-listing-four__col wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <div class="tour-listing-four__ratings">
+                            <div class="trevlo-ratings">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                            <p class="tour-listing-four__ratings__text">4.9 (5)</p>
+                            <!-- /.tour-listing-four__ratings__text -->
+                        </div><!-- /.tour-listing-four__ratings -->
+                        <h3 class="tour-listing-four__title"><a href="/{{ $tour['alias'] }}">{{ $tour['name'] }}</a>
+                        </h3><!-- /.tour-listing-four__title -->
+                        <p class="tour-listing-four__text">{{ $tour['description'] }}</p><!-- /.tour-listing-four__text -->
+                    </div><!-- /.tour-listing-four__content -->
+                    <ul class="tour-listing-four__list tour-listing-four__col wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <li>
+                            <div class="tour-listing-four__list__icon">
+                                <i class="icon-clock-1"></i>
+                            </div><!-- /.tour-listing-four__list__icon -->
+                            Duration <span>{{ $tour['duration'] }}</span>
+                        </li>
+                        <li>
+                            <div class="tour-listing-four__list__icon">
+                                <i class="trevlo-one-icon-paper-plane"></i>
+                            </div><!-- /.tour-listing-four__list__icon -->
+                            Tour Type <span>{{ $tour['activity'] }}</span>
+                        </li>
+                        <li>
+                            <div class="tour-listing-four__list__icon">
+                                <i class="trevlo-one-icon-maps-and-flags"></i>
+                            </div><!-- /.tour-listing-four__list__icon -->
+                            Location <span>{{ $tour['location'] }}</span>
+                        </li>
+                    </ul><!-- /.tour-listing-four__list -->
+                    <div class="tour-listing-four__image tour-listing-four__col wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
+                        <div class="tour-listing-four__image__inner" style="background-image: url({{ asset($tour['images']) }});">
+                            <div class="tour-listing-four__image__left">
+                                <h3 class="tour-listing-four__image__title">form</h3>
+                                <!-- /.tour-listing-four__image__title -->
+                                <h3 class="tour-listing-four__image__price">{{ number_format($tour['price'], 0, ',', '.') }}đ</h3>
+                                <!-- /.tour-listing-four__image__price -->
+                            </div><!-- /.tour-listing-four__image__left -->
+                            <a href="tour-listing-details-right.html" class="tour-listing-four__image__btn trevlo-btn trevlo-btn--white">
+                                <i class="trevlo-one-icon-up-right-arrow"></i>
+                            </a><!-- /.tour-listing-four__image__btn -->
+                        </div><!-- /.tour-listing-four__image__inner -->
+                    </div><!-- /.tour-listing-four__image -->
+                </div><!-- /.tour-listing-four__row -->
+                @endforeach
+            </div><!-- /.tour-listing-four__inner -->
+        </div><!-- /.container -->
+        <img src="assets/images/resources/tour-listing-img-4-1.png" alt="girl" class="tour-listing-four__left-image">
+        <img src="assets/images/resources/tour-listing-airplane-4-1.png" alt="airplane" class="tour-listing-four__airplane">
+    </section><!-- /.tour-listing-four section-space -->
 
     <section class="why-choose-five section-space">
         <div class="container">
@@ -810,7 +874,7 @@
                             There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteradution in
                             some form by injected humour, some form
                         </p>
-                        <a href="about.html" class="trevlo-btn book-button">
+                        <a href="/list-tour" class="trevlo-btn book-button">
                             <span>Book now</span>
                             <i class="trevlo-one-icon-up-right-arrow"></i>
                         </a><!-- /.trevlo-btn -->
