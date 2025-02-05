@@ -71,7 +71,7 @@
     <div class="custom-cursor__cursor-two"></div>
 
     <div class="preloader">
-        <div class="preloader__image" style="background-image: url(assets/frontend/images/loader-3.png);"></div>
+        <div class="preloader__image" id="lottie-container"></div>
     </div>
 
     <div class="page-wrapper">
@@ -109,7 +109,16 @@
 <script type="text/javascript" src="{{ URL::asset('/assets/frontend/js/trevlo.js') }}"></script>
 <!-- template js -->
 <script type="text/javascript" src="{{ URL::asset('/assets/frontend/vendors/jquery-lettering/jquery.lettering.min.js') }}"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+<script>
+  lottie.loadAnimation({
+    container: document.getElementById('lottie-container'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'assets/frontend/images/Logo-animated.json'
+  });
+</script>
 @yield('scripts')
 </body>
 </html>

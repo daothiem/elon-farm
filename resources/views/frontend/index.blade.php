@@ -686,12 +686,11 @@
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                             </div>
                             <p class="tour-listing-four__ratings__text">4.9 (5)</p>
-                            <!-- /.tour-listing-four__ratings__text -->
-                        </div><!-- /.tour-listing-four__ratings -->
+                        </div>
                         <h3 class="tour-listing-four__title"><a href="/{{ $tour['alias'] }}">{{ $tour['name'] }}</a>
-                        </h3><!-- /.tour-listing-four__title -->
+                        </h3>
                         <p class="tour-listing-four__text">{{ $tour['description'] }}</p><!-- /.tour-listing-four__text -->
-                    </div><!-- /.tour-listing-four__content -->
+                    </div>
                     <ul class="tour-listing-four__list tour-listing-four__col wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                         <li>
                             <div class="tour-listing-four__list__icon">
@@ -729,14 +728,12 @@
                 @endforeach
             </div><!-- /.tour-listing-four__inner -->
         </div><!-- /.container -->
-        <img src="assets/images/resources/tour-listing-img-4-1.png" alt="girl" class="tour-listing-four__left-image">
-        <img src="assets/images/resources/tour-listing-airplane-4-1.png" alt="airplane" class="tour-listing-four__airplane">
     </section><!-- /.tour-listing-four section-space -->
 
     <section class="why-choose-five section-space">
         <div class="container">
             <div class="row gutter-y-40">
-                <div class="col-lg-6 d-flex flex-column">
+                <div class="col-lg-5 d-flex flex-column">
                     <div class="why-six__image__two mb-3">
                         <img src="assets/frontend/images/about/why-video.png" alt="about">
                         <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="video-btn video-popup">
@@ -792,7 +789,7 @@
                         </div>
                     </div><!-- /.why-choose-five__faq -->
                 </div><!-- /.col-lg-6 -->
-                <div class="col-lg-6">
+                <div class="col-lg-7">
                     <div class="why-choose-five__content">
                         <div class="sec-title sec-title--two text-left">
 

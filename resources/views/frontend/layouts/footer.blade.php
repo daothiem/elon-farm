@@ -148,8 +148,6 @@
                 </div><!-- /.col-xl-4 col-md-6 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
-        <img src="assets/frontend/images/shapes/footer-shape-3-1.png" alt="shape" class="footer-three__shape-one">
-        <img src="assets/frontend/images/shapes/footer-shape-3-2.png" alt="shape" class="footer-three__shape-two">
     </div><!-- /.footer-three__inner -->
     <div class="footer-three__bottom">
         <div class="container">
