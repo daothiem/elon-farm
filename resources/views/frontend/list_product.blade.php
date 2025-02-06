@@ -10,11 +10,11 @@
         <div class="page-header__bg1"></div>
         <!-- /.page-header__bg -->
         <div class="container">
-            <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">Tours List</h2>
+            <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">@lang('translation.tours_list')</h2>
             <div class="page-header__breadcrumb-box">
                 <ul class="trevlo-breadcrumb">
-                    <li><a href="/">Home</a></li>
-                    <li>Tours List</li>
+                    <li><a href="/">@lang('translation.home')</a></li>
+                    <li>@lang('translation.tours_list')</li>
                 </ul><!-- /.trevlo-breadcrumb -->
             </div><!-- /.page-header__breadcrumb-box -->
         </div><!-- /.container -->
@@ -23,8 +23,8 @@
        
         <div class="container">
              <div class="sec-title sec-title--two text-left">
-                <p class="sec-title__tagline">Our Tours</p><!-- /.sec-title__tagline -->
-                <h2 class="sec-title__title">Select your desired tour</h2><!-- /.sec-title__title -->
+                <p class="sec-title__tagline">@lang('translation.our_tours')</p><!-- /.sec-title__tagline -->
+                <h2 class="sec-title__title">@lang('translation.select_tour')</h2><!-- /.sec-title__title -->
             </div>
             <div class="row">
                 @foreach($products as $item)

@@ -87,7 +87,7 @@
                         <div class="col-xl-4 wow animated fadeInLeft" data-wow-delay="0.1s" data-wow-duration="1500ms">
                             <div class="tour-listing-details__destination-left">
                                 <h3 class="tour-listing-details__dastination-title">{{ $data['name'] }}</h3>
-                                <h4 class="tour-listing-details__dastination-price"><span>{{ number_format($data['price'], 0, ',', '.') }}đ</span><span class="tour-listing-details__dastination-person">/ Per Person</span></h4>
+                                <h4 class="tour-listing-details__dastination-price"><span>{{ number_format($data['price'], 0, ',', '.') }}đ</span><span class="tour-listing-details__dastination-person">/ @lang('translation.per_person')</span></h4>
                             </div><!-- /.tour-listing-details__daetination-left -->
                         </div><!-- /.col-xl-4 -->
                         <div class="col-xl-8">
@@ -95,28 +95,28 @@
                                 <div class="tour-listing-details__destination-info wow animated fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
                                     <img src="assets/frontend/images/about/clock-circle.svg" alt="tab">
                                     <div class="tour-listing-details__destination-info-title">
-                                        <h4 class="tour-listing-details__destination-info-top">Duration</h4>
+                                        <h4 class="tour-listing-details__destination-info-top">@lang('translation.duration')</h4>
                                         <h4 class="tour-listing-details__destination-info-bottom">{{ $data['duration'] }}</h4>
                                     </div>
                                 </div><!-- /.tour-listing-details__destination-info -->
                                 <div class="tour-listing-details__destination-info wow animated fadeInUp" data-wow-delay="0.3s" data-wow-duration="1500ms">
                                     <img src="assets/frontend/images/about/coffee-circle.svg" alt="tab">
                                     <div class="tour-listing-details__destination-info-title">
-                                        <h4 class="tour-listing-details__destination-info-top">Activity</h4>
+                                        <h4 class="tour-listing-details__destination-info-top">@lang('translation.activity')</h4>
                                         <h4 class="tour-listing-details__destination-info-bottom">{{ $data['activity'] }}</h4>
                                     </div>
                                 </div><!-- /.tour-listing-details__destination-info -->
                                 <div class="tour-listing-details__destination-info wow animated fadeInUp" data-wow-delay="0.5s" data-wow-duration="1500ms">
                                     <img src="assets/frontend/images/about/leaf-circle.svg" alt="tab">
                                     <div class="tour-listing-details__destination-info-title">
-                                        <h4 class="tour-listing-details__destination-info-top">Nature</h4>
+                                        <h4 class="tour-listing-details__destination-info-top">@lang('translation.nature')</h4>
                                         <h4 class="tour-listing-details__destination-info-bottom">{{ $data['nature'] }}</h4>
                                     </div>
                                 </div><!-- /.tour-listing-details__destination-info -->
                                 <div class="tour-listing-details__destination-info wow animated fadeInUp" data-wow-delay="0.7s" data-wow-duration="1500ms">
                                     <img src="assets/frontend/images/about/location-circle.svg" alt="tab">
                                     <div class="tour-listing-details__destination-info-title">
-                                        <h4 class="tour-listing-details__destination-info-top">Location</h4>
+                                        <h4 class="tour-listing-details__destination-info-top">@lang('translation.location')</h4>
                                         <h4 class="tour-listing-details__destination-info-bottom">{{ $data['location'] }}</h4>
                                     </div>
                                 </div><!-- /.tour-listing-details__destination-info -->
@@ -130,14 +130,14 @@
                     <div class="col-xl-8">
                         <div class="tour-listing-details__overview">
                             <div class="wow animated fadeIn animated" data-wow-delay="0.1s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.1s; animation-name: fadeIn;">
-                                <h3 class="tour-listing-details__title tour-listing-details__overview-title">Overview</h3>
+                                <h3 class="tour-listing-details__title tour-listing-details__overview-title">@lang('translation.overview')</h3>
                             </div>
                         </div><!-- /.tour-listing-details__explore -->
                         <div class="tour-listing-details__included">
                             {!! $data['content'] !!}
                         </div><!-- /.tour-listing-details__included -->
                         <div class="tour-listing-details__plan">
-                            <h3 class="tour-listing-details__title tour-listing-details__plan-title">Tour Plan For {{ $data['name'] }} ({{ $data['duration'] }})</h3>
+                            <h3 class="tour-listing-details__title tour-listing-details__plan-title">@lang('translation.tour_plan_for') {{ $data['name'] }} ({{ $data['duration'] }})</h3>
                             <div class="trevlo-accrodion tour-listing-details__faq" data-grp-name="tour-listing-details__faq">
                                 @foreach($data['tour_plan'] as $item)
                                 <div class="accrodion wow animated fadeInUp animated active" data-wow-delay="0.1s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.1s; animation-name: fadeInUp;">
@@ -154,14 +154,14 @@
                             </div>
                         </div><!-- /.tour-listing-details__plan -->
                         <div class="tour-listing-details__location">
-                            <h3 class="tour-listing-details__title tour-listing-details__location-title">Location</h3>
+                            <h3 class="tour-listing-details__title tour-listing-details__location-title">@lang('translation.location')</h3>
                             <div class="google-map google-map__@@extraClassName">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d605244.8227399779!2d107.687700516928!3d11.705162129376657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171415c4a847499%3A0x3bac5cf6af75a94a!2sElon%20Farmstay!5e0!3m2!1sen!2s!4v1737343487746!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                             <!-- /.google-map -->
                         </div><!-- /.tour-listing-details__location -->
                         <div class="tour-listing-details__amenities">
-                            <h3 class="tour-listing-details__title tour-listing-details__amenities-title">Tour Amenities</h3>
+                            <h3 class="tour-listing-details__title tour-listing-details__amenities-title">@lang('translation.tour_amenities')</h3>
                             <div class="tour-listing-details__amenities-row row">
                                 @foreach($data->amenities as $amenity)
                                 <div class="col-xl-4 col-lg-4 col-sm-6 wow animated fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms" style="visibility: hidden; animation-duration: 1500ms; animation-delay: 0.1s; animation-name: none;">
@@ -173,7 +173,7 @@
                                 @endforeach
                         </div><!-- /.tour-listing-details__amenities-row -->
                         <div class="tour-listing-details__similar container-fluid mt-5">
-                            <h3 class="tour-listing-details__title tour-listing-details__similar-title">Similar Tour</h3>
+                            <h3 class="tour-listing-details__title tour-listing-details__similar-title">@lang('translation.similar_tours')</h3>
                             <div class="row">
                                 @foreach($data['similar_tour'] as $similarTour)
                                 <div class="col-md-6 wow animated fadeInUp animated" data-wow-delay="0.1s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.1s; animation-name: fadeInUp;">
@@ -229,20 +229,20 @@
                         <aside class="tour-listing-sidebar">
                             <form action="#" class="tour-listing-sidebar__form tour-listing-sidebar__item wow animated fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
                                 <div class="banner-form">
-                                    <h3 class="tour-listing-sidebar__title tour-listing-sidebar__price-ranger-title mb-3">Contact Information</h3>
+                                    <h3 class="tour-listing-sidebar__title tour-listing-sidebar__price-ranger-title mb-3">@lang('translation.contact_information')</h3>
                                     <div class="banner-form__control">
-                                        <label for="name">Name</label>
-                                        <input id="name" type="text" name="name" placeholder="Your name...">
+                                        <label for="name">@lang('translation.name')</label>
+                                        <input id="name" type="text" name="name" placeholder="@lang('translation.your_name')">
                                         <i><img src="assets/frontend/images/about/form-name.svg" alt="tab"></i>
                                     </div>
                                     <div class="banner-form__control">
                                         <label for="email">Email</label>
-                                        <input id="email" type="email" name="email" placeholder="Your email...">
+                                        <input id="email" type="email" name="email" placeholder="@lang('translation.your_email')">
                                         <i><img src="assets/frontend/images/about/form-email.svg" alt="tab"></i>
                                     </div>
                                     <div class="banner-form__control">
-                                        <label for="phoneNumber">Phone number</label>
-                                        <input id="phoneNumber" type="text" name="phoneNumber" placeholder="Your phone number...">
+                                        <label for="phoneNumber">@lang('translation.phone_number')</label>
+                                        <input id="phoneNumber" type="text" name="phoneNumber" placeholder="@lang('translation.your_phone')">
                                         <i><img src="assets/frontend/images/about/form-phone.svg" alt="tab"></i>
                                     </div>
                                 </div>
@@ -251,18 +251,18 @@
                                      <div class="banner-form__control">
                                         <label for="type">Tour</label>
                                         <select name="type" class="selectpicker" id="type">
-                                            <option value="full-day">Full-Day tour</option>
-                                            <option value="half-day">Half-Day tour</option>
+                                            <option value="full-day">@lang('translation.full_day_tour')</option>
+                                            <option value="half-day">@lang('translation.half_day_tour')</option>
                                         </select>
                                         <i><img src="assets/frontend/images/about/form-tour.svg" alt="tab"></i>
                                     </div>
                                     <div class="banner-form__control">
-                                        <label for="date">Preferred Tour Date</label>
-                                        <input class="trevlo-multi-datepicker" id="date" type="text" name="date" placeholder="Select Date">
+                                        <label for="date">@lang('translation.preferred_tour_date')</label>
+                                        <input class="trevlo-multi-datepicker" id="date" type="text" name="date" placeholder="@lang('translation.select_date')">
                                         <i class="icon-calendar-5"></i>
                                     </div>
                                     <div class="banner-form__control">
-                                        <label for="adults">Adults</label>
+                                        <label for="adults">@lang('translation.adults')</label>
                                         <button class="banner-form__qty-minus sub">
                                             <i class="icon-minus-3"></i>
                                         </button>
@@ -272,7 +272,7 @@
                                         </button>
                                     </div>
                                     <div class="banner-form__control">
-                                        <label for="youth">Youth (10-18 years) <span class="alert-form-a">*DISCOUNT 50%</span></label>
+                                        <label for="youth">@lang('translation.youth_10_18')<span class="alert-form-a">*@lang('translation.discount') 50%</span></label>
                                         <button class="banner-form__qty-minus sub">
                                             <i class="icon-minus-3"></i>
                                         </button>
@@ -282,7 +282,7 @@
                                         </button>
                                     </div>
                                     <div class="banner-form__control">
-                                        <label for="children">Children (under 10) <span class="alert-form-a">*FREE</span></label>
+                                        <label for="children">@lang('translation.children')<span class="alert-form-a">*@lang('translation.free')</span></label>
                                         <button class="banner-form__qty-minus sub">
                                             <i class="icon-minus-3"></i>
                                         </button>
@@ -293,34 +293,34 @@
                                     </div>
                                     <div class="form-checked-box">
                                         <input type="checkbox" name="transportation" id="transportation">
-                                        <label for="transportation"><span></span>Transportation (300,000 VND/way from Da Lat City or nearby areas)</label>
+                                        <label for="transportation"><span></span>@lang('translation.take_transport')</label>
                                     </div>
                                 </div><!-- /.price-slider -->
                                 <div class="tour-listing-sidebar__amenities">
-                                    <h3 class="tour-listing-sidebar__title tour-listing-sidebar__amenities-title">Specical Request</h3>
+                                    <h3 class="tour-listing-sidebar__title tour-listing-sidebar__amenities-title">@lang('translation.specical_request')</h3>
                                     <div class="tour-listing-sidebar__amenities-box">
                                         <div class="form-checked-box">
                                             <input type="checkbox" name="dietary-restrictions" id="dietary-restrictions">
-                                            <label for="dietary-restrictions"><span></span>Dietary restrictions</label>
+                                            <label for="dietary-restrictions"><span></span>@lang('translation.dietary_restrictions')</label>
                                         </div>
                                         <div class="form-checked-box">
                                             <input type="checkbox" name="allergies" id="allergies">
-                                            <label for="allergies"><span></span>Allergies</label>
+                                            <label for="allergies"><span></span>@lang('translation.allergies')</label>
                                         </div>
                                         <div class="form-checked-box">
                                             <input type="checkbox" name="health-concerns" id="health-concerns">
-                                            <label for="health-concerns"><span></span>Health concerns</label>
+                                            <label for="health-concerns"><span></span>@lang('translation.health_concerns')</label>
                                         </div>
                                         <div class="form-checked-box">
                                             <input type="checkbox" name="others" id="others">
-                                            <label for="others"><span></span>Others</label>
+                                            <label for="others"><span></span>@lang('translation.others')</label>
                                         </div>
                                     </div><!-- /.tour-listing-sidebar__amenities-box -->
                                 </div><!-- /.tour-listing-sidebar__amenities -->
                                 <h3 class="tour-listing-sidebar__title tour-listing-sidebar__amenities-title mt-3">2.580.000đ</h3>
                                 <div class="tour-listing-sidebar__btn-box">
                                     <button type="submit" class="tour-listing-sidebar__btn trevlo-btn trevlo-btn--base">
-                                        <span>Book Now</span>
+                                        <span>@lang('translation.book_now')</span>
                                     </button>
                                 </div><!-- /.tour-listing-sidebar__btn-box -->
                             </form><!-- /.tour-listing-sidebar__form tour-listing-sidebar__item -->

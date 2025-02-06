@@ -11,22 +11,22 @@
                 <nav class="main-header__nav main-menu">
                     <ul class="main-menu__list">
                         <li>
-                            <a href="/">Home</a>
+                            <a href="/">@lang('translation.home')</a>
                         </li>
                         <li>
                             <a href="robusta-vietnam">Robusta Vietnam</a>
                         </li>
                         <li>
-                            <a href="list-tour">Farm Tour</a>
+                            <a href="list-tour">@lang('translation.farm-tour')</a>
                         </li>
                         <li>
-                            <a href="about-us">About Us</a>
+                            <a href="about-us">@lang('translation.about-us')</a>
                         </li>
                     </ul>
                 </nav><!-- /.main-header__nav -->
                 <a href="list-tour"
                    class="main-header__button trevlo-btn trevlo-btn--two trevlo-btn--base">
-                    <span>Start Booking</span>
+                    <span>@lang('translation.start-booking')</span>
                     <i class="trevlo-one-icon-up-right-arrow"></i>
                 </a>
                 <div class="mobile-nav__btn mobile-nav__toggler">

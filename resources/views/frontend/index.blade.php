@@ -25,14 +25,12 @@
                         <div class="main-slider-four__row row gutter-y-50 align-items-center justify-content-center">
                             <div class="col-xl-9 col-lg-8 w-100 px-5">
                                 <div class="main-slider-four__content text-center">
-                                    <h3 class="main-slider-four__title">Elon Farm with love from Center highland</h3>
-                                    <p class="main-slider-four__text mb-5">At Elon Farm, we blend the art of cultivating premium coffee with
-                                         immersive farm-stay tours. Sip, stay, and savor the natural
-                                         beauty of our vibrant farm</p><!-- /.main-slider-four__text -->
+                                    <h3 class="main-slider-four__title">@lang('translation.elon_with_love')</h3>
+                                    <p class="main-slider-four__text mb-5">@lang('translation.elon_with_love_content')</p><!-- /.main-slider-four__text -->
                                     <div class="main-slider-five__button">
                                         <a href="/robusta-vietnam"
                                         class="trevlo-btn trevlo-btn--two trevlo-btn--base custom-slider-button">
-                                            <span>Explore Our Farm</span>
+                                            <span>@lang('translation.explore_farm')</span>
                                             <i class="trevlo-one-icon-up-right-arrow"></i>
                                         </a><!-- /.trevlo-btn -->
                                     </div><!-- /.main-slider-five__button -->
@@ -47,12 +45,12 @@
                         <div class="main-slider-four__row row gutter-y-50 align-items-center justify-content-center">
                             <div class="col-xl-9 col-lg-8 w-100 px-5">
                                 <div class="main-slider-four__content text-center">
-                                    <h3 class="main-slider-four__title">Cultivating Quality, Harvesting Happiness</h3>
-                                    <p class="main-slider-four__text mb-5">We believe that each coffee region offers a unique experience. Nestled in the fertile hills of Nam Ban at over 1000 meters above sea level, we produce Robusta coffee rich in flavor and tradition. With sustainable farming practices and a dedication to quality, we’re proud to share Vietnamese coffee from Nam Bạn with coffee lovers. Come and explore! </p><!-- /.main-slider-four__text -->
+                                    <h3 class="main-slider-four__title">@lang('translation.cultivating_quality')</h3>
+                                    <p class="main-slider-four__text mb-5">@lang('translation.cultivating_quality_content')</p><!-- /.main-slider-four__text -->
                                     <div class="main-slider-five__button">
                                         <a href="/robusta-vietnam"
                                         class="trevlo-btn trevlo-btn--two trevlo-btn--base custom-slider-button">
-                                            <span>Explore Our Farm</span>
+                                            <span>@lang('translation.explore_farm')</span>
                                             <i class="trevlo-one-icon-up-right-arrow"></i>
                                         </a><!-- /.trevlo-btn -->
                                     </div><!-- /.main-slider-five__button -->
@@ -68,12 +66,12 @@
                         <div class="main-slider-four__row row gutter-y-50 align-items-center justify-content-center">
                             <div class="col-xl-9 col-lg-8 w-100 px-5">
                                 <div class="main-slider-four__content text-center">
-                                    <h3 class="main-slider-four__title">The Heart of Robusta Excellence</h3>
-                                    <p class="main-slider-four__text mb-5">Discover the story behind our Robusta coffee. We love to share our coffee production process with you. Visit our farm to learn, experience, and enjoy the journey from bean to cup.  </p><!-- /.main-slider-four__text -->
+                                    <h3 class="main-slider-four__title">@lang('translation.the_heart')</h3>
+                                    <p class="main-slider-four__text mb-5">@lang('translation.the_heart_content')</p><!-- /.main-slider-four__text -->
                                     <div class="main-slider-five__button">
                                         <a href="/robusta-vietnam"
                                         class="trevlo-btn trevlo-btn--two trevlo-btn--base custom-slider-button">
-                                            <span>Explore Our Farm</span>
+                                            <span>@lang('translation.explore_farm')</span>
                                             <i class="trevlo-one-icon-up-right-arrow"></i>
                                         </a><!-- /.trevlo-btn -->
                                     </div><!-- /.main-slider-five__button -->
@@ -89,12 +87,12 @@
                         <div class="main-slider-four__row row gutter-y-50 align-items-center justify-content-center">
                             <div class="col-xl-9 col-lg-8 w-100 px-5">
                                 <div class="main-slider-four__content text-center">
-                                    <h3 class="main-slider-four__title">Beyond Coffee: Live the Local Life</h3>
-                                    <p class="main-slider-four__text mb-5">Visit our vibrant coffee farm and immerse yourself in the local culture. Not only will you experience our coffee, but you’ll also have the opportunity to explore the local culture through silk worm raising activities, visiting Linh An Pagoda, and viewing the majestic Elephant Waterfall.  </p><!-- /.main-slider-four__text -->
+                                    <h3 class="main-slider-four__title">@lang('translation.beyond_coffee')</h3>
+                                    <p class="main-slider-four__text mb-5">@lang('translation.beyond_coffee_content')</p><!-- /.main-slider-four__text -->
                                     <div class="main-slider-five__button">
                                         <a href="/robusta-vietnam"
                                         class="trevlo-btn trevlo-btn--two trevlo-btn--base custom-slider-button">
-                                            <span>Explore Our Farm</span>
+                                            <span>@lang('translation.explore_farm')</span>
                                             <i class="trevlo-one-icon-up-right-arrow"></i>
                                         </a><!-- /.trevlo-btn -->
                                     </div><!-- /.main-slider-five__button -->
@@ -110,12 +108,12 @@
                         <div class="main-slider-four__row row gutter-y-50 align-items-center justify-content-center">
                             <div class="col-xl-9 col-lg-8 w-100 px-5">
                                 <div class="main-slider-four__content text-center">
-                                    <h3 class="main-slider-four__title">More Than a Tour—This is a Local Experience </h3>
-                                    <p class="main-slider-four__text mb-5">At Elon Farm, we offer more than just a tour. Immerse yourself in Vietnam’s coffee heritage. Wander through our plantations, learn about local life alongside our coffee processing, and enjoy fresh brews. Join us for an experience where we share our knowledge and passion for coffee. </p><!-- /.main-slider-four__text -->
+                                    <h3 class="main-slider-four__title">@lang('translation.more_than_tour') </h3>
+                                    <p class="main-slider-four__text mb-5">@lang('translation.more_than_tour_content')</p><!-- /.main-slider-four__text -->
                                     <div class="main-slider-five__button">
                                         <a href="/robusta-vietnam"
                                         class="trevlo-btn trevlo-btn--two trevlo-btn--base custom-slider-button">
-                                            <span>Explore Our Farm</span>
+                                            <span>@lang('translation.explore_farm')</span>
                                             <i class="trevlo-one-icon-up-right-arrow"></i>
                                         </a><!-- /.trevlo-btn -->
                                     </div><!-- /.main-slider-five__button -->
@@ -139,8 +137,8 @@
                                 <div class="flex-fill">
                                     <label for="location">Tour</label>
                                     <select name="location" class="selectpicker" id="location">
-                                        <option value="fullDay">Full-Day Tour</option>
-                                        <option value="halfDay">Half-Day Tour</option>
+                                        <option value="fullDay">@lang('translation.full_day_tour')</option>
+                                        <option value="halfDay">@lang('translation.half_day_tour')</option>
                                     </select>
                                 </div>
                             </div>
@@ -151,9 +149,9 @@
                                     <img src="assets/frontend/images/about/date-icon.svg" alt="about">
                                 </div><!-- /.banner-form__icon -->
                                 <div class="flex-fill">
-                                    <label for="date">Preferred Tour Date</label>
+                                    <label for="date">@lang('translation.preferred_tour_date')</label>
                                         <input class="trevlo-multi-datepicker" id="date" type="text" name="date"
-                                            placeholder="Select Date">
+                                            placeholder="@lang('translation.select_date')">
                                 </div>
                                 <span class="trevlo-one-icon-chevron-down banner-form__datepicker-icon position-relative"></span>
                             </div>
@@ -164,7 +162,7 @@
                                     <img src="assets/frontend/images/about/pax-icon.svg" alt="about">
                                 </div>
                                 <div class="flex-fill">
-                                    <label for="guests">Pax</label>
+                                    <label for="guests">@lang('translation.pax')</label>
                                     <input id="guests" type="number" value="2" name="guests" placeholder="2">
                                 </div>
                                 <div class="d-flex gap-1">
@@ -184,17 +182,17 @@
                                     <img src="assets/frontend/images/about/transport-icon.svg" alt="about">
                                 </div><!-- /.banner-form__icon -->
                                 <div class="flex-fill">
-                                    <label for="type">Transportation</label>
+                                    <label for="type">@lang('translation.transportation')</label>
                                     <select name="type" class="selectpicker" id="type">
-                                        <option value="select">Yes</option>
-                                        <option value="africa">No</option>
+                                        <option value="yes">@lang('translation.yes')</option>
+                                        <option value="no">@lang('translation.no')</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                         <div class="banner-form__col banner-form__col--5">
                             <button type="submit" aria-label="search submit" class="trevlo-btn trevlo-btn--base">
-                                <span>Book Now @lang('translation.menu')</span>
+                                <span>@lang('translation.book_now')</span>
                             </button>
                         </div>
                     </div>
@@ -229,30 +227,30 @@
                     <div class="about-six__content">
                         <div class="sec-title sec-title--two text-left">
 
-                            <p class="sec-title__tagline">Our Story</p><!-- /.sec-title__tagline -->
+                            <p class="sec-title__tagline">@lang('translation.our_story')</p><!-- /.sec-title__tagline -->
 
-                            <h2 class="sec-title__title">We strive to elevate Vietnamese robusta coffee for global coffee lovers.</h2>
+                            <h2 class="sec-title__title">@lang('translation.we_strive')</h2>
                             <!-- /.sec-title__title -->
                         </div><!-- /.sec-title -->
-                        <p class="about-six__text wow fadeInUp" data-wow-duration="1500ms">Located in the Vietnam Central Highlands at 1000m, we are Elon Farm - coffee producers with experience in elevating the taste of Robusta since 2017.</p>
+                        <p class="about-six__text wow fadeInUp" data-wow-duration="1500ms">@lang('translation.located_in')</p>
                         <!-- /.about-six__text -->
                         <div class="about-six__inner d-flex flex-column align-items-center">
                             <div class="about-six__box wow fadeInUp" data-wow-duration="1500ms">
                                 <div class="about-six__box__icon"><img src="assets/frontend/images/about/coffee-icon.svg" alt="about"></div>
                                 <div class="about-six__box__content">
-                                    <h3 class="about-six__box__title">Vietnam's Leadership in Robusta Coffee Production</h3>
-                                    <p class="about-six__box__text">By refining processing methods, we enhance the flavor and commercial value of Robusta, creating high-quality products that elevate its market reputation.</p>
+                                    <h3 class="about-six__box__title">@lang('translation.vietnam_leadership')</h3>
+                                    <p class="about-six__box__text">@lang('translation.by_refining')</p>
                                 </div><!-- /.about-six__box__content -->
                             </div><!-- /.about-box -->
                             <div class="about-six__box wow fadeInUp mb-3" data-wow-duration="1500ms">
                                 <div class="about-six__box__icon"><img src="assets/frontend/images/about/coffee-icon.svg" alt="about"></div>
                                 <div class="about-six__box__content">
-                                    <h3 class="about-six__box__title">Connecting People to the Premium Potential of Robusta</h3>
-                                    <p class="about-six__box__text">Through immersive agritourism experiences, we introduce high-quality Vietnamese Robusta to new audiences while rekindling appreciation among longtime fans. These efforts aim to showcase the unique qualities of Robusta and build deeper connections with coffee lovers worldwide.</p>
+                                    <h3 class="about-six__box__title">@lang('translation.connecting_people')</h3>
+                                    <p class="about-six__box__text">@lang('translation.through_immersive')</p>
                                 </div><!-- /.about-six__box__content -->
                             </div><!-- /.about-box -->
                             <a href="/robusta-vietnam" class="trevlo-btn trevlo-btn--two trevlo-btn--base w-50">
-                                <span>more about us</span>
+                                <span>@lang('translation.more_about_us')</span>
                                 <i class="trevlo-one-icon-up-right-arrow"></i>
                             </a><!-- /.trevlo-btn -->
                         </div><!-- /.about-six__inner -->
@@ -262,7 +260,7 @@
                                     <img src="assets/frontend/images/about/whapsapp-icon.svg" alt="about">
                                 </div>
                                 <div class="about-six__phone__text">
-                                    <p class="about-six__phone__title">Chat on WhatsApp</p>
+                                    <p class="about-six__phone__title">@lang('translation.chat_whatsapp')</p>
                                     <h4 class="about-six__phone__number"><a href="tel:+84969285991">(+84) 969285991</a>
                                     </h4>
                                 </div>
@@ -272,7 +270,7 @@
                                     <img src="assets/frontend/images/about/zalo-icon.svg" alt="about">
                                 </div>
                                 <div class="about-six__phone__text">
-                                    <p class="about-six__phone__title">Chat on Zalo</p>
+                                    <p class="about-six__phone__title">@lang('translation.chat_zalo')</p>
                                     <h4 class="about-six__phone__number"><a href="tel:+84397529379">(+84) 397529379</a>
                                     </h4>
                                 </div>
@@ -356,24 +354,24 @@
         <div class="container">
             <div class="sec-title--two text-left d-flex mx-4 align-items-center pb-3 border-bottom">
                 <div class="flex-fill">
-                    <p class="sec-title__tagline">Our Story</p>
-                    <h2 class="sec-title__title title-made-by">Made By Us</h2>
+                    <p class="sec-title__tagline">@lang('translation.our_coffee')</p>
+                    <h2 class="sec-title__title title-made-by">@lang('translation.made_by_us')</h2>
                 </div>
                 <a href="/robusta-vietnam" class="h-fit-content ">
-                    <span>Read more about our process</span>
+                    <span>@lang('translation.read_more')</span>
                     <i class="trevlo-one-icon-up-right-arrow"></i>
                 </a><!-- /.trevlo-btn -->
             </div><!-- /.sec-title -->
-            <p class="about-six__box__text my-4">We are proud to offer high quality robusta coffee green beans from Vietnam. Our beans are grown in optimal conditions and processed with care to ensure the best flavor and aroma. Whether you are a roaster, a retailer, or a coffee lover, you will appreciate the excellence of our Robusta coffee green beans.</p>
+            <p class="about-six__box__text my-4">@lang('translation.we-are')</p>
             <div class="row tabs-box">
                 <div class="col-xl-5 col-lg-5">
                     <ul class="list-unstyled tab-buttons tab-one__list">
-                        <li data-tab="#tent_camping" class="tab-btn active-btn"><img src="assets/frontend/images/about/tab1-mbu.svg" alt="gallery" class="logo-img">Selection of Coffee Cherries</li>
-                        <li data-tab="#adventure_travel" class="tab-btn"><img src="assets/frontend/images/about/tab2-mbu.svg" alt="gallery" class="logo-img">Natural Process</li>
-                        <li data-tab="#mountain_biking" class="tab-btn"><img src="assets/frontend/images/about/tab3-mbu.svg" alt="gallery" class="logo-img">Full-Washed Process</li>
-                        <li data-tab="#discovery_world" class="tab-btn"><img src="assets/frontend/images/about/tab4-mbu.svg" alt="gallery" class="logo-img">Honey Process</li>
-                        <li data-tab="#fishing_swimming" class="tab-btn"><img src="assets/frontend/images/about/tab5-mbu.svg" alt="gallery" class="logo-img">Experimental Processes</li>
-                        <li data-tab="#paragliding_tours" class="tab-btn"><img src="assets/frontend/images/about/tab6-mbu.svg" alt="gallery" class="logo-img">Final Drying and Quality Check</li>
+                        <li data-tab="#tent_camping" class="tab-btn active-btn"><img src="assets/frontend/images/about/tab1-mbu.svg" alt="gallery" class="logo-img">@lang('translation.selection_of')</li>
+                        <li data-tab="#adventure_travel" class="tab-btn"><img src="assets/frontend/images/about/tab2-mbu.svg" alt="gallery" class="logo-img">@lang('translation.natural_process')</li>
+                        <li data-tab="#mountain_biking" class="tab-btn"><img src="assets/frontend/images/about/tab3-mbu.svg" alt="gallery" class="logo-img">@lang('translation.full-washed')</li>
+                        <li data-tab="#discovery_world" class="tab-btn"><img src="assets/frontend/images/about/tab4-mbu.svg" alt="gallery" class="logo-img">@lang('translation.honey_process')</li>
+                        <li data-tab="#fishing_swimming" class="tab-btn"><img src="assets/frontend/images/about/tab5-mbu.svg" alt="gallery" class="logo-img">@lang('translation.experimental_processes')</li>
+                        <li data-tab="#paragliding_tours" class="tab-btn"><img src="assets/frontend/images/about/tab6-mbu.svg" alt="gallery" class="logo-img">@lang('translation.final_drying')</li>
                     </ul><!-- /.list-unstyledf -->
                 </div>
                 <div class="col-xl-7 col-lg-7">
@@ -383,13 +381,13 @@
                                 <div class="tab-one__content__img">
                                     <img src="assets/frontend/images/about/tab-1-1.png" alt="tab">
                                 </div>
-                                <h4 class="tab-one__content__title">1. Selection of Coffee Cherries</h4>
+                                <h4 class="tab-one__content__title">1. @lang('translation.selection_of')</h4>
                                 <p class="tab-one__content__text">
-                                    We carefully handpick only ripe coffee cherries to ensure premium quality. After harvesting, the cherries are soaked to remove impurities such as broken fruit, twigs, and soil.
+                                    @lang('translation.we_carefully')
                                 </p>
                                 <ul class="tab-one__content__list">
-                                    <li><span class="far fa-check-circle"></span>Ripeness checked by color</li>
-                                    <li><span class="far fa-check-circle"></span>Impurities inspected post-soaking</li>
+                                    <li><span class="far fa-check-circle"></span>@lang('translation.ripeness_checked')</li>
+                                    <li><span class="far fa-check-circle"></span>@lang('translation.impurities_inspected')</li>
                                 </ul>
                                 <div class="clearfix"></div>
                             </div>
@@ -399,13 +397,13 @@
                                 <div class="tab-one__content__img">
                                     <img src="assets/frontend/images/about/tab-1-2.png" alt="tab">
                                 </div>
-                                <h4 class="tab-one__content__title">2. Natural Process</h4>
+                                <h4 class="tab-one__content__title">2. @lang('translation.natural_process')</h4>
                                 <p class="tab-one__content__text">
-                                    Bold, naturally sweet, and low in acidity, our coffee is sun-dried in thin layers and carefully turned to enhance its vibrant flavors.
+                                    @lang('translation.bold_naturally')
                                 </p>
                                 <ul class="tab-one__content__list">
-                                    <li><span class="far fa-check-circle"></span>Sunlight Exposure Optimized</li>
-                                    <li><span class="far fa-check-circle"></span>Drying monitored every hour</li>
+                                    <li><span class="far fa-check-circle"></span>@lang('translation.sunlight_exposure')</li>
+                                    <li><span class="far fa-check-circle"></span>@lang('translation.drying_monitored')</li>
                                 </ul>
                                 <div class="clearfix"></div>
                             </div>
@@ -415,13 +413,13 @@
                                 <div class="tab-one__content__img">
                                     <img src="assets/frontend/images/about/tab-1-3.png" alt="tab">
                                 </div>
-                                <h4 class="tab-one__content__title">3. Full-Washed Process</h4>
+                                <h4 class="tab-one__content__title">3. @lang('translation.full-washed')</h4>
                                 <p class="tab-one__content__text">
-                                    Clean, bright, with light acidity, our coffee is fermented for 8 hours, washed, and dried to achieve pure, fruity flavors.
+                                    @lang('translation.clean_bright')
                                 </p>
                                 <ul class="tab-one__content__list">
-                                    <li><span class="far fa-check-circle"></span>Fermentation time precisely tracked</li>
-                                    <li><span class="far fa-check-circle"></span>Cleanliness checked post-washing</li>
+                                    <li><span class="far fa-check-circle"></span>@lang('translation.fermentation_time')</li>
+                                    <li><span class="far fa-check-circle"></span>@lang('translation.cleanliness_checked')</li>
                                 </ul>
                                 <div class="clearfix"></div>
                             </div>
@@ -431,13 +429,13 @@
                                 <div class="tab-one__content__img">
                                     <img src="assets/frontend/images/about/tab-1-4.png" alt="tab">
                                 </div>
-                                <h4 class="tab-one__content__title">4. Honey Process</h4>
+                                <h4 class="tab-one__content__title">4. @lang('translation.honey_process')</h4>
                                 <p class="tab-one__content__text">
-                                    Sweet, smooth, and balanced acidity, our coffee is de-pulped and dried with its mucilage intact, developing rich honey-like hues and complex flavors.
+                                    @lang('translation.sweet_smooth')
                                 </p>
                                 <ul class="tab-one__content__list">
-                                    <li><span class="far fa-check-circle"></span>Ingredient ratios precisely calculated</li>
-                                    <li><span class="far fa-check-circle"></span>Flavor testing pre- and post-process</li>
+                                    <li><span class="far fa-check-circle"></span>@lang('translation.ingredient_ratios')</li>
+                                    <li><span class="far fa-check-circle"></span>@lang('translation.flavor_testing')</li>
                                 </ul>
                                 <div class="clearfix"></div>
                             </div>
@@ -447,13 +445,13 @@
                                 <div class="tab-one__content__img">
                                     <img src="assets/frontend/images/about/tab-1-5.png" alt="tab">
                                 </div>
-                                <h4 class="tab-one__content__title">5. Experimental Processes</h4>
+                                <h4 class="tab-one__content__title">5. @lang('translation.experimental_processes')</h4>
                                 <p class="tab-one__content__text">
-                                    At Elon Farm, we embrace innovation by experimenting with fermentation techniques. By using ingredients such as pineapple juice or beer, we create coffee with diverse and unique flavor profiles, offering an exciting experience for coffee lovers.
+                                    @lang('translation.at_elon_farm')
                                 </p>
                                 <ul class="tab-one__content__list">
-                                    <li><span class="far fa-check-circle"></span>Ingredient ratios precisely calculated</li>
-                                    <li><span class="far fa-check-circle"></span>Consistency across batches ensured</li>
+                                    <li><span class="far fa-check-circle"></span>@lang('translation.ingredient_ratios')</li>
+                                    <li><span class="far fa-check-circle"></span>@lang('translation.consistency_across')</li>
                                 </ul>
                                 <div class="clearfix"></div>
                             </div>
@@ -463,13 +461,13 @@
                                 <div class="tab-one__content__img">
                                     <img src="assets/frontend/images/about/tab-1-6.png" alt="tab">
                                 </div>
-                                <h4 class="tab-one__content__title">6. Final Drying and Quality Check</h4>
+                                <h4 class="tab-one__content__title">6. @lang('translation.final_drying')</h4>
                                 <p class="tab-one__content__text">
-                                    The beans are carefully dried under controlled conditions to maintain consistent quality. Once dried, they undergo a rigorous quality check to evaluate aroma and flavor, ensuring each batch aligns with our high standards.
+                                    @lang('translation.the_bean')
                                 </p>
                                 <ul class="tab-one__content__list">
-                                    <li><span class="far fa-check-circle"></span>Moisture content precisely measured</li>
-                                    <li><span class="far fa-check-circle"></span>Final flavor consistency verified</li>
+                                    <li><span class="far fa-check-circle"></span>@lang('translation.moisture_content')</li>
+                                    <li><span class="far fa-check-circle"></span>@lang('translation.final_flavor')</li>
                                 </ul>
                                 <div class="clearfix"></div>
                             </div>
@@ -490,15 +488,15 @@
                     <div class="col-lg-8">
                         <div class="sec-title sec-title--two text-left">
 
-                            <p class="sec-title__tagline">Our Latest Blog</p><!-- /.sec-title__tagline -->
+                            <p class="sec-title__tagline">@lang('translation.latest_blog')</p><!-- /.sec-title__tagline -->
 
-                            <h2 class="sec-title__title">Our Latest News</h2><!-- /.sec-title__title -->
+                            <h2 class="sec-title__title">@lang('translation.latest_news')</h2><!-- /.sec-title__title -->
                         </div><!-- /.sec-title -->
                     </div><!-- /.col-lg-8 -->
                     <div class="col-lg-4">
                         <div class="blog-three__button">
                             <a href="#" class="h-fit-content ">
-                                <span>View All Blogs</span>
+                                <span>@lang('translation.all_blog')</span>
                                 <i class="trevlo-one-icon-up-right-arrow"></i>
                             </a><!-- /.trevlo-btn -->
                         </div><!-- /.blog-three__button -->
@@ -523,7 +521,7 @@
                                         <span class="blog-three__card__meta__icon">
                                             <i class="trevlo-one-icon-user"></i>
                                         </span>
-                                        by {{ $news[0]['createdBy']['name'] }}
+                                        @lang('translation.by') {{ $news[0]['createdBy']['name'] }}
                                     </a>
                                 </li>
                             </ul>
@@ -547,7 +545,7 @@
                                                 <span class="blog-three__card__meta__icon">
                                                     <i class="trevlo-one-icon-user"></i>
                                                 </span>
-                                                by {{ $item['created_by']['name'] ?? 'Unknown' }}
+                                                @lang('translation.by') {{ $item['created_by']['name'] ?? 'Unknown' }}
                                             </a>
                                         </li>
                                     </ul>
@@ -572,9 +570,9 @@
         <div class="container">
             <div class="sec-title sec-title--two text-center">
 
-                <p class="sec-title__tagline">Our feedback</p><!-- /.sec-title__tagline -->
+                <p class="sec-title__tagline">@lang('translation.our_feedback')</p><!-- /.sec-title__tagline -->
 
-                <h2 class="sec-title__title">What Peoples Say About Elon Farm</h2><!-- /.sec-title__title -->
+                <h2 class="sec-title__title">@lang('translation.what_people_say')</h2><!-- /.sec-title__title -->
             </div><!-- /.sec-title -->
             <!-- /.sec-title -->
             <div class="testimonial-three__carousel trevlo-owl__carousel trevlo-owl__carousel--basic-nav trevlo-owl__carousel--with-shadow owl-theme owl-carousel" data-owl-options='{
@@ -609,10 +607,10 @@
                                 <span class="trevlo-one-icon-quote"></span>
                             </div><!-- /.testimonials-card-three__quote-icon -->
                             <div class="testimonials-card-three__identity">
-                                <h5 class="testimonials-card-three__identity__name">Guy Hawkins</h5>
-                                <p class="testimonials-card-three__identity__designation">managing director</p>
+                                <h5 class="testimonials-card-three__identity__name">Anna Thompson</h5>
+                                <p class="testimonials-card-three__identity__designation">Yorkshire, UK</p>
                             </div><!-- /.testimonials-card-three__identity -->
-                            <p class="testimonials-card-three__quote">travel agency Company also impressed us with their transpa regarding costs. The initial quote was</p><!-- /.testimonials-card-three__quote -->
+                            <p class="testimonials-card-three__quote">@lang('translation.anna_thompson')</p><!-- /.testimonials-card-three__quote -->
                             <div class="trevlo-ratings">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                             </div>
@@ -629,10 +627,10 @@
                                 <span class="trevlo-one-icon-quote"></span>
                             </div><!-- /.testimonials-card-three__quote-icon -->
                             <div class="testimonials-card-three__identity">
-                                <h5 class="testimonials-card-three__identity__name">Robert Fox</h5>
-                                <p class="testimonials-card-three__identity__designation">Tourist</p>
+                                <h5 class="testimonials-card-three__identity__name">Liam Anderson</h5>
+                                <p class="testimonials-card-three__identity__designation">Victoria, Australia</p>
                             </div><!-- /.testimonials-card-three__identity -->
-                            <p class="testimonials-card-three__quote">Flexible Classes refers to the process of acquiring is knowledge free or skills through the use</p><!-- /.testimonials-card-three__quote -->
+                            <p class="testimonials-card-three__quote">@lang('translation.liam_anderson')</p><!-- /.testimonials-card-three__quote -->
                             <div class="trevlo-ratings">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                             </div>
@@ -649,10 +647,10 @@
                                 <span class="trevlo-one-icon-quote"></span>
                             </div><!-- /.testimonials-card-three__quote-icon -->
                             <div class="testimonials-card-three__identity">
-                                <h5 class="testimonials-card-three__identity__name">Michael G. Ware</h5>
-                                <p class="testimonials-card-three__identity__designation">Tourist</p>
+                                <h5 class="testimonials-card-three__identity__name">Michael Carter</h5>
+                                <p class="testimonials-card-three__identity__designation">Ontario, Canada</p>
                             </div><!-- /.testimonials-card-three__identity -->
-                            <p class="testimonials-card-three__quote">There are many variations of passages, but the majority have suffered alteradution in some form</p><!-- /.testimonials-card-three__quote -->
+                            <p class="testimonials-card-three__quote">@lang('translation.michael_carter')</p><!-- /.testimonials-card-three__quote -->
                             <div class="trevlo-ratings">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                             </div>
@@ -670,9 +668,9 @@
                     <div class="col-lg-12">
                         <div class="sec-title sec-title--two text-left">
 
-                            <p class="sec-title__tagline">Our Tours</p><!-- /.sec-title__tagline -->
+                            <p class="sec-title__tagline">@lang('translation.our_tours')</p><!-- /.sec-title__tagline -->
 
-                            <h2 class="sec-title__title">Select your desired tour</h2><!-- /.sec-title__title -->
+                            <h2 class="sec-title__title">@lang('translation.select_tour')</h2><!-- /.sec-title__title -->
                         </div><!-- /.sec-title -->
                     </div><!-- /.col-lg-12 -->
                 </div><!-- /.row -->
@@ -696,25 +694,25 @@
                             <div class="tour-listing-four__list__icon">
                                 <i class="icon-clock-1"></i>
                             </div><!-- /.tour-listing-four__list__icon -->
-                            Duration <span>{{ $tour['duration'] }}</span>
+                            @lang('translation.duration') <span>{{ $tour['duration'] }}</span>
                         </li>
                         <li>
                             <div class="tour-listing-four__list__icon">
                                 <i class="trevlo-one-icon-paper-plane"></i>
                             </div><!-- /.tour-listing-four__list__icon -->
-                            Tour Type <span>{{ $tour['activity'] }}</span>
+                            @lang('translation.tour_type') <span>{{ $tour['activity'] }}</span>
                         </li>
                         <li>
                             <div class="tour-listing-four__list__icon">
                                 <i class="trevlo-one-icon-maps-and-flags"></i>
                             </div><!-- /.tour-listing-four__list__icon -->
-                            Location <span>{{ $tour['location'] }}</span>
+                            @lang('translation.location') <span>{{ $tour['location'] }}</span>
                         </li>
                     </ul><!-- /.tour-listing-four__list -->
                     <div class="tour-listing-four__image tour-listing-four__col wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
                         <div class="tour-listing-four__image__inner" style="background-image: url({{ asset($tour['images']) }});">
                             <div class="tour-listing-four__image__left">
-                                <h3 class="tour-listing-four__image__title">form</h3>
+                                <h3 class="tour-listing-four__image__title">@lang('translation.from')</h3>
                                 <!-- /.tour-listing-four__image__title -->
                                 <h3 class="tour-listing-four__image__price">{{ number_format($tour['price'], 0, ',', '.') }}đ</h3>
                                 <!-- /.tour-listing-four__image__price -->
@@ -747,43 +745,43 @@
                     <div class="trevlo-accrodion why-choose-five__faq" data-grp-name="why-choose-five__faq">
                         <div class="accrodion active wow animated fadeInUp" data-wow-delay="0s" data-wow-duration="1500ms">
                             <div class="accrodion-title">
-                                <h4>How do I get to Elon Farm from the airport?</h4>
+                                <h4>@lang('translation.get_airport')</h4>
                             </div>
                             <div class="accrodion-content" style="display: none;">
                                 <div class="inner">
-                                    <p>Elon Farm is approximately 30 km from Dalat Airport. You can take a taxi or arrange a private transfer through our team. The scenic drive takes about 45 minutes and offers beautiful views of the Central Highlands.</p>
+                                    <p>@lang('translation.dalat_airport')</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="accrodion wow animated fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
                             <div class="accrodion-title">
-                                <h4>Can I participate in coffee activities all year round?</h4>
+                                <h4>@lang('translation.participate_activities')</h4>
                             </div>
                             <div class="accrodion-content">
                                 <div class="inner">
-                                    <p>Yes, but the experience varies by season! During the harvest season (November to January), you can pick ripe coffee cherries. Outside of this period, you’ll still get to learn about coffee processing, roasting, and brewing.</p>
+                                    <p>@lang('translation.yes_activities')</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="accrodion wow animated fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms">
                             <div class="accrodion-title">
-                                <h4>Are meals or snacks provided during the tour?</h4>
+                                <h4>@lang('translation.are_meals')</h4>
                             </div>
                             <div class="accrodion-content" style="display: none;">
                                 <div class="inner">
-                                    <p>Yes, we provide light snacks and coffee as part of the tour. For a full meal, you can enjoy authentic local dishes by arranging in advance. Let us know if you have any dietary restrictions or preferences!</p>
+                                    <p>@lang('translation.yes_meal')</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accrodion wow animated fadeInUp" data-wow-delay="0.3s" data-wow-duration="1500ms">
                             <div class="accrodion-title">
-                                <h4>Are there any other activities besides coffee tours?</h4>
+                                <h4>@lang('translation.other_activities')</h4>
                             </div>
                             <div class="accrodion-content" style="display: none;">
                                 <div class="inner">
-                                    <p>Yes! You can explore local attractions like Elephant Waterfall, Linh An Pagoda, and traditional silk-making villages. We also offer cycling trips and cooking classes with fresh, organic ingredients from the farm.</p>
+                                    <p>@lang('translation.yes_other')</p>
                                 </div>
                             </div>
                         </div>
@@ -793,12 +791,12 @@
                     <div class="why-choose-five__content">
                         <div class="sec-title sec-title--two text-left">
 
-                            <p class="sec-title__tagline">Get To Know Us</p><!-- /.sec-title__tagline -->
+                            <p class="sec-title__tagline">@lang('translation.get_know')</p><!-- /.sec-title__tagline -->
 
-                            <h2 class="sec-title__title">Why You Should Choose <br> Elon Farm?</h2><!-- /.sec-title__title -->
+                            <h2 class="sec-title__title">@lang('translation.why_should_choose') <br> Elon Farm?</h2><!-- /.sec-title__title -->
                         </div><!-- /.sec-title -->
                         <div class="why-choose-five__text-box wow fadeInUp" data-wow-duration="1500ms">
-                            <p class="why-choose-five__text">Elon Farm stands out for its innovative approach to agriculture, offering sustainable, high-quality products while integrating modern technology. Whether you’re looking for fresh, organic produce or customized agricultural solutions, Elon Farm provides expert services designed to enhance farming productivity and sustainability.</p><!-- /.why-choose-five__text -->
+                            <p class="why-choose-five__text">@lang('translation.why_choose_title')</p><!-- /.why-choose-five__text -->
                         </div><!-- /.why-choose-five__text-box -->
                         <div class="why-choose-five__inner">
                             <div class="why-choose-five__item wow fadeInUp" data-wow-duration="1500ms">
@@ -806,11 +804,11 @@
                                     <div class="why-choose-five__item__icon">
                                         <img src="assets/frontend/images/about/icon-why-choose.svg" alt="tab">
                                     </div><!-- /.why-choose-five__item__icon -->
-                                    <h3 class="why-choose-five__item__title">High-Quality Robusta Coffee</h3>
+                                    <h3 class="why-choose-five__item__title">@lang('translation.high_quality_robusta')</h3>
                                     <!-- /.why-choose-five__item__title -->
                                 </div><!-- /.why-choose-five__item__left -->
                                 <div class="why-choose-five__item__right">
-                                    <p class="why-choose-five__item__text">We are dedicated to producing premium Robusta coffee that challenges the stereotypes. Our beans are rich in flavor, sustainably grown, and crafted with care to deliver an unforgettable coffee experience.</p><!-- /.why-choose-five__item__text -->
+                                    <p class="why-choose-five__item__text">@lang('translation.we_are_dedicated')</p><!-- /.why-choose-five__item__text -->
                                 </div><!-- /.why-choose-five__item__right -->
                             </div><!-- /.why-choose-five__item -->
                             <div class="why-choose-five__item wow fadeInUp" data-wow-duration="1500ms">
@@ -818,11 +816,11 @@
                                     <div class="why-choose-five__item__icon">
                                         <img src="assets/frontend/images/about/icon-why-choose.svg" alt="tab">
                                     </div><!-- /.why-choose-five__item__icon -->
-                                    <h3 class="why-choose-five__item__title">Natural Beauty</h3>
+                                    <h3 class="why-choose-five__item__title">@lang('translation.natural_beauty')</h3>
                                     <!-- /.why-choose-five__item__title -->
                                 </div><!-- /.why-choose-five__item__left -->
                                 <div class="why-choose-five__item__right">
-                                    <p class="why-choose-five__item__text">Nestled in Lam Ha, our farm offers breathtaking views of rolling hills, lush plantations, and serene countryside landscapes. It’s the perfect escape for nature and coffee lovers alike.</p><!-- /.why-choose-five__item__text -->
+                                    <p class="why-choose-five__item__text">@lang('translation.nested_in')</p><!-- /.why-choose-five__item__text -->
                                 </div><!-- /.why-choose-five__item__right -->
                             </div><!-- /.why-choose-five__item -->
                             <div class="why-choose-five__item wow fadeInUp" data-wow-duration="1500ms">
@@ -830,11 +828,11 @@
                                     <div class="why-choose-five__item__icon">
                                         <img src="assets/frontend/images/about/icon-why-choose.svg" alt="tab">
                                     </div><!-- /.why-choose-five__item__icon -->
-                                    <h3 class="why-choose-five__item__title">Cultural Immersion</h3>
+                                    <h3 class="why-choose-five__item__title">@lang('translation.cultural_immersion')</h3>
                                     <!-- /.why-choose-five__item__title -->
                                 </div><!-- /.why-choose-five__item__left -->
                                 <div class="why-choose-five__item__right">
-                                    <p class="why-choose-five__item__text">Our tours are not just about coffee—they’re about connecting with the local community. Learn about Vietnamese traditions, enjoy authentic dishes, and participate in activities like cycling and silk-making.</p><!-- /.why-choose-five__item__text -->
+                                    <p class="why-choose-five__item__text">@lang('translation.our_tours_not')</p><!-- /.why-choose-five__item__text -->
                                 </div><!-- /.why-choose-five__item__right -->
                             </div><!-- /.why-choose-five__item -->
                             <div class="why-choose-five__item wow fadeInUp" data-wow-duration="1500ms">
@@ -842,11 +840,11 @@
                                     <div class="why-choose-five__item__icon">
                                         <img src="assets/frontend/images/about/icon-why-choose.svg" alt="tab">
                                     </div><!-- /.why-choose-five__item__icon -->
-                                    <h3 class="why-choose-five__item__title">Commit to Sustainability</h3>
+                                    <h3 class="why-choose-five__item__title">@lang('translation.commit_sustainability')</h3>
                                     <!-- /.why-choose-five__item__title -->
                                 </div><!-- /.why-choose-five__item__left -->
                                 <div class="why-choose-five__item__right">
-                                    <p class="why-choose-five__item__text">At Elon Farm, we prioritize eco-friendly practices and support local farmers. By choosing us, you’re contributing to sustainable coffee production and community development.</p><!-- /.why-choose-five__item__text -->
+                                    <p class="why-choose-five__item__text">@lang('translation.we_prioritize')</p><!-- /.why-choose-five__item__text -->
                                 </div><!-- /.why-choose-five__item__right -->
                             </div><!-- /.why-choose-five__item -->
                         </div><!-- /.why-choose-five__inner -->
@@ -864,15 +862,14 @@
                 <div class="col-xl-6">
                     <div class="why-choose-three__content">
                         <div class="sec-title text-left">
-                            <p class="sec-title__tagline text-white">Our Tour</p><!-- /.sec-title__tagline -->
-                            <h2 class="sec-title__title text-white">Elon Farm with love<br> from central highland</h2><!-- /.sec-title__title -->
+                            <p class="sec-title__tagline text-white">@lang('translation.our_tour')</p><!-- /.sec-title__tagline -->
+                            <h2 class="sec-title__title text-white">@lang('translation.our_tour1')<br> @lang('translation.our_tour2')</h2><!-- /.sec-title__title -->
                         </div><!-- /.sec-title --><!-- /.sec-title -->
                         <p class="why-choose-three__content__text text-white">
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteradution in
-                            some form by injected humour, some form
+                            @lang('translation.there_are_many')
                         </p>
                         <a href="/list-tour" class="trevlo-btn book-button">
-                            <span>Book now</span>
+                            <span>@lang('translation.book_now')</span>
                             <i class="trevlo-one-icon-up-right-arrow"></i>
                         </a><!-- /.trevlo-btn -->
                     </div>
