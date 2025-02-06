@@ -29,10 +29,10 @@
                         <form action="#" data-url="MAILCHIMP_FORM_URL"
                               class="footer-three__newsletter__form mc-form">
                             <input type="email" name="EMAIL" id="footer-three__newsletter__input"
-                                   placeholder="Enter Email" class="footer-three__newsletter__input">
+                                   placeholder="@lang('translation.enter_email')" class="footer-three__newsletter__input">
                             <button type="submit"
                                     class="footer-three__newsletter__btn trevlo-btn trevlo-btn--two trevlo-btn--base">
-                                <span>Subscribe</span></button>
+                                <span>@lang('translation.subscribe')</span></button>
                         </form><!-- /.footer-widget__newsletter-form -->
                         <div class="mc-form__response"></div><!-- /.mc-form__response -->
                     </div><!-- /.footer-three__newsletter -->
@@ -41,8 +41,8 @@
             <div class="row gutter-y-40">
                 <div class="col-xl-3 col-md-6 wow animated fadeInUp" data-wow-delay="0s" data-wow-duration="1500ms">
                     <div class="footer-widget footer-widget--about">
-                        <h2 class="footer-widget__title">About us</h2><!-- /.footer-widget__title -->
-                        <p class="footer-widget__about-text">Promoting sustainable and innovative farming practices to create a greener, healthier future for all.</p><!-- /.footer-widget__about-text -->
+                        <h2 class="footer-widget__title">@lang('translation.about-us')</h2><!-- /.footer-widget__title -->
+                        <p class="footer-widget__about-text">@lang('translation.promoting_sustainable')</p><!-- /.footer-widget__about-text -->
                         <div class="social-links">
                             <a href="https://www.facebook.com/elonfarm">
                                 <i class="fab fa-facebook-f" aria-hidden="true"></i>
@@ -74,74 +74,49 @@
                 <div class="col-xl-3 col-md-3 wow animated fadeInUp" data-wow-delay="0.1s"
                      data-wow-duration="1500ms">
                     <div class="footer-widget footer-widget--links footer-widget--links-1">
-                        <h2 class="footer-widget__title">Useful links</h2><!-- /.footer-widget__title -->
+                        <h2 class="footer-widget__title">@lang('translation.useful_links')</h2><!-- /.footer-widget__title -->
                         <ul class="footer-widget__links">
-                            <li><a href="login.html">Account</a></li>
-                            <li><a href="tour-listing-1.html">Tour Listings</a></li>
-                            <li><a href="contact.html">Privacy Policy</a></li>
-                            <li><a href="faq.html">Help</a></li>
+                            <li><a href="/list-tour">@lang('translation.tour_listing')</a></li>
                         </ul><!-- /.footer-widget__links -->
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-xl-3 col-md-3 -->
                 <div class="col-xl-2 col-md-3 wow animated fadeInUp" data-wow-delay="0.2s"
                      data-wow-duration="1500ms">
                     <div class="footer-widget footer-widget--links footer-widget--links-2">
-                        <h2 class="footer-widget__title">Company</h2><!-- /.footer-widget__title -->
+                        <h2 class="footer-widget__title">@lang('translation.tour_listing')</h2><!-- /.footer-widget__title -->
                         <ul class="footer-widget__links">
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="blog.html">Community Blog</a></li>
-                            <li><a href="destinations.html">Destinations</a></li>
-                            <li><a href="our-guide.html">Meet the Guide</a></li>
-                            <li><a href="contact.html">Contact Now</a></li>
+                            <li><a href="/about-us">@lang('translation.about-us')</a></li>
                         </ul><!-- /.footer-widget__links -->
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-xl-2 col-md-3 -->
                 <div class="col-xl-4 col-md-6 wow animated fadeInUp" data-wow-delay="0.3s"
                      data-wow-duration="1500ms">
                     <div class="footer-widget footer-widget--gallery">
-                        <h2 class="footer-widget__title">Our Gallery</h2><!-- /.footer-widget__title -->
+                        <h2 class="footer-widget__title">@lang('translation.gallery')</h2><!-- /.footer-widget__title -->
                         <div class="footer-widget__gallery">
                             <a href="gallery.html" class="footer-widget__gallery__link">
                                 <img src="assets/frontend/images/gallery/footer-widget-gallery-1.png"
                                      alt="footer-widget-gallery">
-                                <span class="footer-widget__gallery__icon">
-                                            <i class="icon-plus"></i>
-                                        </span>
                             </a><!-- /.footer-widget__gallery__link -->
                             <a href="gallery.html" class="footer-widget__gallery__link">
                                 <img src="assets/frontend/images/gallery/footer-widget-gallery-2.png"
                                      alt="footer-widget-gallery">
-                                <span class="footer-widget__gallery__icon">
-                                            <i class="icon-plus"></i>
-                                        </span>
                             </a><!-- /.footer-widget__gallery__link -->
                             <a href="gallery.html" class="footer-widget__gallery__link">
                                 <img src="assets/frontend/images/gallery/footer-widget-gallery-3.png"
                                      alt="footer-widget-gallery">
-                                <span class="footer-widget__gallery__icon">
-                                            <i class="icon-plus"></i>
-                                        </span>
                             </a><!-- /.footer-widget__gallery__link -->
                             <a href="gallery.html" class="footer-widget__gallery__link">
                                 <img src="assets/frontend/images/gallery/footer-widget-gallery-4.png"
                                      alt="footer-widget-gallery">
-                                <span class="footer-widget__gallery__icon">
-                                            <i class="icon-plus"></i>
-                                        </span>
                             </a><!-- /.footer-widget__gallery__link -->
                             <a href="gallery.html" class="footer-widget__gallery__link">
                                 <img src="assets/frontend/images/gallery/footer-widget-gallery-5.png"
                                      alt="footer-widget-gallery">
-                                <span class="footer-widget__gallery__icon">
-                                            <i class="icon-plus"></i>
-                                        </span>
                             </a><!-- /.footer-widget__gallery__link -->
                             <a href="gallery.html" class="footer-widget__gallery__link">
                                 <img src="assets/frontend/images/gallery/footer-widget-gallery-6.png"
                                      alt="footer-widget-gallery">
-                                <span class="footer-widget__gallery__icon">
-                                            <i class="icon-plus"></i>
-                                        </span>
                             </a><!-- /.footer-widget__gallery__link -->
                         </div>
                     </div><!-- /.footer-widget -->

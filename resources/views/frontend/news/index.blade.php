@@ -18,7 +18,7 @@
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">Robusta Vietnam</h2>
             <div class="page-header__breadcrumb-box">
                 <ul class="trevlo-breadcrumb">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/">@lang('translation.home')</a></li>
                     <li>Robusta Vietnam</li>
                 </ul><!-- /.trevlo-breadcrumb -->
             </div><!-- /.page-header__breadcrumb-box -->
@@ -44,7 +44,7 @@
                                     <ul class="blog__card-meta">
                                         <li>
                                             <span class="blog__card-meta-icon icon-user"></span>
-                                            <span class="blog__card-meta-author">By {{ $data['createdBy']['name'] }}</span>
+                                            <span class="blog__card-meta-author">@lang('translation.by') {{ $data['createdBy']['name'] }}</span>
                                         </li>
                                     </ul><!-- /.blog__card-meta -->
                                     <h3 class="blog__card-title">{{ $data['title'] }}</h3>
@@ -57,7 +57,7 @@
                     </div><!-- /.blog-details -->
                     <div class="post-info">
                         <div class="post-tag">
-                            <h3 class="post-tag__title">Tags:</h3>
+                            <h3 class="post-tag__title">@lang('translation.tags'):</h3>
                             <div class="post-tag__text-box">
                                 @foreach($tagNames as $item)
                                 <a href="#" class="post-tag__text">{{$item}}</a>
@@ -74,7 +74,7 @@
                     <div class="sidebar-blog @@extraClassName">
                         <aside class="widget-area">
                             <div class="sidebar-blog__single sidebar-blog__single--posts wow animated fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-                                <h4 class="sidebar-blog__title">Latest posts</h4><!-- /.sidebar-blog__title -->
+                                <h4 class="sidebar-blog__title">@lang('translation.latest_post')</h4><!-- /.sidebar-blog__title -->
                                 <ul class="sidebar-blog__posts ">
                                     @foreach($data['newsPre']->slice(0, 7) as $item)
                                     <li class="sidebar-blog__posts-item">
@@ -94,7 +94,7 @@
                             </div><!-- /.sidebar-blog__single -->
                             
                             <div class="sidebar-blog__single sidebar-blog__single--tags wow animated fadeInUp" data-wow-delay="0.3s" data-wow-duration="1500ms">
-                                <h4 class="sidebar-blog__title">Tags</h4><!-- /.sidebar-blog__title -->
+                                <h4 class="sidebar-blog__title">@lang('translation.tags')</h4><!-- /.sidebar-blog__title -->
                                 <div class="sidebar-blog__tags">
                                     @foreach($tagNames as $item)
                                     <a href="#" class="trevlo-btn trevlo-btn--white-two"><span>{{$item}}</span></a>
