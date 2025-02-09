@@ -209,7 +209,7 @@
                                                             <span class="icon-clock-1"></span>
                                                             <p class="tour-listing__card-day-text text-small">{{ $similarTour['duration'] }}</p>
                                                         </div><!-- /.tour-listing__card-day -->
-                                                        
+
                                                     </div><!-- /.tour-listing__card-bottom-left -->
                                                     <div class="tour-listing__card-bottom-right">
                                                         <h4 class="tour-listing__card-price">{{ number_format($similarTour['price'], 0, ',', '.') }}đ</h4>
@@ -222,27 +222,31 @@
                                 @endforeach
                             </div><!-- /.row -->
                         </div><!-- /.tour-listing-details__similar container-fluid -->
-                        
+
                         </div><!-- /.tour-listing-details__amenities -->
                     </div><!-- /.col-xl-8 -->
                     <div class="col-xl-4">
                         <aside class="tour-listing-sidebar">
-                            <form action="#" class="tour-listing-sidebar__form tour-listing-sidebar__item wow animated fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
+                            <form action="/book-tour" method="post" id="form-booking-tour" class="tour-listing-sidebar__form tour-listing-sidebar__item wow animated fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
+                                @csrf
+                                @method("post")
+                                <input name="product_id" type="hidden" value="{{$data->id}}" />
+                                <input name="price_product" type="hidden" value="{{$data->price}}" >
                                 <div class="banner-form">
                                     <h3 class="tour-listing-sidebar__title tour-listing-sidebar__price-ranger-title mb-3">@lang('translation.contact_information')</h3>
                                     <div class="banner-form__control">
                                         <label for="name">@lang('translation.name')</label>
-                                        <input id="name" type="text" name="name" placeholder="@lang('translation.your_name')">
+                                        <input id="name" type="text" name="customer_name" placeholder="@lang('translation.your_name')">
                                         <i><img src="assets/frontend/images/about/form-name.svg" alt="tab"></i>
                                     </div>
                                     <div class="banner-form__control">
-                                        <label for="email">Email</label>
-                                        <input id="email" type="email" name="email" placeholder="@lang('translation.your_email')">
+                                        <label for="customer_address_mail">Email</label>
+                                        <input id="customer_address_mail" type="email" name="customer_address_mail" placeholder="@lang('translation.your_email')">
                                         <i><img src="assets/frontend/images/about/form-email.svg" alt="tab"></i>
                                     </div>
                                     <div class="banner-form__control">
                                         <label for="phoneNumber">@lang('translation.phone_number')</label>
-                                        <input id="phoneNumber" type="text" name="phoneNumber" placeholder="@lang('translation.your_phone')">
+                                        <input id="phoneNumber" type="text" name="customer_number_phone" placeholder="@lang('translation.your_phone')">
                                         <i><img src="assets/frontend/images/about/form-phone.svg" alt="tab"></i>
                                     </div>
                                 </div>
@@ -251,8 +255,8 @@
                                      <div class="banner-form__control">
                                         <label for="type">Tour</label>
                                         <select name="type" class="selectpicker" id="type">
-                                            <option value="full-day">@lang('translation.full_day_tour')</option>
-                                            <option value="half-day">@lang('translation.half_day_tour')</option>
+                                            <option value="1">@lang('translation.full_day_tour')</option>
+                                            <option value="0">@lang('translation.half_day_tour')</option>
                                         </select>
                                         <i><img src="assets/frontend/images/about/form-tour.svg" alt="tab"></i>
                                     </div>
@@ -300,24 +304,25 @@
                                     <h3 class="tour-listing-sidebar__title tour-listing-sidebar__amenities-title">@lang('translation.specical_request')</h3>
                                     <div class="tour-listing-sidebar__amenities-box">
                                         <div class="form-checked-box">
-                                            <input type="checkbox" name="dietary-restrictions" id="dietary-restrictions">
+                                            <input type="checkbox" name="special_request[]" value="dietary restrictions" id="dietary-restrictions">
                                             <label for="dietary-restrictions"><span></span>@lang('translation.dietary_restrictions')</label>
                                         </div>
                                         <div class="form-checked-box">
-                                            <input type="checkbox" name="allergies" id="allergies">
+                                            <input type="checkbox" name="special_request[]" value="allergies" id="allergies">
                                             <label for="allergies"><span></span>@lang('translation.allergies')</label>
                                         </div>
                                         <div class="form-checked-box">
-                                            <input type="checkbox" name="health-concerns" id="health-concerns">
+                                            <input type="checkbox" name="special_request[]" value="health concerns" id="health-concerns">
                                             <label for="health-concerns"><span></span>@lang('translation.health_concerns')</label>
                                         </div>
                                         <div class="form-checked-box">
-                                            <input type="checkbox" name="others" id="others">
+                                            <input type="checkbox" name="special_request[]" value="others" id="others">
                                             <label for="others"><span></span>@lang('translation.others')</label>
                                         </div>
                                     </div><!-- /.tour-listing-sidebar__amenities-box -->
                                 </div><!-- /.tour-listing-sidebar__amenities -->
-                                <h3 class="tour-listing-sidebar__title tour-listing-sidebar__amenities-title mt-3">2.580.000đ</h3>
+                                <h3 class="tour-listing-sidebar__title tour-listing-sidebar__amenities-title mt-3 total_price_tour">2.580.000đ</h3>
+                                <input type="hidden" name="price" class="price-hidden">
                                 <div class="tour-listing-sidebar__btn-box">
                                     <button type="submit" class="tour-listing-sidebar__btn trevlo-btn trevlo-btn--base">
                                         <span>@lang('translation.book_now')</span>
@@ -331,5 +336,47 @@
     </section>
 @endsection
 @section('scripts')
+<script>
+    $(document).ready(() => {
+        $('.trevlo-multi-datepicker').on('change', () => {
+            console.log(123131);
+        })
+        const calculate_price = () => {
+            const all_values = $('#form-booking-tour').serializeArray();
+            let keysToExtract = ["adults", "youth", "type", "transportation"];
+            let selectedValues = {};
+            all_values.forEach(item => {
+                if (keysToExtract.includes(item.name)) {
+                    selectedValues[item.name] = item.value;
+                }
+            });
+            selectedValues.price = selectedValues.type.toString() === "1" ? 1800000 : 800000;
+            let transport_fee = 0;
+            if (selectedValues.hasOwnProperty("transportation")) {
+                transport_fee = 300000;
+            }
+            let adults_fee = 0
+            if (selectedValues.hasOwnProperty("adults")) {
+                adults_fee = parseInt(selectedValues.adults) * selectedValues.price;
+            }
+            let youth_fee = 0;
+            if (selectedValues.hasOwnProperty("youth")) {
+                youth_fee = parseInt(selectedValues.youth) * selectedValues.price/2;
+            }
 
+            const total_fee = transport_fee + adults_fee + youth_fee;
+
+            $('.total_price_tour').html(`${Number(total_fee).toLocaleString("vi-VN")}đ`)
+            $('#price-hidden').val(total_fee);
+        }
+        $('.sub, .add').on('click', () => {
+            calculate_price();
+        })
+        $('#type, #adults, #youth, #transportation').on('change', () => {
+            calculate_price();
+        })
+
+        calculate_price();
+    })
+</script>
 @endsection

@@ -20,7 +20,7 @@
         </div><!-- /.container -->
     </section><!-- /.page-header -->
     <section class="tour-listing-one tour-listing section-space">
-       
+
         <div class="container">
              <div class="sec-title sec-title--two text-left">
                 <p class="sec-title__tagline">@lang('translation.our_tours')</p><!-- /.sec-title__tagline -->
@@ -48,7 +48,7 @@
                                 </a>
                             </div><!-- /.tour-listing__card-camera-group -->
                             <h3 class="tour-listing__card-title"><a href="/{{ $item['alias'] }}">{{ $item['name'] }}</a></h3>
-                            <p class="tour-listing__card-text text-small">{{ $item['description'] }}</p>
+                            <p class="tour-listing__card-text text-small">{!! $item['description'] !!}</p>
                             <div class="tour-listing__card-inner-content">
                                 <div class="tour-listing__card-review-box">
                                     <span class="icon-star"></span>

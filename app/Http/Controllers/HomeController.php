@@ -4,17 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\News;
 use App\Models\AboutUs;
-use App\Models\Customer;
 use App\Models\District;
 use App\Models\Order;
-use App\Models\OrderDetail;
-use App\Models\Poster;
 use App\Models\PreviewTour;
 use App\Models\Product;
 use App\Models\Promotion;
 use App\Models\Province;
-use App\Models\Service;
-use App\Models\Slider;
 use App\Models\Tags;
 use App\Models\Url;
 use App\Models\User;
@@ -28,7 +23,6 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
-use function GuzzleHttp\Promise\all;
 
 class HomeController extends Controller
 {

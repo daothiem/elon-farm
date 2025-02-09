@@ -36,7 +36,7 @@ Route::middleware(['frontend'])->group(function () {
     Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
     Route::get('/san-pham/search', ['uses' => 'Frontend\FrontendController@product_search'])->name('frontend.product_search');
     Route::get('/about-us', ['uses' => 'Frontend\FrontendController@aboutUs'])->name('frontend.aboutUs');
-    Route::get('/gio-hang', ['uses' => 'Frontend\FrontendController@cart'])->name('frontend.cart');
+    Route::post('/book-tour', ['uses' => 'Frontend\FrontendController@bookTour'])->name('frontend.bookTour');
     Route::post('/', ['uses' => 'Frontend\FrontendController@sendMailContact'])->name('frontend.sendMailContact');
     Route::get('/lien-he', ['uses' => 'Frontend\FrontendController@contact'])->name('frontend.contact');
     Route::get('/cua-hang', ['uses' => 'Frontend\FrontendController@store'])->name('frontend.store');
