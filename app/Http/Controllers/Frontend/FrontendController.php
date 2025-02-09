@@ -7,6 +7,7 @@ use App\Models\AboutUs;
 use App\Models\Category;
 use App\Models\News;
 use App\Models\NewsCategory;
+use App\Models\Order;
 use App\Models\Poster;
 use App\Models\Product;
 use App\Models\Province;
@@ -15,6 +16,9 @@ use App\Models\Amenity;
 use App\Models\Url;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use function GuzzleHttp\Promise\all;
+
 class FrontendController extends Controller
 {
     public function siteMap() {
@@ -80,12 +84,12 @@ class FrontendController extends Controller
             return view('frontend.404');
         }
         $dataSeo = [];
-        
+
         $model_name = $model->module;
         $view = 'frontend.'.strtolower($model_name).'.index';
         $model = '\\App\Models\\'.ucfirst($model_name);
         $data = $model::where('alias',$alias)->first();
-        
+
         if ($model_name === 'Product') {
             $data['tour_plan'] = TourPlan::where('product_id', '=', $data->id)->get();
             $data['similar_tour'] = Product::where('id', '!=', $data->id)->get();
@@ -137,7 +141,7 @@ class FrontendController extends Controller
         if (!isset($data->meta_key_word) || $data->meta_key_word !== 'null') {
             $dataSeo['keywords'] = $data->meta_key_word;
         }
-        
+
         $tagIds = DB::table('tag_news')->where('news_id', '=', $data->id)->pluck('tag_id')->toArray();;
         $tagNames = DB::table('tags')->whereIn('id', $tagIds)->pluck('name')->toArray();
         return view($view, compact(['data', 'dataSeo', 'tagNames']));
@@ -191,6 +195,31 @@ class FrontendController extends Controller
         $province_html = \App\Helper\StringHelper::getSelectOptionPlace($provinces, '', 'Vui lòng chọn thành phố', false, true);
 
         return view('frontend.cart', compact(['province_html']));
+    }
+
+    public function bookTour(Request $request): \Illuminate\Http\RedirectResponse
+    {
+        $input = $request->all();
+        $input['special_request'] = '';
+        if ($request->get('special_request') !== null) {
+            $input['special_request'] = implode(',', $request->get('special_request'));
+        }
+        $order = Order::create($input);
+        $type = $order->type === 1 ? 'Full-day' : 'Half-day';
+        $product_name = $order->product->name;
+        // send mail to customer
+        Mail::send('frontend.mail.booking-confirm', ['order' => $order, 'type'=> $type, 'product_name' => $product_name], function ($m) use ($input) {
+            $m->from(config('app.email_app'), 'Elon farm');
+            $m->to($input['customer_address_mail'], 'Elon farm')->subject('Farm Tour Booking Confirmation');
+        });
+
+        // send mail to admin
+        Mail::send('frontend.mail.info-book-tour', ['order' => $order, 'type'=> $type, 'product_name' => $product_name], function ($m) use ($input) {
+            $m->from(config('app.email_app'), 'Elon farm');
+            $m->to(config('app.email_app'), 'Elon farm')->subject('New Farm Tour Booking Alert');
+        });
+
+        return redirect()->route('root');
     }
     public function listTour() {
         $products =  Product::where('id', '>', 0)->get();

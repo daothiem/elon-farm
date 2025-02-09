@@ -15,6 +15,13 @@ class Order extends Model
         'product_id',
         'promotion_id', 'amenities_id',
         'address', 'booking_type', 'from_date',
-        'to_date', 'guest', 'price'
+        'to_date', 'guest', 'price',
+        'customer_name', 'customer_address_mail', 'customer_number_phone',
+        'type', 'adults', 'youth', 'children', 'special_request', 'date'
     ];
+
+    public function product(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Product::class, 'product_id', 'id');
+    }
 }
