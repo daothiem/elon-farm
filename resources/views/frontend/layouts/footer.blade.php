@@ -1,11 +1,12 @@
 <footer class="footer-three section-space-top">
+    <div class="elfsight-app-ffd5caab-ba62-49db-90f0-b2b5f2ea2d39" data-elfsight-app-lazy></div>
     <div class="footer-three__bg" style="background-image: url(assets/frontend/images/shapes/footer-bg-3-1.png);"></div>
     <div class="footer-three__inner">
         <!-- /.footer-three__bg -->
         <div class="container">
             <div class="footer-three__top">
                 <div class="footer-three__logo">
-                    <a href="index.html">
+                    <a href="/">
                         <img src="assets/frontend/images/logo_footer.png" alt="Elon Farm HTML" width="187"
                          class="main-header__logo__1">
                     </a>
@@ -45,20 +46,20 @@
                         <p class="footer-widget__about-text">@lang('translation.promoting_sustainable')</p><!-- /.footer-widget__about-text -->
                         <div class="social-links">
                             <a href="https://www.facebook.com/elonfarm">
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                <img src="assets/frontend/images/facebook.svg" alt="Elon Farm HTML" />
                                 <span class="sr-only">Facebook</span>
                             </a>
                             <a href="https://twitter.com/">
-                                <i class="fab fa-twitter" aria-hidden="true"></i>
-                                <span class="sr-only">Twitter</span>
+                                <img src="assets/frontend/images/whatsapp.svg" alt="Elon Farm HTML" />
+                                <span class="sr-only">Whatsapp</span>
                             </a>
                             <a href="https://www.instagram.com/elonfarm/profilecard/?igsh=MTljc3l3Z3Jtd2pidA==">
-                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <img src="assets/frontend/images/instagram.svg" alt="Elon Farm HTML" />
                                 <span class="sr-only">Instagram</span>
                             </a>
-                            <a href="https://youtube.com/">
-                                <i class="fab fa-youtube" aria-hidden="true"></i>
-                                <span class="sr-only">Youtube</span>
+                            <a href="tel:+84969285991">
+                                <img src="assets/frontend/images/zalo.svg" alt="Elon Farm HTML" />
+                                <span class="sr-only">Zalo</span>
                             </a>
                         </div><!-- /.social-links -->
                         <div class="d-flex text-white multi-language gap-3 mt-3">

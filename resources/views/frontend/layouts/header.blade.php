@@ -44,7 +44,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/frontend/images/logo_header.png" width="187" alt="" /></a>
+                <a href="/" aria-label="logo image"><img src="assets/frontend/images/logo_header.png" width="187" alt="" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>

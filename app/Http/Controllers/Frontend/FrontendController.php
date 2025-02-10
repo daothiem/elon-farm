@@ -75,7 +75,12 @@ class FrontendController extends Controller
         return $result;
     }
     public function repairService() {
-        return view('frontend.repair_service.index');
+        return view('frontend.order-success');
+    }
+
+    public function orderSuccess(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    {
+        return view('frontend.order-success');
     }
 
     public function view($alias) {
@@ -127,7 +132,7 @@ class FrontendController extends Controller
             $dataSeo['image'] = $data->avatar;
         }
         if ($model_name === 'News') {
-            $data['newsPre'] = $data->news_category->news()->where('id', '<>', $data->id)->limit(3)->get();
+            $data['newsPre'] = $data->new_categories[0]->news()->where('id', '<>', $data->id)->limit(3)->get();
         }
         if ($model_name === 'NewsCategory') {
             $data['newsPre'] = $data->news()->paginate(5)->withQueryString();
@@ -223,7 +228,6 @@ class FrontendController extends Controller
     }
     public function listTour() {
         $products =  Product::where('id', '>', 0)->get();
-        dd($products);
         return view('frontend.list_tour', compact(['products']));
     }
 }

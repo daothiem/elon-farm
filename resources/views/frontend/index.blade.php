@@ -479,6 +479,60 @@
         <img src="assets/frontend/images/shapes/coffee-background.svg" alt="mountain" class="about-six__coffee">
         <img src="assets/frontend/images/shapes/leaf-background.svg" alt="mountain" class="about-six__leaf">
     </section>
+
+    <div class="client-carousel @@extraClassName">
+        <div class="container">
+            <h5 class="client-carousel__title"><span>@lang('translation.our_partner')</span></h5>
+            <div class="client-carousel__one trevlo-owl__carousel owl-theme owl-carousel" data-owl-options='{
+        "items": 5,
+        "margin": 65,
+        "smartSpeed": 700,
+        "loop":true,
+        "autoplay": 6000,
+        "nav":false,
+        "dots":false,
+        "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
+        "responsive":{
+            "0":{
+                "items":1,
+                "margin": 0
+            },
+            "450":{
+                "items":2,
+                "margin": 0
+            },
+            "768":{
+                "items":3,
+                "margin": 40
+            },
+            "992":{
+                "items": 4,
+                "margin": 40
+            },
+            "1200":{
+                "items": 5
+            }
+        }
+        }'>
+                <div class="client-carousel__one__item">
+                    <img src="assets/frontend/images/partner-1.svg" alt="Elon Farm HTML" />
+                </div><!-- /.owl-slide-item-->
+                <div class="client-carousel__one__item">
+                    <img src="assets/frontend/images/partner-2.svg" alt="Elon Farm HTML" />
+                </div><!-- /.owl-slide-item-->
+                <div class="client-carousel__one__item">
+                    <img src="assets/frontend/images/partner-3.svg" alt="Elon Farm HTML" />
+                </div><!-- /.owl-slide-item-->
+                <div class="client-carousel__one__item">
+                    <img src="assets/frontend/images/partner-4.svg" alt="Elon Farm HTML" />
+                </div><!-- /.owl-slide-item-->
+                <div class="client-carousel__one__item">
+                    <img src="assets/frontend/images/partner-5.svg" alt="Elon Farm HTML" />
+                </div><!-- /.owl-slide-item-->
+                
+            </div><!-- /.thm-owl__slider -->
+        </div><!-- /.container -->
+    </div><!-- /.client-carousel -->
     <!-- tab-section-end -->
 
      <div class="blog-three section-space-top mb-5" id="blog">
@@ -687,7 +741,7 @@
                         </div>
                         <h3 class="tour-listing-four__title"><a href="/{{ $tour['alias'] }}">{{ $tour['name'] }}</a>
                         </h3>
-                        <p class="tour-listing-four__text">{{ $tour['description'] }}</p><!-- /.tour-listing-four__text -->
+                        <p class="tour-listing-four__text">{!! $tour['description'] !!}</p><!-- /.tour-listing-four__text -->
                     </div>
                     <ul class="tour-listing-four__list tour-listing-four__col wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                         <li>

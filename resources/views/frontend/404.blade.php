@@ -13,7 +13,7 @@
                     <div class="col-12">
                         <div class="tp-breadcrumb__content text-center z-index-5">
                             <div class="tp-breadcrumb__list">
-                                <span><a href="index.html">Home </a></span>
+                                <span><a href="/">Home </a></span>
                                 <span class="dvdr">.</span>
                                 <span>404 Error</span>
                             </div>
@@ -54,7 +54,7 @@
                                 <h6 class="tp-error__title">Oops... It looks like you ‘re <span>lost !</span></h6>
                                 <span>Oops! The page you are looking for does not exist. It might have been moved or deleted.</span>
                             </div>
-                            <a class="tp-btn-purple-sm" href="index.html">Back To Home</a>
+                            <a class="tp-btn-purple-sm" href="/">Back To Home</a>
                         </div>
                     </div>
                 </div>
