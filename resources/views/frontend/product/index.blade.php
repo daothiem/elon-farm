@@ -61,22 +61,22 @@
         }'>
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
-                                <img src="assets/frontend/images/about/gallery-1-5.png" alt="gallery">
+                                <img src="assets/frontend/images/about/gallery-1-1.png" alt="gallery">
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
-                                <img src="assets/frontend/images/about/gallery-1-5.png" alt="gallery">
+                                <img src="assets/frontend/images/about/gallery-1-2.png" alt="gallery">
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
-                                <img src="assets/frontend/images/about/gallery-1-5.png" alt="gallery">
+                                <img src="assets/frontend/images/about/gallery-1-3.png" alt="gallery">
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
-                                <img src="assets/frontend/images/about/gallery-1-5.png" alt="gallery">
+                                <img src="assets/frontend/images/about/gallery-1-4.png" alt="gallery">
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                 </div><!-- /.tour-listing-details__top-carousel-wrapper -->
@@ -128,16 +128,11 @@
             <div class="container">
                 <div class="tour-listing-details__row row">
                     <div class="col-xl-8">
-                        <div class="tour-listing-details__overview">
-                            <div class="wow animated fadeIn animated" data-wow-delay="0.1s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.1s; animation-name: fadeIn;">
-                                <h3 class="tour-listing-details__title tour-listing-details__overview-title">@lang('translation.overview')</h3>
-                            </div>
-                        </div><!-- /.tour-listing-details__explore -->
                         <div class="tour-listing-details__included">
                             {!! $data['content'] !!}
                         </div><!-- /.tour-listing-details__included -->
                         <div class="tour-listing-details__plan">
-                            <h3 class="tour-listing-details__title tour-listing-details__plan-title">@lang('translation.tour_plan_for') {{ $data['name'] }} ({{ $data['duration'] }})</h3>
+                            <h3 class="tour-listing-details__title tour-listing-details__plan-title">{{ $data['title_plan'] }}</h3>
                             <div class="trevlo-accrodion tour-listing-details__faq" data-grp-name="tour-listing-details__faq">
                                 @foreach($data['tour_plan'] as $item)
                                 <div class="accrodion wow animated fadeInUp animated active" data-wow-delay="0.1s" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0.1s; animation-name: fadeInUp;">

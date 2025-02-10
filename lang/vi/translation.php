@@ -87,6 +87,7 @@ return [
     "all_blog" => "Xem Tất Cả Các Blog",
     "by" => "Bởi",
     "our_feedback" => "Phản Hồi Về Chúng Tôi",
+    "our_partner" => "Đối tác của chúng tôi",
     "what_people_say" => "Những Người Khác Nói Gì Về Elon Farm",
     "anna_thompson" => "Đi dạo qua những cánh đồng cà phê bao quanh bởi những ngọn núi xanh tươi thật huyền bí. Việc hái quả cà phê trực tiếp từ cây và pha cà phê dưới bầu trời rộng mở khiến tôi cảm thấy rất gần gũi với thiên nhiên. Đó là một kỷ niệm tôi sẽ luôn trân trọng.",
     "liam_anderson" => "Đạp xe quanh Elon Farm là phần tuyệt vời nhất trong chuyến đi của tôi! Cảnh sắc thật ngoạn mục—những ngọn đồi sương mù, những đồn điền rực rỡ và những con đường mòn yên tĩnh. Tôi cảm thấy như mình là một phần của mảnh đất này, chứ không chỉ là khách tham quan.",
@@ -154,6 +155,14 @@ return [
     "allergies" => "Dị ứng",
     "health_concerns" => "Lo ngại sức khoẻ",
     "others" => "Khác",
+    "booking_confirmed" => "Xác nhận đặt chỗ!",
+    "thank_book_1" => "Cảm ơn vì đã chọn Elon Farm làm điểm đến. Đơn đặt chỗ của bạn đã được xác nhận thành công",
+    "thank_book_2" => "Chúng tôi sẽ gửi email xác nhận về chi tiết của sự đặt chỗ.",
+    "booking_details" => "Chi tiết đặt chỗ",
+    "customer" => "Khách hàng",
+    "request" => "Yêu cầu",
+    "dont-forget" => "Đừng quên",
+    "dont-forget-mess" => "Quần áo thoải mái và giày dễ vệ sinh, mũ, bình xịt muỗi, chai nước tái sử dụng. Và đừng quên mang theo sự phấn khích của bạn để có một trải nghiệm trang trại đáng nhớ!",
 
 ];
 ?>

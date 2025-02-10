@@ -87,6 +87,7 @@ return [
     "all_blog" => "View All Blogs",
     "by" => "By",
     "our_feedback" => "Our Feedback",
+    "our_partner" => "Our Partners",
     "what_people_say" => "What Peoples Say About Elon Farm",
     "anna_thompson" => "Walking through the coffee fields surrounded by the lush green mountains was magical. Picking cherries straight from the trees and brewing coffee under the open sky felt so connected to nature. It’s a memory I’ll always cherish.",
     "liam_anderson" => "Cycling around Elon Farm was the best part of my trip! The views were breathtaking—misty hills, vibrant plantations, and peaceful trails. It felt like I was part of the land, not just visiting.",
@@ -154,5 +155,13 @@ return [
     "allergies" => "Allergies",
     "health_concerns" => "Health concerns",
     "others" => "Others",
+    "booking_confirmed" => "Booking Confirmed!",
+    "thank_book_1" => "Thank you for choosing Elon Farm! Your booking has been successfully confirmed.",
+    "thank_book_2" => "We’ve sent a confirmation email with all the details of your booking.",
+    "booking_details" => "Booking Details",
+    "customer" => "Customer",
+    "request" => "Requests",
+    "dont-forget" => "Don’t forget",
+    "dont-forget-mess" => "Comfortable clothing and easy-to-clean shoes, a hat, mosquito spray, reusable water bottle. And don’t forget to bring your excitement for a memorable farm experience!",
 ];
 ?>

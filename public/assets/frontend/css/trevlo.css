@@ -12936,8 +12936,6 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 
 .tour-listing-details__included {
-  padding-bottom: 42px;
-  border-bottom: 1px solid var(--trevlo-white3, #EBE6DE);
   margin-bottom: 40px;
 }
 .tour-listing-details__included-title {
@@ -12959,7 +12957,7 @@ body.megamenu-popup-active .mobile-nav__content {
   position: relative;
   top: 6px;
   font-size: 16px;
-  color: var(--trevlo-base, #FF5956);
+  color: #63AB45;
 }
 .tour-listing-details__included-list-one li p {
   color: var(--trevlo-primary, #2D2330);
@@ -12980,16 +12978,12 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .tour-listing-details__included-list-two li i {
   position: relative;
-  top: 5px;
-  display: inline-block;
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  background-color: var(--trevlo-white2, #FAF5EE);
-  font-size: 10px;
-  text-align: center;
-  color: var(--trevlo-secondary, #736D75);
-  line-height: 18px;
+  top: 6px;
+  font-size: 16px;
+  color: #63AB45;
+}
+.tour-listing-details__included-list-two li .fa-times {
+  color: #344054;
 }
 .tour-listing-details__included-list-two li p {
   color: var(--trevlo-primary, #2D2330);
@@ -13064,6 +13058,8 @@ body.megamenu-popup-active .mobile-nav__content {
   margin: 0;
   padding: 0;
   list-style: none;
+  list-style-type: disc;
+  padding-left: 16px;
 }
 .tour-listing-details__faq .accrodion-content-bottom li {
   font-family: var(--trevlo-font, "DM Sans", sans-serif);
@@ -18018,10 +18014,11 @@ li:hover .footer-three__contact__list__icon {
 .client-carousel__title {
   text-align: center;
   display: block;
-  color: var(--trevlo-secondary, #736D75);
-  border-top: 1px solid var(--trevlo-white4, #EBEBEB);
+  color: white;
+  border-top: 1px solid #D0D5DD;
   font-size: 16px;
   margin: 0 0 45px;
+  
 }
 .client-carousel__title span {
   display: inline-block;
@@ -18030,6 +18027,8 @@ li:hover .footer-three__contact__list__icon {
   z-index: 2;
   position: relative;
   top: -10px;
+  background-color: #101828;
+  line-height: 24px;
 }
 .client-carousel__one {
   position: relative;
@@ -20713,4 +20712,37 @@ body.boxed-wrapper .main-header__booking-btn {
   font-size: 18px;
   color: #232323;
   font-weight: bold;
+}
+.confirmation-card {
+    background: #FAF5F0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.confirmation-card p {
+    display: flex;
+    justify-content: space-between;
+    gap: 150px;
+}
+.highlight-text {
+    font-weight: bold;
+    color: #0C111D;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+.order-success h2 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 72px;
+    color: #2D2330;
+}
+.order-success p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #344054;
+}
+.alert-success{
+  max-width: 600px;
 }

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" type="image/x-icon" href="{{asset($about_us->logo_mobile)}}">
-    <link rel="canonical" href="index.html"/>
+    <link rel="canonical" href="/"/>
 
     <meta property="og:locale" content="vi_VN">
     <meta property="og:type" content="website">
@@ -110,6 +110,7 @@
 <!-- template js -->
 <script type="text/javascript" src="{{ URL::asset('/assets/frontend/vendors/jquery-lettering/jquery.lettering.min.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
 <script>
   lottie.loadAnimation({
     container: document.getElementById('lottie-container'),
