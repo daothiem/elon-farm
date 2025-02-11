@@ -1131,6 +1131,8 @@ path {
   -webkit-box-align: center;
   align-items: center;
   text-align: center;
+  flex-direction: column;
+  font-style: italic;
 }
 .preloader__image {
   -webkit-animation-fill-mode: both;
@@ -1146,6 +1148,8 @@ path {
   background-size: 60px auto;
   width: 100%;
   height: 100%;
+  max-width: 120px;
+  max-height: 120px;
 }
 
 /* scroll to top */
@@ -18018,7 +18022,7 @@ li:hover .footer-three__contact__list__icon {
   border-top: 1px solid #D0D5DD;
   font-size: 16px;
   margin: 0 0 45px;
-  
+
 }
 .client-carousel__title span {
   display: inline-block;

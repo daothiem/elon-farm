@@ -126,8 +126,7 @@
             </div><!-- banner-slider -->
             <div class="banner-form banner-form--two banner-form--three wow fadeInUp" data-wow-delay="300ms">
             <div class="container">
-                <form class="banner-form__wrapper"
-                      action="https://bracketweb.com/trevlo-html/tour-listing-top-search.html">
+                <form class="banner-form__wrapper" action="/">
                     <div class="row m-0">
                         <div class="banner-form__col banner-form__col--1 margin-24">
                             <div class="banner-form__control banner-form__control--traveler d-flex gap-3">
@@ -175,7 +174,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="banner-form__col banner-form__col--4 margin-24">
                             <div class="banner-form__control d-flex gap-3">
                                 <div class="banner-form__icon">
@@ -529,7 +528,7 @@
                 <div class="client-carousel__one__item">
                     <img src="assets/frontend/images/partner-5.svg" alt="Elon Farm HTML" />
                 </div><!-- /.owl-slide-item-->
-                
+
             </div><!-- /.thm-owl__slider -->
         </div><!-- /.container -->
     </div><!-- /.client-carousel -->

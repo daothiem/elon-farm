@@ -72,6 +72,7 @@
 
     <div class="preloader">
         <div class="preloader__image" id="lottie-container"></div>
+        <p>Loading...</p>
     </div>
 
     <div class="page-wrapper">
