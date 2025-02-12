@@ -1,6 +1,6 @@
 @extends('admin.layouts.master-without-nav')
 @section('title')
-@lang('translation.signin')
+    Đăng nhập
 @endsection
 @section('content')
 <div class="auth-page-wrapper pt-5">
