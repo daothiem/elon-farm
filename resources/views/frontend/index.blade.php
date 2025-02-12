@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 @section('title')
-    Elon-farm | Trang chủ
+    Elon-farm | Home page
 @endsection
 @section('css')
 
