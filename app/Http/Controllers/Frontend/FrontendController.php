@@ -78,9 +78,10 @@ class FrontendController extends Controller
         return view('frontend.order-success');
     }
 
-    public function orderSuccess(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    public function orderSuccess($orderId): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
-        return view('frontend.order-success');
+        $order = Order::find($orderId);
+        return view('frontend.order-success', compact('order'));
     }
 
     public function view($alias) {
@@ -206,6 +207,10 @@ class FrontendController extends Controller
     {
         $input = $request->all();
         $input['special_request'] = '';
+        $input['is_transportation'] = false;
+        if ($request->get('transportation')) {
+            $input['is_transportation'] = $request->get('transportation') === 'on';
+        }
         if ($request->get('special_request') !== null) {
             $input['special_request'] = implode(',', $request->get('special_request'));
         }
@@ -224,7 +229,7 @@ class FrontendController extends Controller
             $m->to(config('app.email_app'), 'Elon farm')->subject('New Farm Tour Booking Alert');
         });
 
-        return redirect()->route('frontend.order-success');
+        return redirect()->route('frontend.order-success', ['orderId' => $order->id]);
     }
     public function listTour() {
         $products =  Product::where('id', '>', 0)->get();

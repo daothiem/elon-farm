@@ -90,28 +90,29 @@
             <p>@lang('translation.thank_book_1') <br/>
 @lang('translation.thank_book_2') </p>
         </div>
-        
+
         <div class="confirmation-card mx-auto p-4" style="max-width: 600px;">
             <h2 class="text-center mb-3"><strong>@lang('translation.booking_details')</strong></h2>
-            
+
             <h6 class="text-start highlight-text">@lang('translation.customer')</h6>
-            <p class="text-start">@lang('translation.name'): <strong>Phillip</strong></p>
-            <p class="text-start">Email: <strong>philip22u88@gmail.com</strong></p>
-            <p class="text-start">@lang('translation.phone_number'): <strong>(+84) 982.223.111</strong></p>
-            
+            <p class="text-start">@lang('translation.name'): <strong>{{$order->customer_name}}</strong></p>
+            <p class="text-start">Email: <strong>{{$order->customer_address_mail}}</strong></p>
+            <p class="text-start">@lang('translation.phone_number'): <strong>{{$order->customer_number_phone}}</strong></p>
+
             <h6 class="text-start highlight-text">Tour</h6>
-            <p class="text-start">Tour: <strong>Full-day tour</strong></p>
-            <p class="text-start">@lang('translation.preferred_tour_date'): <strong>30-08-2025</strong></p>
-            <p class="text-start">@lang('translation.adults'): <strong>2</strong></p>
-            <p class="text-start">@lang('translation.youth_10_18'): <strong>2</strong></p>
-            <p class="text-start">@lang('translation.children'): <strong>1</strong></p>
-            <p class="text-start">@lang('translation.transportation'): <strong>Yes</strong></p>
-            
+            <p class="text-start">Tour: <strong>{{$order->product->name}}</strong></p>
+            <p class="text-start">@lang('translation.preferred_tour_date'): <strong>{{$order->date}}</strong></p>
+            <p class="text-start">@lang('translation.adults'): <strong>{{$order->adults}}</strong></p>
+            <p class="text-start">@lang('translation.youth_10_18'): <strong>{{$order->youth}}</strong></p>
+            <p class="text-start">@lang('translation.children'): <strong>{{$order->children}}</strong></p>
+            <p class="text-start">@lang('translation.transportation'): <strong>{{$order->is_transportation ? 'Yes' : 'No'}}</strong></p>
+
             <h6 class="text-start highlight-text">@lang('translation.specical_request')</h6>
-            <p class="text-start">@lang('translation.request'): <strong>Dietary restrictions, Allergies</strong></p>
-            <p class="text-start">@lang('translation.others'): <strong>I would like vegetarian meals during the tour, as I follow a plant-based diet.</strong></p>
+            @foreach(explode(',', $order->special_request) as $special)
+                <p class="text-start">@lang('translation.request'): <strong>{{$special}}</strong></p>
+            @endforeach
         </div>
-        
+
         <div class="mx-auto mt-4 text-muted alert-success">
             <p><strong>@lang('translation.dont-forget')</strong></p>
             <p>@lang('translation.dont-forget-mess')</p>
