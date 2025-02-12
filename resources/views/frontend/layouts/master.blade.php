@@ -13,18 +13,18 @@
     <meta property="og:locale" content="vi_VN">
     <meta property="og:type" content="website">
     <meta property="og:title" itemprop="headline"
-          content="@if(isset($dataSeo) && isset($dataSeo['title']) && strlen($dataSeo['title'])){{$dataSeo['title']}}@else  @endif">
+          content="@if(isset($dataSeo) && isset($dataSeo['title']) && strlen($dataSeo['title'])){{$dataSeo['title']}}@else Elon Farm with love from Center highland @endif">
     <meta property="og:image" itemprop="thumbnailUrl"
           content="@if(isset($dataSeo) && isset($dataSeo['image'])){{asset($dataSeo['image'])}} @else {{asset($about_us->logo_mobile)}} @endif?w=480&amp;h=280">
     <meta name="og:description"
-          content="@if(isset($dataSeo) && isset($dataSeo['description']) && strlen($dataSeo['description'])){{$dataSeo['description']}}@else  @endif "/>
+          content="@if(isset($dataSeo) && isset($dataSeo['description']) && strlen($dataSeo['description'])){{$dataSeo['description']}}@else Visit our vibrant coffee farm and immerse yourself in the local culture. Not only will you experience our coffee, but you’ll also have the opportunity to explore the local culture through silk worm raising activities, visiting Linh An Pagoda, and viewing the majestic Elephant Waterfall. @endif "/>
 
     <meta name="description"
-          content="@if(isset($dataSeo) && isset($dataSeo['description']) && strlen($dataSeo['description'])){{$dataSeo['description']}}@else  @endif">
+          content="@if(isset($dataSeo) && isset($dataSeo['description']) && strlen($dataSeo['description'])){{$dataSeo['description']}}@else Visit our vibrant coffee farm and immerse yourself in the local culture. Not only will you experience our coffee, but you’ll also have the opportunity to explore the local culture through silk worm raising activities, visiting Linh An Pagoda, and viewing the majestic Elephant Waterfall. @endif">
     <link rel="alternate" type="application/rss+xml" title=" "
-          href="https://sfone97.com">
+          href="https://elonfarm.vn">
     <meta name="keywords"
-          content="@if(isset($dataSeo) && isset($dataSeo['keywords']) && strlen($dataSeo['keywords'])){{$dataSeo['keywords']}} @else  @endif"/>
+          content="@if(isset($dataSeo) && isset($dataSeo['keywords']) && strlen($dataSeo['keywords'])){{$dataSeo['keywords']}} @else elonfarm @endif"/>
     @if(isset($dataSeo) && isset($dataSeo['title']) && strlen($dataSeo['title']))
         <title>{{$dataSeo['title']}}</title>
     @else
