@@ -224,7 +224,7 @@ class FrontendController extends Controller
             $m->to(config('app.email_app'), 'Elon farm')->subject('New Farm Tour Booking Alert');
         });
 
-        return redirect()->route('root');
+        return redirect()->route('frontend.order-success');
     }
     public function listTour() {
         $products =  Product::where('id', '>', 0)->get();

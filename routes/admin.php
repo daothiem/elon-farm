@@ -62,7 +62,7 @@ Route::middleware(['backend'])->group(function () {
             Route::get('/{id}/dich-vu', ['uses' => 'Admin\ServiceController@edit'])->name('admin.services.edit');
             Route::delete('/{id}/dich-vu', ['uses' => 'Admin\ServiceController@destroy'])->name('admin.services.destroy');
 
-            Route::get('/don-hang', ['uses' => 'Admin\OrderController@index'])->name('admin.orders.index');
+            Route::get('/order', ['uses' => 'Admin\OrderController@index'])->name('admin.orders.index');
 
             Route::get('/product-review', ['uses' => 'Admin\ProductReviewController@index'])->name('admin.product_reviews.index');
             Route::get('/them-moi/product-review', ['uses' => 'Admin\ProductReviewController@create'])->name('admin.product_reviews.create');

@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title') Quản lý sản phẩm @endsection
+@section('title') Quản lý tour @endsection
 @section('css')
     <link href="{{ URL::asset('assets/libs/dropzone/dropzone.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">

@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>@yield('title')| Velzon - Admin & Printing Việt Cường</title>
+    <title>@yield('title')| Admin & Elon farm</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Printing Việt Cường admin" name="description" />
+    <meta content="Admin & Elon farm" name="description" />
     <meta content="dmcmedia" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ URL::asset('assets/images/logo-print.png')}}">
+    <link rel="shortcut icon" href="{{ URL::asset('assets/frontend/images/logo-light.png')}}">
     @include('admin.layouts.head-css')
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
