@@ -251,7 +251,7 @@
                                         <label for="type">Tour</label>
                                         <select name="type" class="selectpicker" id="type">
                                             <option value="1">@lang('translation.full_day_tour')</option>
-                                            <option value="0">@lang('translation.half_day_tour')</option>
+                                            <option value="0" selected>@lang('translation.half_day_tour')</option>
                                         </select>
                                         <i><img src="assets/frontend/images/about/form-tour.svg" alt="tab"></i>
                                     </div>
@@ -275,7 +275,7 @@
                                         <button class="banner-form__qty-minus sub">
                                             <i class="icon-minus-3"></i>
                                         </button>
-                                        <input id="youth" type="number" value="2" name="youth" placeholder="2">
+                                        <input id="youth" type="number" value="0" name="youth" placeholder="2">
                                         <button class="banner-form__qty-plus add">
                                             <i class="icon-plus-3"></i>
                                         </button>
@@ -285,7 +285,7 @@
                                         <button class="banner-form__qty-minus sub">
                                             <i class="icon-minus-3"></i>
                                         </button>
-                                        <input id="children" type="number" value="2" name="children" placeholder="2">
+                                        <input id="children" type="number" value="0" name="children" placeholder="2">
                                         <button class="banner-form__qty-plus add">
                                             <i class="icon-plus-3"></i>
                                         </button>
@@ -333,6 +333,41 @@
 @section('scripts')
 <script>
     $(document).ready(() => {
+
+        function getQueryParams() {
+            let params = new URLSearchParams(window.location.search);
+            let data = {};
+            params.forEach((value, key) => {
+                data[key] = value;
+            });
+            return data;
+        }
+        const urlParams = getQueryParams();
+        $.each(urlParams, function (key, value) {
+            const $element = $('[name="' + key + '"]');
+
+            if ($element.is(':checkbox')) {
+                if (value === 'yes' || value === '1') {
+                    $element.prop('checked', true);
+                } else {
+                    $element.prop('checked', false);
+                }
+            } else if ($element.is('select')) {
+                // Handle select dropdown
+                $element.val(value);
+                $element.find('option').each(function () {
+                if ($(this).val() === value) {
+                    $(this).prop('selected', true);
+                } else {
+                    $(this).prop('selected', false);
+                }
+            });
+            } else {
+                // Default case: handle text, number, email, etc.
+                $element.val(value);
+            }
+        });
+
         $('.trevlo-multi-datepicker').on('change', () => {
             console.log(123131);
         })
@@ -372,6 +407,7 @@
         })
 
         calculate_price();
+        
     })
 </script>
 @endsection
