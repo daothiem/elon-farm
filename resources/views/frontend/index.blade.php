@@ -135,9 +135,9 @@
                                 </div><!-- /.banner-form__icon -->
                                 <div class="flex-fill">
                                     <label for="location">Tour</label>
-                                    <select name="location" class="selectpicker" id="location">
-                                        <option value="fullDay">@lang('translation.full_day_tour')</option>
-                                        <option value="halfDay">@lang('translation.half_day_tour')</option>
+                                    <select name="type" class="selectpicker" id="location">
+                                        <option value="1">@lang('translation.full_day_tour')</option>
+                                        <option value="0">@lang('translation.half_day_tour')</option>
                                     </select>
                                 </div>
                             </div>
@@ -162,7 +162,7 @@
                                 </div>
                                 <div class="flex-fill">
                                     <label for="guests">@lang('translation.pax')</label>
-                                    <input id="guests" type="number" value="2" name="guests" placeholder="2">
+                                    <input id="guests" type="number" value="2" name="adults" placeholder="2">
                                 </div>
                                 <div class="d-flex gap-1">
                                     <button class="banner-form__qty-minus sub minusPax position-relative">
@@ -182,7 +182,7 @@
                                 </div><!-- /.banner-form__icon -->
                                 <div class="flex-fill">
                                     <label for="type">@lang('translation.transportation')</label>
-                                    <select name="type" class="selectpicker" id="type">
+                                    <select name="transportation" class="selectpicker" id="type">
                                         <option value="yes">@lang('translation.yes')</option>
                                         <option value="no">@lang('translation.no')</option>
                                     </select>
@@ -939,5 +939,32 @@
     </section><!-- /.why-choose-three -->
 @endsection
 @section('scripts')
+<script>
+    $(document).ready(function () {
+        $(".banner-form__wrapper").on("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
 
+            let formData = $(this).serializeArray(); // Get form data as an array
+            let params = new URLSearchParams();
+            let locationValue = ""; // Store location separately
+
+            // Iterate over form data and construct query parameters
+            $.each(formData, function (_, field) {
+                params.append(field.name, field.value);
+                if (field.name === "type") {
+                    if(field.value === "1") {
+                        locationValue = "full-day-tour";
+                    } else if(field.value === "0") {
+                        locationValue = "half-day-tour";
+                    }
+                }
+            });
+
+            // Redirect to "/locationValue?params"
+            if (locationValue) {
+                window.location.href = `/${locationValue}?${params.toString()}`;
+            }
+        });
+    });
+</script>
 @endsection

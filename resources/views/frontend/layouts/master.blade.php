@@ -120,6 +120,22 @@
     autoplay: true,
     path: 'assets/frontend/images/Logo-animated.json'
   });
+  $(document).ready(() => {
+        if (localStorage.getItem("scrollToGallery") === "true") {
+            localStorage.removeItem("scrollToGallery");
+            $("html, body").animate(
+                {
+                    scrollTop: $("#gallery_about_us").offset().top,
+                },
+                800 
+            );
+        }
+        $(".footer-widget__gallery__link").on("click", function (event) {
+            event.preventDefault(); 
+            localStorage.setItem("scrollToGallery", "true");
+            window.location.href = "/about-us";
+        });
+    })
 </script>
 @yield('scripts')
 </body>

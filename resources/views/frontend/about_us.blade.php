@@ -264,7 +264,7 @@
     <!-- Counter One End -->
 
     <!-- Guide One Start -->
-    <section class="guide-one section-space-bottom">
+    <section class="guide-one section-space-bottom" id="gallery_about_us">
         <div class="container">
             <div class="sec-title text-center">
 
@@ -335,4 +335,6 @@
     </section>
 @endsection
 @section('scripts')
+
 @endsection
+
