@@ -34,7 +34,7 @@ return [
     "the_heart_content" => "Discover the story behind our Robusta coffee. We love to share our coffee production process with you. Visit our farm to learn, experience, and enjoy the journey from bean to cup. ",
     "beyond_coffee" => "Beyond Coffee: Live the Local Life",
     "beyond_coffee_content" => "Visit our vibrant coffee farm and immerse yourself in the local culture. Not only will you experience our coffee, but you’ll also have the opportunity to explore the local culture through silk worm raising activities, visiting Linh An Pagoda, and viewing the majestic Elephant Waterfall.",
-    "more_than_tour" => "More Than a Tour—This is a Local Experience",
+    "more_than_tour" => "More Than a Tour - This is a Local Experience",
     "more_than_tour_content" => "At Elon Farm, we offer more than just a tour. Immerse yourself in Vietnam’s coffee heritage. Wander through our plantations, learn about local life alongside our coffee processing, and enjoy fresh brews. Join us for an experience where we share our knowledge and passion for coffee.",
     "full_day_tour" => "Full-Day Tour",
     "half_day_tour" => "Half-Day Tour",
@@ -163,5 +163,7 @@ return [
     "request" => "Requests",
     "dont-forget" => "Don’t forget",
     "dont-forget-mess" => "Comfortable clothing and easy-to-clean shoes, a hat, mosquito spray, reusable water bottle. And don’t forget to bring your excitement for a memorable farm experience!",
+    "read_more_only" => "Read more",
+    "all_blog_title" => "All Blog",
 ];
 ?>

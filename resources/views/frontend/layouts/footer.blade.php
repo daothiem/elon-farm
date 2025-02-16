@@ -96,27 +96,27 @@
                         <h2 class="footer-widget__title">@lang('translation.gallery')</h2><!-- /.footer-widget__title -->
                         <div class="footer-widget__gallery">
                             <a href="" class="footer-widget__gallery__link">
-                                <img src="assets/frontend/images/gallery/footer-widget-gallery-1.png"
+                                <img src="/assets/frontend/images/gallery/footer-widget-gallery-1.png"
                                      alt="footer-widget-gallery">
                             </a><!-- /.footer-widget__gallery__link -->
                             <a href="javascript:void(0);" class="footer-widget__gallery__link">
-                                <img src="assets/frontend/images/gallery/footer-widget-gallery-2.png"
+                                <img src="/assets/frontend/images/gallery/footer-widget-gallery-2.png"
                                      alt="footer-widget-gallery">
                             </a><!-- /.footer-widget__gallery__link -->
                             <a href="javascript:void(0);" class="footer-widget__gallery__link">
-                                <img src="assets/frontend/images/gallery/footer-widget-gallery-3.png"
+                                <img src="/assets/frontend/images/gallery/footer-widget-gallery-3.png"
                                      alt="footer-widget-gallery">
                             </a><!-- /.footer-widget__gallery__link -->
                             <a href="javascript:void(0);" class="footer-widget__gallery__link">
-                                <img src="assets/frontend/images/gallery/footer-widget-gallery-4.png"
+                                <img src="/assets/frontend/images/gallery/footer-widget-gallery-4.png"
                                      alt="footer-widget-gallery">
                             </a><!-- /.footer-widget__gallery__link -->
                             <a href="javascript:void(0);" class="footer-widget__gallery__link">
-                                <img src="assets/frontend/images/gallery/footer-widget-gallery-5.png"
+                                <img src="/assets/frontend/images/gallery/footer-widget-gallery-5.png"
                                      alt="footer-widget-gallery">
                             </a><!-- /.footer-widget__gallery__link -->
                             <a href="javascript:void(0);" class="footer-widget__gallery__link">
-                                <img src="assets/frontend/images/gallery/footer-widget-gallery-6.png"
+                                <img src="/assets/frontend/images/gallery/footer-widget-gallery-6.png"
                                      alt="footer-widget-gallery">
                             </a><!-- /.footer-widget__gallery__link -->
                         </div>

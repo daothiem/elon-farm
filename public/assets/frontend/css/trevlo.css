@@ -2064,8 +2064,8 @@ path {
 }
 .testimonials-card-three__image {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 16px;
+  right: -3px;
 }
 @media (max-width: 767px) {
   .testimonials-card-three__image {
@@ -2089,6 +2089,7 @@ path {
   background-color: var(--trevlo-white, #ffffff);
   border-radius: 30px;
   transition: all 500ms ease;
+  min-height: 503px;
 }
 @media (min-width: 768px) {
   .testimonials-card-three__inner {
@@ -5796,6 +5797,7 @@ path {
 .main-header--five .main-menu .main-menu__list > li + li {
   margin-left: 42px;
 }
+
 @media (max-width: 1599px) {
   .main-header--five .main-menu .main-menu__list > li + li {
     margin-left: 38px;
@@ -6834,6 +6836,7 @@ body.megamenu-popup-active .mobile-nav__content {
   margin-right: 10px;
   color: var(--trevlo-white, #ffffff);
 }
+
 
 .mobile-nav__container .main-menu__logo,
 .mobile-nav__container .main-menu__right {
@@ -19239,7 +19242,6 @@ li:hover .footer-three__contact__list__icon {
   margin: 0 auto;
 }
 .main-slider-four__carousel.owl-carousel .owl-nav {
-  visibility: hidden;
   position: absolute;
   right: 0;
   left: 0;
@@ -19253,6 +19255,7 @@ li:hover .footer-three__contact__list__icon {
 }
 @media (max-width: 1199px) {
   .main-slider-four__carousel.owl-carousel .owl-nav {
+    visibility: hidden;
     width: auto;
     height: auto;
     top: 50px;
@@ -19264,6 +19267,7 @@ li:hover .footer-three__contact__list__icon {
 }
 @media (max-width: 575px) {
   .main-slider-four__carousel.owl-carousel .owl-nav {
+    
     right: 15px;
   }
 }
@@ -19328,7 +19332,7 @@ li:hover .footer-three__contact__list__icon {
   }
 }
 .main-slider-four__carousel .active .main-slider-four__image {
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 .main-slider-four__carousel .active .main-slider-four__sub-title {
   opacity: 1;
@@ -19368,6 +19372,7 @@ li:hover .footer-three__contact__list__icon {
   }
 }
 .main-slider-four__image {
+  min-height: 1000px;
   position: relative;
   position: absolute;
   top: 0;
@@ -19378,7 +19383,9 @@ li:hover .footer-three__contact__list__icon {
   background-repeat: no-repeat;
   background-size: cover;
   transform: scale(1);
+  /* TODO */
   transition: transform 10000ms ease, -webkit-transform 10000ms ease;
+  animation-name: changewidth;
   overflow: hidden;
   background-color: var(--trevlo-black, #000000);
 }

@@ -61,22 +61,22 @@
         }'>
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
-                                <img src="assets/frontend/images/about/gallery-1-1.png" alt="gallery">
+                                <img src="/assets/frontend/images/about/gallery-1-1.png" alt="gallery">
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
-                                <img src="assets/frontend/images/about/gallery-1-2.png" alt="gallery">
+                                <img src="/assets/frontend/images/about/gallery-1-2.png" alt="gallery">
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
-                                <img src="assets/frontend/images/about/gallery-1-3.png" alt="gallery">
+                                <img src="/assets/frontend/images/about/gallery-1-3.png" alt="gallery">
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
-                                <img src="assets/frontend/images/about/gallery-1-4.png" alt="gallery">
+                                <img src="/assets/frontend/images/about/gallery-1-4.png" alt="gallery">
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                 </div><!-- /.tour-listing-details__top-carousel-wrapper -->
@@ -257,7 +257,7 @@
                                     </div>
                                     <div class="banner-form__control">
                                         <label for="date">@lang('translation.preferred_tour_date')</label>
-                                        <input class="trevlo-multi-datepicker" id="date" type="text" name="date" placeholder="@lang('translation.select_date')">
+                                        <input type="text" name="date" placeholder="Select date" id="date" class="tour-listing-details__sidebar-form-date trevlo-datepicker">
                                         <i class="icon-calendar-5"></i>
                                     </div>
                                     <div class="banner-form__control">

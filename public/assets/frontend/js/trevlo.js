@@ -333,6 +333,7 @@
 
   if ($(".mobile-nav__toggler").length) {
     $(".mobile-nav__toggler").on("click", function (e) {
+      console.log('123', 123);
       e.preventDefault();
       $(".mobile-nav__wrapper").toggleClass("expanded");
       $("body").toggleClass("locked");

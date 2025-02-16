@@ -43,6 +43,7 @@ Route::middleware(['frontend'])->group(function () {
     //Route::get('/tin-tuc', ['uses' => 'Frontend\FrontendController@listNews'])->name('frontend.news.list');
     Route::get('/danh-muc-san-pham', ['uses' => 'Frontend\FrontendController@listCategory'])->name('frontend.categories.list');
     Route::get('/list-tour', ['uses' => 'Frontend\FrontendController@listProduct'])->name('frontend.products.list');
+    Route::get('/list-blog', ['uses' => 'Frontend\FrontendController@listBlog'])->name('frontend.blog.list');
     Route::get('/order-success/{orderId}', ['uses' => 'Frontend\FrontendController@orderSuccess'])->name('frontend.order-success');
     Route::get('/{alias}', ['uses' => 'Frontend\FrontendController@view'])->name('frontend.view');
 });
