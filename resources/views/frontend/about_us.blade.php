@@ -108,7 +108,7 @@
                             <h2 class="sec-title__title">@lang('translation.welcome_to_homestay')</h2><!-- /.sec-title__title -->
                         </div><!-- /.sec-title --><!-- /.sec-title -->
                         <p class="destination-two__text">@lang('translation.about_us_description')</p>
-                        <a href="tour-listing-side-filter-right.html"
+                        <a href="/list-tour"
                            class="main-header__button trevlo-btn trevlo-btn--two trevlo-btn--base">
                             <span>Start Booking</span>
                             <i class="trevlo-one-icon-up-right-arrow"></i>
@@ -183,13 +183,119 @@
                             <div class="item">
                                 <div class="destination-two__card">
                                     <div class="destination-two__card-img-box destination-two__card-img-box--circle">
-                                        <img src="assets/frontend/images/about/destination-2-5.jpeg" alt="destination" class="destination-two__card-img destination-two__card-img--circle">
+                                        <img src="assets/frontend/images/about/destination-2-5.webp" alt="destination" class="destination-two__card-img destination-two__card-img--circle">
                                         <div class="destination-two__card-overlay destination-two__card-overlay--circle">
-                                            <a href="assets/frontend/images/about/destination-2-5.jpeg" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
+                                            <a href="assets/frontend/images/about/destination-2-5.webp" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
                                         </div><!-- /.destination-two__card-overlay destination-two__card-overlay--circle -->
                                     </div><!-- /.destination-two__card-img-box -->
                                     <div class="destination-two__card-title-box">
                                         <h4 class="destination-two__card-title"><a href="javascript:void(0)">Rustic</a></h4>
+                                    </div><!-- /.destination-two__card-title-box -->
+                                </div><!-- /.destination-two__card -->
+                            </div>
+
+                            <div class="item">
+                                <div class="destination-two__card">
+                                    <div class="destination-two__card-img-box destination-two__card-img-box--round">
+                                        <img src="assets/frontend/images/about/destination-2-6.webp" alt="destination" class="destination-two__card-img destination-two__card-img--round">
+                                        <div class="destination-two__card-overlay destination-two__card-overlay--round">
+                                            <a href="assets/frontend/images/about/destination-2-6.webp" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
+                                        </div><!-- /.destination-two__card-overlay destination-two__card-overlay--round -->
+                                    </div><!-- /.destination-two__card-img-box -->
+                                    <div class="destination-two__card-title-box">
+                                        <h4 class="destination-two__card-title"><a href="javascript:void(0)">Homely</a></h4>
+                                    </div><!-- /.destination-two__card-title-box -->
+                                </div><!-- /.destination-two__card -->
+                            </div>
+                            <div class="item">
+                                <div class="destination-two__card">
+                                    <div class="destination-two__card-img-box destination-two__card-img-box--circle">
+                                        <img src="assets/frontend/images/about/destination-2-7.webp" alt="destination" class="destination-two__card-img destination-two__card-img--circle">
+                                        <div class="destination-two__card-overlay destination-two__card-overlay--circle">
+                                            <a href="assets/frontend/images/about/destination-2-7.webp" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
+                                        </div><!-- /.destination-two__card-overlay destination-two__card-overlay--circle -->
+                                    </div><!-- /.destination-two__card-img-box -->
+                                    <div class="destination-two__card-title-box">
+                                        <h4 class="destination-two__card-title"><a href="javascript:void(0)">Refreshing</a></h4>
+                                    </div><!-- /.destination-two__card-title-box -->
+                                </div><!-- /.destination-two__card -->
+                            </div>
+                            <div class="item">
+                                <div class="destination-two__card">
+                                    <div class="destination-two__card-img-box destination-two__card-img-box--round">
+                                        <img src="assets/frontend/images/about/destination-2-8.webp" alt="destination" class="destination-two__card-img destination-two__card-img--round">
+                                        <div class="destination-two__card-overlay destination-two__card-overlay--round">
+                                            <a href="assets/frontend/images/about/destination-2-8.webp" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
+                                        </div><!-- /.destination-two__card-overlay destination-two__card-overlay--round -->
+                                    </div><!-- /.destination-two__card-img-box -->
+                                    <div class="destination-two__card-title-box">
+                                        <h4 class="destination-two__card-title"><a href="javascript:void(0)">Welcoming</a></h4>
+                                    </div><!-- /.destination-two__card-title-box -->
+                                </div><!-- /.destination-two__card -->
+                            </div>
+                            <div class="item">
+                                <div class="destination-two__card">
+                                    <div class="destination-two__card-img-box destination-two__card-img-box--circle">
+                                        <img src="assets/frontend/images/about/destination-2-9.jpeg" alt="destination" class="destination-two__card-img destination-two__card-img--circle">
+                                        <div class="destination-two__card-overlay destination-two__card-overlay--circle">
+                                            <a href="assets/frontend/images/about/destination-2-9.jpeg" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
+                                        </div><!-- /.destination-two__card-overlay destination-two__card-overlay--circle -->
+                                    </div><!-- /.destination-two__card-img-box -->
+                                    <div class="destination-two__card-title-box">
+                                        <h4 class="destination-two__card-title"><a href="javascript:void(0)">Enchanting</a></h4>
+                                    </div><!-- /.destination-two__card-title-box -->
+                                </div><!-- /.destination-two__card -->
+                            </div>
+
+                            <div class="item">
+                                <div class="destination-two__card">
+                                    <div class="destination-two__card-img-box destination-two__card-img-box--round">
+                                        <img src="assets/frontend/images/about/destination-3-0.webp" alt="destination" class="destination-two__card-img destination-two__card-img--round">
+                                        <div class="destination-two__card-overlay destination-two__card-overlay--round">
+                                            <a href="assets/frontend/images/about/destination-3-0.webp" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
+                                        </div><!-- /.destination-two__card-overlay destination-two__card-overlay--round -->
+                                    </div><!-- /.destination-two__card-img-box -->
+                                    <div class="destination-two__card-title-box">
+                                        <h4 class="destination-two__card-title"><a href="javascript:void(0)">Sustainable</a></h4>
+                                    </div><!-- /.destination-two__card-title-box -->
+                                </div><!-- /.destination-two__card -->
+                            </div>
+                            <div class="item">
+                                <div class="destination-two__card">
+                                    <div class="destination-two__card-img-box destination-two__card-img-box--circle">
+                                        <img src="assets/frontend/images/about/destination-3-1.jpeg" alt="destination" class="destination-two__card-img destination-two__card-img--circle">
+                                        <div class="destination-two__card-overlay destination-two__card-overlay--circle">
+                                            <a href="assets/frontend/images/about/destination-3-1.jpeg" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
+                                        </div><!-- /.destination-two__card-overlay destination-two__card-overlay--circle -->
+                                    </div><!-- /.destination-two__card-img-box -->
+                                    <div class="destination-two__card-title-box">
+                                        <h4 class="destination-two__card-title"><a href="javascript:void(0)">Vibrant</a></h4>
+                                    </div><!-- /.destination-two__card-title-box -->
+                                </div><!-- /.destination-two__card -->
+                            </div>
+                            <div class="item">
+                                <div class="destination-two__card">
+                                    <div class="destination-two__card-img-box destination-two__card-img-box--round">
+                                        <img src="assets/frontend/images/about/destination-3-2.jpeg" alt="destination" class="destination-two__card-img destination-two__card-img--round">
+                                        <div class="destination-two__card-overlay destination-two__card-overlay--round">
+                                            <a href="assets/frontend/images/about/destination-3-2.jpeg" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
+                                        </div><!-- /.destination-two__card-overlay destination-two__card-overlay--round -->
+                                    </div><!-- /.destination-two__card-img-box -->
+                                    <div class="destination-two__card-title-box">
+                                        <h4 class="destination-two__card-title"><a href="javascript:void(0)">Authentic</a></h4>
+                                    </div><!-- /.destination-two__card-title-box -->
+                                </div><!-- /.destination-two__card -->
+                            </div>
+                            <div class="item">
+                                <div class="destination-two__card">
+                                    <div class="destination-two__card-img-box destination-two__card-img-box--circle">
+                                        <img src="assets/frontend/images/about/destination-3-3.jpeg" alt="destination" class="destination-two__card-img destination-two__card-img--circle">
+                                        <div class="destination-two__card-overlay destination-two__card-overlay--circle">
+                                            <a href="assets/frontend/images/about/destination-3-3.jpeg" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
+                                        </div><!-- /.destination-two__card-overlay destination-two__card-overlay--circle -->
+                                    </div><!-- /.destination-two__card-img-box -->
+                                    <div class="destination-two__card-title-box">
+                                        <h4 class="destination-two__card-title"><a href="javascript:void(0)">Relaxing</a></h4>
                                     </div><!-- /.destination-two__card-title-box -->
                                 </div><!-- /.destination-two__card -->
                             </div>
@@ -295,21 +401,21 @@
             }
             }'>
                 <div class="guide-one__carousel-item item">
-                    <div class="guide-single">
+                    <div class="guide-single-">
                         <div class="guide-single__image-box">
                             <img src="assets/frontend/images/about/about-us-images-1.png" alt="assets/frontend/images/about/about-us-images-1.png" class="guide-single__image">
                         </div><!-- /.guide-single__image-box -->
                     </div><!-- /.guide-single -->
                 </div><!-- /.guide-one__carousel-item item -->
                 <div class="guide-one__carousel-item item">
-                    <div class="guide-single">
+                    <div class="guide-single-">
                         <div class="guide-single__image-box">
                             <img src="assets/frontend/images/about/about-us-images-2.png" alt="assets/frontend/images/about/about-us-images-2.png" class="guide-single__image">
                         </div><!-- /.guide-single__image-box -->
                     </div><!-- /.guide-single -->
                 </div><!-- /.guide-one__carousel-item item -->
                 <div class="guide-one__carousel-item item">
-                    <div class="guide-single">
+                    <div class="guide-single-">
                         <div class="guide-single__image-box">
                             <img src="assets/frontend/images/about/about-us-images-3.png" alt="assets/frontend/images/about/about-us-images-3.png" class="guide-single__image">
                         </div><!-- /.guide-single__image-box -->

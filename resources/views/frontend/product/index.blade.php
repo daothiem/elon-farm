@@ -314,6 +314,9 @@
                                             <input type="checkbox" name="special_request[]" value="others" id="others">
                                             <label for="others"><span></span>@lang('translation.others')</label>
                                         </div>
+                                        <div class="banner-form__control mt-2 border-0 mb-0 form-control">
+                                            <input id="special_request" disabled type="text" name="special_request_text" placeholder="Input your special request">
+                                        </div>
                                     </div><!-- /.tour-listing-sidebar__amenities-box -->
                                 </div><!-- /.tour-listing-sidebar__amenities -->
                                 <h3 class="tour-listing-sidebar__title tour-listing-sidebar__amenities-title mt-3 total_price_tour">2.580.000đ</h3>
@@ -368,9 +371,6 @@
             }
         });
 
-        $('.trevlo-multi-datepicker').on('change', () => {
-            console.log(123131);
-        })
         const calculate_price = () => {
             const all_values = $('#form-booking-tour').serializeArray();
             let keysToExtract = ["adults", "youth", "type", "transportation"];
@@ -407,7 +407,16 @@
         })
 
         calculate_price();
-        
+
+        $('input[name="special_request[]"]').on('change', function() {
+            // Kiểm tra nếu checkbox với value = "others" được chọn
+            if ($('input[name="special_request[]"][value="others"]').is(':checked')) {
+                $('#special_request').prop('disabled', false); // Enable input
+            } else {
+                $('#special_request').prop('disabled', true).val(''); // Disable input và reset value
+            }
+        });
+
     })
 </script>
 @endsection

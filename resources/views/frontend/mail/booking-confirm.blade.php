@@ -21,7 +21,7 @@
 <ul>
     <li><strong>Name:</strong> {{ $order->customer_name }}</li>
     <li><strong>Email:</strong> {{ $order->customer_address_mail }}</li>
-    <li><strong>Phone Number:</strong> {{ $order->customer_number_phone }}</li>
+    <li><strong>Phone Number:</strong> {{ $order->customer_number_phone }}@if($order->special_request_text !== null && $order->special_request_text != ''), {{$order->special_request_text}}@endif</li>
 </ul>
 
 <h3>Participants:</h3>
