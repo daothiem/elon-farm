@@ -29,7 +29,7 @@
     <li><strong>Adults:</strong> {{ $order->adults }}</li>
     <li><strong>Youth:</strong> {{ $order->youth }}</li>
     <li><strong>Children:</strong> {{ $order->children }}</li>
-    <li><strong>Special request:</strong> {{ $order->special_request }}</li>
+    <li><strong>Special request:</strong> {{ $order->special_request }}@if($order->special_request_text !== null && $order->special_request_text != ''), {{$order->special_request_text}}@endif</li>
 </ul>
 
 <p>Please review the booking details and take necessary actions.</p>
