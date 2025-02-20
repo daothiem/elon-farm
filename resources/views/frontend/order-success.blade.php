@@ -61,22 +61,22 @@
         }'>
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
-                                <img src="assets/frontend/images/about/gallery-1-1.png" alt="gallery">
+                                <img src="/assets/frontend/images/about/gallery-1-1.png" alt="gallery">
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
-                                <img src="assets/frontend/images/about/gallery-1-2.png" alt="gallery">
+                                <img src="/assets/frontend/images/about/gallery-1-2.png" alt="gallery">
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
-                                <img src="assets/frontend/images/about/gallery-1-3.png" alt="gallery">
+                                <img src="/assets/frontend/images/about/gallery-1-3.png" alt="gallery">
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         <div class="tour-listing-details__top-carousel-item item">
                         <div class="tour-listing-details__top-carousel-image">
-                                <img src="assets/frontend/images/about/gallery-1-4.png" alt="gallery">
+                                <img src="/assets/frontend/images/about/gallery-1-4.png" alt="gallery">
                         </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                 </div><!-- /.tour-listing-details__top-carousel-wrapper -->
@@ -84,7 +84,7 @@
        <div class="container-order my-5 text-center">
         <div class="mb-4 order-success">
             <div class="success-icon">
-                <img src="assets/frontend/images/order-success.svg" alt="Elon Farm HTML" />
+                <img src="/assets/frontend/images/order-success.svg" alt="Elon Farm HTML" />
             </div>
             <h2 class="mt-2">@lang('translation.booking_confirmed')</h2>
             <p>@lang('translation.thank_book_1') <br/>

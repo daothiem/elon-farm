@@ -13099,11 +13099,6 @@ body.megamenu-popup-active .mobile-nav__content {
   margin-bottom: 19px;
 }
 
-.tour-listing-details__amenities {
-  border-bottom: 1px solid var(--trevlo-white3, #EBE6DE);
-  padding-bottom: 55px;
-  margin-bottom: 40px;
-}
 .tour-listing-details__amenities-row {
   align-items: center;
 }
@@ -13121,6 +13116,11 @@ body.megamenu-popup-active .mobile-nav__content {
 @media (max-width: 991px) {
   .tour-listing-details__amenities-content--two, .tour-listing-details__amenities-content--five {
     padding-left: 0;
+  }
+  .tour-listing-details__amenities {
+    border-bottom: 1px solid var(--trevlo-white3, #EBE6DE);
+    padding-bottom: 55px;
+    margin-bottom: 40px;
   }
 }
 .tour-listing-details__amenities-content--three, .tour-listing-details__amenities-content--six {
@@ -15165,6 +15165,7 @@ body.megamenu-popup-active .mobile-nav__content {
 .destination-five {
   position: relative;
   background-color: var(--trevlo-white5);
+  padding-bottom: 165px;
 }
 .destination-five__bg {
   background-repeat: no-repeat;

@@ -165,6 +165,14 @@ return [
     "dont-forget-mess" => "Quần áo thoải mái và giày dễ vệ sinh, mũ, bình xịt muỗi, chai nước tái sử dụng. Và đừng quên mang theo sự phấn khích của bạn để có một trải nghiệm trang trại đáng nhớ!",
     "read_more_only" => "Đọc thêm",
     "all_blog_title" => "Tất cả bài viết",
+    "our_moment" => "Khoảnh khắc",
+    "best_memories1" => "Kỷ niệm đẹp nhất",
+    "best_memories2" => "từ ​​chuyến tham quan",
+    "all" => "Tất cả",
+    "coffee_activities" => "Hoạt động cà phê",
+    "mulberry_silk" => "Dâu tằm và tằm",
+    "homestay" => "Homestay",
+    "coffee_time" => "Thời gian cà phê"
 
 ];
 ?>

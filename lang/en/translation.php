@@ -165,5 +165,13 @@ return [
     "dont-forget-mess" => "Comfortable clothing and easy-to-clean shoes, a hat, mosquito spray, reusable water bottle. And don’t forget to bring your excitement for a memorable farm experience!",
     "read_more_only" => "Read more",
     "all_blog_title" => "All Blog",
+    "our_moment" => "Our Moments",
+    "best_memories1" => "Best Memories from",
+    "best_memories2" => "Elon Farm Tours",
+    "all" => "All",
+    "coffee_activities" => "Coffee activities",
+    "mulberry_silk" => "Mulberry & Silkworm",
+    "homestay" => "Homestay",
+    "coffee_time" => "Coffee Time"
 ];
 ?>
