@@ -800,43 +800,53 @@
                     <div class="trevlo-accrodion why-choose-five__faq" data-grp-name="why-choose-five__faq">
                         <div class="accrodion active wow animated fadeInUp" data-wow-delay="0s" data-wow-duration="1500ms">
                             <div class="accrodion-title">
-                                <h4>@lang('translation.get_airport')</h4>
+                                <h4>@lang('translation.how_can_purchase')</h4>
                             </div>
                             <div class="accrodion-content" style="display: none;">
                                 <div class="inner">
-                                    <p>@lang('translation.dalat_airport')</p>
+                                    <p>@lang('translation.answer_purchase')</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="accrodion wow animated fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
                             <div class="accrodion-title">
-                                <h4>@lang('translation.participate_activities')</h4>
+                                <h4>@lang('translation.how_can_buy')</h4>
                             </div>
                             <div class="accrodion-content">
                                 <div class="inner">
-                                    <p>@lang('translation.yes_activities')</p>
+                                    <p>@lang('translation.answer_buy')</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="accrodion wow animated fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms">
                             <div class="accrodion-title">
-                                <h4>@lang('translation.are_meals')</h4>
+                                <h4>@lang('translation.what_measure')</h4>
                             </div>
                             <div class="accrodion-content" style="display: none;">
                                 <div class="inner">
-                                    <p>@lang('translation.yes_meal')</p>
+                                    <p>@lang('translation.answer_measure')</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accrodion wow animated fadeInUp" data-wow-delay="0.3s" data-wow-duration="1500ms">
                             <div class="accrodion-title">
-                                <h4>@lang('translation.other_activities')</h4>
+                                <h4>@lang('translation.can_i_visit')</h4>
                             </div>
                             <div class="accrodion-content" style="display: none;">
                                 <div class="inner">
-                                    <p>@lang('translation.yes_other')</p>
+                                    <p>@lang('translation.answer_can_i_visit')</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accrodion wow animated fadeInUp" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                            <div class="accrodion-title">
+                                <h4>@lang('translation.how_do_i_get')</h4>
+                            </div>
+                            <div class="accrodion-content" style="display: none;">
+                                <div class="inner">
+                                    <p>@lang('translation.answer_how_do_i_get')</p>
                                 </div>
                             </div>
                         </div>
@@ -902,6 +912,18 @@
                                     <p class="why-choose-five__item__text">@lang('translation.we_prioritize')</p><!-- /.why-choose-five__item__text -->
                                 </div><!-- /.why-choose-five__item__right -->
                             </div><!-- /.why-choose-five__item -->
+                            <div class="why-choose-five__item wow fadeInUp" data-wow-duration="1500ms">
+                                <div class="why-choose-five__item__left">
+                                    <div class="why-choose-five__item__icon">
+                                        <img src="assets/frontend/images/about/icon-why-choose.svg" alt="tab">
+                                    </div><!-- /.why-choose-five__item__icon -->
+                                    <h3 class="why-choose-five__item__title">@lang('translation.global_appreciation')</h3>
+                                    <!-- /.why-choose-five__item__title -->
+                                </div><!-- /.why-choose-five__item__left -->
+                                <div class="why-choose-five__item__right">
+                                    <p class="why-choose-five__item__text">@lang('translation.by_continuously_sharing')</p><!-- /.why-choose-five__item__text -->
+                                </div><!-- /.why-choose-five__item__right -->
+                            </div><!-- /.why-choose-five__item -->
                         </div><!-- /.why-choose-five__inner -->
                     </div><!-- /.why-choose-five__content -->
                 </div><!-- /.col-lg-6 -->
@@ -955,9 +977,9 @@
                 params.append(field.name, field.value);
                 if (field.name === "type") {
                     if(field.value === "1") {
-                        locationValue = "full-day-tour";
+                        locationValue = "full-day-experience";
                     } else if(field.value === "0") {
-                        locationValue = "half-day-tour";
+                        locationValue = "half-day-experience";
                     }
                 }
             });

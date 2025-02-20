@@ -60,16 +60,17 @@
                         <div class="why-choose-two__box-wrapper">
                             <div class="why-choose-two__box">
                                 <div class="why-choose-two__box__icon">
-                                    <img src="{{asset('/assets/frontend/images/about/capa_1.png')}}" alt="">
-                                </div><!-- /.why-choose-two__box__icon -->
-                                <h4 class="why-choose-two__box__title">@lang('translation.coffee_experiences')</h4>
-                            </div><!-- /.why-choose-two__box -->
-                            <div class="why-choose-two__box">
-                                <div class="why-choose-two__box__icon">
                                     <img src="{{asset('/assets/frontend/images/about/leaves.png')}}" alt="">
                                 </div><!-- /.why-choose-two__box__icon -->
                                 <h4 class="why-choose-two__box__title">@lang('translation.farming_practices')</h4>
                             </div><!-- /.why-choose-two__box -->
+                            <div class="why-choose-two__box">
+                                <div class="why-choose-two__box__icon">
+                                    <img src="{{asset('/assets/frontend/images/about/capa_1.png')}}" alt="">
+                                </div><!-- /.why-choose-two__box__icon -->
+                                <h4 class="why-choose-two__box__title">@lang('translation.coffee_experiences')</h4>
+                            </div><!-- /.why-choose-two__box -->
+
                         </div><!-- /.why-choose-two__service -->
                         <div class="why-choose-two__box-wrapper">
                             <div class="why-choose-two__box">
