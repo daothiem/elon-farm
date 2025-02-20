@@ -21,7 +21,7 @@
 		"autoplay": true
 		}'>
                 <div class="item">
-                    <div class="main-slider-four__image" style="background-image: url(assets/frontend/images/backgrounds/slider-5-1.jpeg);"></div>
+                    <div class="main-slider-four__image" style="background-image: url(assets/frontend/images/backgrounds/slider-5-1.webp);"></div>
                     <div class="container">
                         <div class="main-slider-four__row row gutter-y-50 align-items-center justify-content-center">
                             <div class="col-xl-9 col-lg-8 w-100 px-5">
@@ -41,7 +41,7 @@
                     </div>
                 </div><!-- end item 1 -->
                 <div class="item">
-                    <div class="main-slider-four__image" style="background-image: url(assets/frontend/images/backgrounds/slider-5-2.jpeg);"></div>
+                    <div class="main-slider-four__image" style="background-image: url(assets/frontend/images/backgrounds/slider-5-2.webp);"></div>
                     <div class="container">
                         <div class="main-slider-four__row row gutter-y-50 align-items-center justify-content-center">
                             <div class="col-xl-9 col-lg-8 w-100 px-5">
@@ -83,7 +83,7 @@
                 </div><!-- end item 3 -->
 
                 <div class="item">
-                    <div class="main-slider-four__image" style="background-image: url(assets/frontend/images/backgrounds/slider-5-4.jpeg);"></div>
+                    <div class="main-slider-four__image" style="background-image: url(assets/frontend/images/backgrounds/slider-5-4.webp);"></div>
                     <div class="container">
                         <div class="main-slider-four__row row gutter-y-50 align-items-center justify-content-center">
                             <div class="col-xl-9 col-lg-8 w-100 px-5">
@@ -210,7 +210,7 @@
                 <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
                     <div class="about-six__image">
                         <div class="about-six__image__one">
-                            <img src="assets/frontend/images/about/about-6-3.png" alt="about">
+                            <img src="assets/frontend/images/about/about-6-3.webp" alt="about">
                         </div><!-- /.about-six__image__one -->
                         <div class="about-six__image__two">
                             <img src="assets/frontend/images/about/about-6-4.png" alt="about">
