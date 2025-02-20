@@ -39,6 +39,8 @@ return [
 
     'shared_folder_name'       => 'shares',
 
+    'base_directory' => 'files/1',
+    'base_url' => env('APP_URL') . '/storage/files/1',
     /*
     |--------------------------------------------------------------------------
     | Folder Names
