@@ -196,6 +196,12 @@ class FrontendController extends Controller
 
         return view('frontend.list_product', compact(['products']));
     }
+
+    public function listBlog(Request $request) {
+        $news = News::where('id', '>=', 0)->orderBy('created_at', "ASC")->get();
+        return view('frontend.news.list', compact('news'));
+    }
+
     public function cart() {
         $provinces = Province::all();
         $province_html = \App\Helper\StringHelper::getSelectOptionPlace($provinces, '', 'Vui lòng chọn thành phố', false, true);

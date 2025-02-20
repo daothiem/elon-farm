@@ -2,97 +2,73 @@
 @section('title')
 @endsection
 @section('css')
-    <link href="{{ asset('/assets/frontend/modules/news/css/newscbcf.css?v=23062018') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('/assets/frontend/modules/news/js/news.js') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/assets/frontend/modules/news/css/newsf83b.css?v=1872017') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/assets/frontend/modules/news/css/detail.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/assets/frontend/modules/news/css/comment.css') }}" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="{{ URL::asset('/assets/frontend/modules/news/js/detail.js') }}"></script>
+
 @endsection
 @section('main-content')
-    <nav aria-label="breadcrumb" class="div_breadcrumb">
+    
+    <section class="page-header">
+        <div class="page-header__bg"></div>
+        <!-- /.page-header__bg -->
         <div class="container">
-            <div class="row">
-                <ol class="breadcrumb">
-                    @foreach($data->new_categories as $category)
-                    <li class="breadcrumb-item">
-                        <a href='{{$category->alias}}'>
-                            {{--<span>{{$category->title}}</span>--}}
-                            {{$category->title}}
-                        </a>
-                    </li>
-                    @endforeach
-                </ol>
-            </div>
-        </div>
-    </nav>
+            <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">@lang('translation.all_blog_title')</h2>
+            <div class="page-header__breadcrumb-box">
+                <ul class="trevlo-breadcrumb">
+                    <li><a href="/">@lang('translation.home')</a></li>
+                    <li>@lang('translation.all_blog_title')</li>
+                </ul><!-- /.trevlo-breadcrumb -->
+            </div><!-- /.page-header__breadcrumb-box -->
+        </div><!-- /.container -->
+    </section><!-- /.page-header -->
 
-    <div id="vnt-container" class="container">
-        <div id="vnt-content">
-
-            <div class="row">
-                <div class="box_category_news">
-                    <div class="container">
-                        <div class="row">
-                            @foreach($data->new_categories as $category)
-                                <a href='{{$category->alias}}'><span>{{$category->title}}</span></a>
+    <!-- Blog List Page Start -->
+    <div class="blog-list-page section-space">
+        <div class="container">
+            <div class="blog-list-page__row row">
+                <div class="col-lg-8">
+                    <div class="blog-list__inner-container">
+                        <div class="row gutter-y-50">
+                            @foreach($news as $item)
+                            <div class="col-12 wow animated fadeInUp" data-wow-delay="0s" data-wow-duration="1500ms">
+                                <div class="blog-card-three blog-list-card">
+                                    <div class="blog__card">
+                                        <a href="blog-details-right.html" class="blog__card-img">
+                                            <img src="{{ asset($item['avatar']) }}" alt="{{ $item['title'] }}">
+                                            <div class="blog__card-date">
+                                                <h4 class="blog__card-date-number">{{ \Carbon\Carbon::parse($item['created_at'])->format('d') }}</h4>
+                                                <p class="blog__card-date-month">{{ \Carbon\Carbon::parse($item['created_at'])->format('M, Y') }}</p>
+                                            </div><!-- /.blog__card-date -->
+                                        </a><!-- /.blog__card-img -->
+                                        <div class="blog__card-content">
+                                            <ul class="blog__card-meta">
+                                                <li>
+                                                    <span class="blog__card-meta-icon icon-user"></span>
+                                                    <span class="blog__card-meta-author">@lang('translation.by') {{ $item['createdBy']['name'] }}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="blog__card-meta-icon icon-chat"></span>
+                                                    <span class="blog__card-meta-author">2 Comment</span>
+                                                </li>
+                                            </ul><!-- /.blog__card-meta -->
+                                            <h3 class="blog__card-title"><a href="/{{ $item['alias'] }}">{{ $item['title'] }}</a></h3>
+                                            <p class="blog__card-text">{{ $item['description'] }}</p>
+                                            <a href="/{{ $item['alias'] }}" class="log__card-btn trevlo-btn trevlo-btn--white-two"><span>@lang('translation.read_more_only')</span></a>
+                                        </div><!-- /.blog-details__card-content -->
+                                    </div><!-- /.blog-details__card -->
+                                </div><!-- /.blog-card-three -->
+                            </div><!-- /.col-12 -->
                             @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="title_cat row">
-                <h1>{{$data->title}}</h1>
-            </div>
-
-            <div class="row row-tin-tuc">
-                <div class="column Column1">
-                    <div id="List_View" class="paging-default clearfix">
-                        @foreach($data->news as $new)
-                            <div class="item-main">
-                                <div class="pic">
-                                    <a href="/{{$new->alias}}">
-                                        <img
-                                                src="{{$new->avatar}}"
-                                                alt='{{$new->title}}'
-                                                title='{{$new->title}}'
-                                        />
-                                    </a>
-                                </div>
-                                <h3>
-                                    <a href="/{{$new->alias}}">{$new->title}}</a>
-                                </h3>
-                                <div class="short">{{{$new->description}}}}
-                                </div>
-                                <div class="info_post">
-                                    <p>BY locday123
-                                        <span class="view">
-                                        <i class="fa fa-eye" aria-hidden="true"></i>
-                                        626</span> - <a href="/{{$new->news_category->alias}}" class="icon_cat">{{$new->news_category->title}}</a></p>
-                                    <p class="date_post"><span>27-09-2024</span></p>
-                                </div>
-                            </div>
-                        @endforeach
-
-                    </div>
-                    <input type="hidden" value="11" name="cat_id" id="catID">
-                    <input type="hidden" value="9" name="size" id="size">
-                    <input type="hidden" value="2" name="view" id="view">
-                    <input type="hidden" value="7" name="totalpage" id="totalpage">
-                    <span id="view_more"><a href="javascript:;" id="load_more" class="viewmore hidden" data-view="2"
-                                            data-catid="11" data-page="2" data-size="9" data-totalpage="7">Xem thêm <i
-                                    class="glyphicon glyphicon-triangle-bottom"></i></a></span>
-                    <div id="loading" class="hidden">
-                        <div class="loader" id="loader-4">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="column Column2"></div>
-            </div>
-
-
-            <div class="clear"></div>
-        </div>
-    </div>
+                        </div><!-- /.row -->
+                    </div><!-- /.blog-list__inner-container -->
+                </div><!-- /.col-lg-78-->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- /.blog-list-page -->
+    <!-- Blog List Page End -->
 @endsection
 @section('scripts')
 @endsection

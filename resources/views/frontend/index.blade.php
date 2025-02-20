@@ -150,8 +150,9 @@
                                 </div><!-- /.banner-form__icon -->
                                 <div class="flex-fill">
                                     <label for="date">@lang('translation.preferred_tour_date')</label>
-                                        <input class="trevlo-multi-datepicker" id="date" type="text" name="date"
-                                            placeholder="@lang('translation.select_date')">
+                                        <!-- <input class="trevlo-multi-datepicker" id="date" type="text" name="date"
+                                            placeholder="@lang('translation.select_date')"> -->
+                                        <input type="text" name="date" placeholder="Select date" id="date" class="tour-listing-details__sidebar-form-date trevlo-datepicker">
                                 </div>
                                 <span class="trevlo-one-icon-chevron-down banner-form__datepicker-icon position-relative"></span>
                             </div>
@@ -249,7 +250,7 @@
                                     <p class="about-six__box__text">@lang('translation.through_immersive')</p>
                                 </div><!-- /.about-six__box__content -->
                             </div><!-- /.about-box -->
-                            <a href="/robusta-vietnam" class="trevlo-btn trevlo-btn--two trevlo-btn--base w-50">
+                            <a href="/about-us" class="trevlo-btn trevlo-btn--two trevlo-btn--base w-50">
                                 <span>@lang('translation.more_about_us')</span>
                                 <i class="trevlo-one-icon-up-right-arrow"></i>
                             </a><!-- /.trevlo-btn -->
@@ -549,7 +550,7 @@
                     </div><!-- /.col-lg-8 -->
                     <div class="col-lg-4">
                         <div class="blog-three__button">
-                            <a href="#" class="h-fit-content ">
+                            <a href="/list-blog" class="h-fit-content ">
                                 <span>@lang('translation.all_blog')</span>
                                 <i class="trevlo-one-icon-up-right-arrow"></i>
                             </a><!-- /.trevlo-btn -->
@@ -654,7 +655,7 @@
                 <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                     <div class="testimonials-card-three">
                         <div class="testimonials-card-three__image">
-                            <img src="assets/frontend/images/about/blog-1.png" alt="tab">
+                            <img src="assets/frontend/images/about/anna-ava.png" alt="tab">
                         </div>
                         <div class="testimonials-card-three__inner">
                             <div class="testimonials-card-three__quote-icon">
@@ -674,7 +675,7 @@
                 <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                     <div class="testimonials-card-three">
                         <div class="testimonials-card-three__image">
-                            <img src="assets/frontend/images/about/blog-1.png" alt="tab">
+                            <img src="assets/frontend/images/about/liam-ava.png" alt="tab">
                         </div>
                         <div class="testimonials-card-three__inner">
                             <div class="testimonials-card-three__quote-icon">
@@ -694,7 +695,7 @@
                 <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
                     <div class="testimonials-card-three">
                         <div class="testimonials-card-three__image">
-                            <img src="assets/frontend/images/about/blog-1.png" alt="tab">
+                            <img src="assets/frontend/images/about/michael-ava.png" alt="tab">
                         </div>
                         <div class="testimonials-card-three__inner">
                             <div class="testimonials-card-three__quote-icon">
