@@ -29,11 +29,11 @@ return [
     "elon_with_love_content" => "Tại Elon Farm, chúng tôi trồng và sản xuất cà phê Robusta hảo hạng của Việt Nam, kết hợp với trải nghiệm nông trại địa phương. Hãy ghé thăm, tìm hiểu về quy trình sản xuất cà phê, thư giãn và tận hưởng vẻ đẹp của làng cà phê chúng tôi.",
     "explore_farm" => "Khám phá Nông Trại Chúng Tôi",
     "cultivating_quality" => "Gieo trồng chất lượng, thu hoạch hạnh phúc.",
-    "cultivating_quality_content" => "Chúng tôi tin rằng mỗi vùng cà phê mang đến một trải nghiệm độc đáo. Nằm giữa những ngọn đồi màu mỡ của Nam Ban ở độ cao trên 1000 mét so với mực nước biển, chúng tôi sản xuất cà phê Robusta đậm đà hương vị và giàu truyền thống. Với các phương pháp canh tác bền vững và cam kết chất lượng, chúng tôi tự hào mang cà phê Việt Nam từ Nam Ban đến với những người yêu cà phê. Hãy đến và khám phá!",
+    "cultivating_quality_content" => "Chúng tôi tin rằng mỗi vùng cà phê đều mang đến một trải nghiệm độc đáo. Chúng tôi nồng nhiệt mời mọi người đến và khám phá cà phê địa phương của chúng tôi được trồng ở độ cao 1.000m!",
     "the_heart" => "Trái Tim Của Robusta",
-    "the_heart_content" => "Khám phá câu chuyện đằng sau cà phê Robusta của chúng tôi. Chúng tôi rất muốn chia sẻ quy trình sản xuất cà phê của mình với bạn. Hãy đến thăm trang trại của chúng tôi để tìm hiểu, trải nghiệm và tận hưởng hành trình từ hạt cà phê đến tách cà phê.",
+    "the_heart_content" => "Chúng tôi sản xuất cà phê Robusta chất lượng cao và hảo hạng, với mục tiêu cung cấp sản phẩm tốt nhất cho khách hàng.",
     "beyond_coffee" => "Hơn cả cà phê: Trải nghiệm cuộc sống địa phương.",
-    "beyond_coffee_content" => "Tham quan nông trại cà phê sôi động của chúng tôi và hòa mình vào văn hóa địa phương. Không chỉ thưởng thức cà phê, bạn còn có cơ hội khám phá văn hóa bản địa qua các hoạt động nuôi tằm, tham quan chùa Linh Ẩn và chiêm ngưỡng thác Voi hùng vĩ.",
+    "beyond_coffee_content" => "Bên cạnh trải nghiệm cà phê, chúng tôi còn cung cấp các hoạt động giúp bạn đắm mình vào lối sống địa phương.",
     "more_than_tour" => "Hơn cả một Tour—Đây là trải nghiệm địa phương",
     "more_than_tour_content" => "Tại Elon Farm, chúng tôi mang đến hơn cả một chuyến tham quan. Hãy đắm chìm trong di sản cà phê của Việt Nam. Dạo bước qua các đồn điền, tìm hiểu về cuộc sống địa phương cùng quá trình chế biến cà phê, và thưởng thức những tách cà phê tươi ngon. Tham gia cùng chúng tôi trong một trải nghiệm chia sẻ kiến thức và đam mê với cà phê.",
     "full_day_tour" => "Tour cả ngày",
@@ -45,6 +45,7 @@ return [
     "yes" => "Có",
     "no" => "Không",
     "book_now" => "Đặt ngay",
+    "book_tour" => "Đặt tour",
     "our_story" => "Câu chuyện của chúng tôi",
     "we_strive" => "Chúng tôi nỗ lực nâng tầm cà phê Robusta Việt Nam cho những người yêu cà phê trên toàn cầu.",
     "located_in" => "Tọa lạc tại Tây Nguyên Việt Nam ở độ cao 1000m, chúng tôi là Elon Farm - những người sản xuất cà phê với kinh nghiệm nâng tầm hương vị Robusta từ năm 2017.",
@@ -95,7 +96,7 @@ return [
     "our_tours" => "Các Tours",
     "select_tour" => "Chọn Tour Bạn Mong Muốn",
     "duration" => "Thời gian",
-    "tour_type" => "Loại Tour",
+    "tour_type" => "Trải nghiệm",
     "location" => "Địa Điểm",
     "from" => "Chỉ từ",
     "get_airport" => "Làm thế nào để tôi đến Elon Farm từ sân bay?",
@@ -184,7 +185,8 @@ return [
     "can_i_visit" => "Tôi có thể đến thăm Nông trại Elon để tham quan hoặc trải nghiệm cà phê không?",
     "answer_can_i_visit" => "Chắc chắn rồi! Chúng tôi hoan nghênh du khách đến Nông trại Elon để tham quan và trải nghiệm cà phê. Vui lòng lên lịch chuyến thăm của bạn trước bằng cách liên hệ với chúng tôi.",
     "how_do_i_get" => "Làm thế nào để tôi đến Nông trại Elon từ sân bay hoặc trung tâm thành phố Đà Lạt?",
-    "answer_how_do_i_get" => "Nông trại Elon cách sân bay Đà Lạt khoảng 20 km. Bạn có thể đi taxi hoặc sắp xếp xe đưa đón riêng qua đội ngũ của chúng tôi. Chuyến đi ngắm cảnh mất khoảng 45 phút và mang đến khung cảnh tuyệt đẹp của Tây Nguyên."
+    "answer_how_do_i_get" => "Nông trại Elon cách sân bay Đà Lạt khoảng 20 km. Bạn có thể đi taxi hoặc sắp xếp xe đưa đón riêng qua đội ngũ của chúng tôi. Chuyến đi ngắm cảnh mất khoảng 45 phút và mang đến khung cảnh tuyệt đẹp của Tây Nguyên.",
+    "experience" => "Trải nghiệm"
 
 ];
 ?>

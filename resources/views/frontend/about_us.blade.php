@@ -109,7 +109,7 @@
                             <h2 class="sec-title__title">@lang('translation.welcome_to_homestay')</h2><!-- /.sec-title__title -->
                         </div><!-- /.sec-title --><!-- /.sec-title -->
                         <p class="destination-two__text">@lang('translation.about_us_description')</p>
-                        <a href="/list-tour"
+                        <a href="/experiences"
                            class="main-header__button trevlo-btn trevlo-btn--two trevlo-btn--base">
                             <span>Start Booking</span>
                             <i class="trevlo-one-icon-up-right-arrow"></i>

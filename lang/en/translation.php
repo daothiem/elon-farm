@@ -29,11 +29,11 @@ return [
     "elon_with_love_content" => "At Elon Farm, we blend the art of cultivating premium coffee with immersive farm-stay experiences. Sip, stay, and savor the natural beauty of our vibrant farm.",
     "explore_farm" => "Explore Our Farm",
     "cultivating_quality" => "Cultivating Quality, Harvesting Happiness",
-    "cultivating_quality_content" => "We believe that each coffee region offers a unique experience. Nestled in the fertile hills of Nam Ban at over 1000 meters above sea level, we produce Robusta coffee rich in flavor and tradition. With sustainable farming practices and a dedication to quality, we’re proud to share Vietnamese coffee from Nam Bạn with coffee lovers. Come and explore! ",
+    "cultivating_quality_content" => "We believe that each coffee region offers a unique experience. We warmly invite everyone to come and explore our local coffee grown at 1,000m! ",
     "the_heart" => "The Heart of Robusta Excellence",
-    "the_heart_content" => "Discover the story behind our Robusta coffee. We love to share our coffee production process with you. Visit our farm to learn, experience, and enjoy the journey from bean to cup. ",
+    "the_heart_content" => "We produce High-quality and Fine Robusta coffee, aiming to deliver the best product to our customers.",
     "beyond_coffee" => "Beyond Coffee: Live the Local Life",
-    "beyond_coffee_content" => "Visit our vibrant coffee farm and immerse yourself in the local culture. Not only will you experience our coffee, but you’ll also have the opportunity to explore the local culture through silk worm raising activities, visiting Linh An Pagoda, and viewing the majestic Elephant Waterfall.",
+    "beyond_coffee_content" => "Alongside our coffee experiences, we also offer activities that help you immerse yourself in the local lifestyle.",
     "more_than_tour" => "More Than a Tour - This is a Local Experience",
     "more_than_tour_content" => "At Elon Farm, we offer more than just a tour. Immerse yourself in Vietnam’s coffee heritage. Wander through our plantations, learn about local life alongside our coffee processing, and enjoy fresh brews. Join us for an experience where we share our knowledge and passion for coffee.",
     "full_day_tour" => "Full-Day Experience",
@@ -45,6 +45,7 @@ return [
     "yes" => "Yes",
     "no" => "No",
     "book_now" => "Book Now",
+    "book_tour" => "Book Tour",
     "our_story" => "Our Story",
     "we_strive" => "We strive to elevate Vietnamese robusta coffee for global coffee lovers.",
     "located_in" => "Located in the Vietnam Central Highlands at 1000m, we are Elon Farm - coffee producers with experience in elevating the taste of Robusta since 2017.",
@@ -95,7 +96,7 @@ return [
     "our_tours" => "Our experiences",
     "select_tour" => "Select your desired experience",
     "duration" => "Duration",
-    "tour_type" => "Experience Type",
+    "tour_type" => "Experience",
     "location" => "Location",
     "from" => "From",
     "get_airport" => "How do I get to Elon Farm from the airport?",
@@ -184,8 +185,8 @@ return [
     "can_i_visit" => "Can I visit Elon Farm for a tour or coffee experience?",
     "answer_can_i_visit" => "Absolutely! We welcome visitors to Elon Farm for tours and coffee experiences. Please schedule your visit in advance by contacting us.",
     "how_do_i_get" => "How do I get to Elon Farm from the airport or Dalat city center?",
-    "answer_how_do_i_get" => "Elon Farm is approximately 20 km from Dalat Airport. You can take a taxi or arrange a private transfer through our team. The scenic drive takes about 45 minutes and offers beautiful views of the Central Highlands"
-
+    "answer_how_do_i_get" => "Elon Farm is approximately 20 km from Dalat Airport. You can take a taxi or arrange a private transfer through our team. The scenic drive takes about 45 minutes and offers beautiful views of the Central Highlands",
+    "experience" => "Experience"
 
 ];
 ?>

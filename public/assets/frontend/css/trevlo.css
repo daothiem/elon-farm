@@ -12945,6 +12945,24 @@ body.megamenu-popup-active .mobile-nav__content {
 .tour-listing-details__included {
   margin-bottom: 40px;
 }
+.tour-listing-details__included ul {
+  list-style-type: none;
+  margin-left: 0px;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.tour-listing-details__included ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.tour-listing-details__included ul li p {
+  margin-bottom: 0;
+}
 .tour-listing-details__included-title {
   margin-bottom: 13px;
 }
