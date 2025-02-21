@@ -230,18 +230,18 @@
                                 <div class="banner-form">
                                     <h3 class="tour-listing-sidebar__title tour-listing-sidebar__price-ranger-title mb-3">@lang('translation.contact_information')</h3>
                                     <div class="banner-form__control">
-                                        <label for="name">@lang('translation.name')</label>
-                                        <input id="name" type="text" name="customer_name" placeholder="@lang('translation.your_name')">
+                                        <label for="name">@lang('translation.name') <span class="text-danger">*</span></label>
+                                        <input required id="name" type="text" name="customer_name" placeholder="@lang('translation.your_name')">
                                         <i><img src="assets/frontend/images/about/form-name.svg" alt="tab"></i>
                                     </div>
                                     <div class="banner-form__control">
-                                        <label for="customer_address_mail">Email</label>
-                                        <input id="customer_address_mail" type="email" name="customer_address_mail" placeholder="@lang('translation.your_email')">
+                                        <label for="customer_address_mail">Email <span class="text-danger">*</span></label>
+                                        <input required id="customer_address_mail" type="email" name="customer_address_mail" placeholder="@lang('translation.your_email')">
                                         <i><img src="assets/frontend/images/about/form-email.svg" alt="tab"></i>
                                     </div>
                                     <div class="banner-form__control">
-                                        <label for="phoneNumber">@lang('translation.phone_number')</label>
-                                        <input id="phoneNumber" type="text" name="customer_number_phone" placeholder="@lang('translation.your_phone')">
+                                        <label for="phoneNumber">@lang('translation.phone_number')<span class="text-danger">*</span></label>
+                                        <input required id="phoneNumber" type="text" name="customer_number_phone" placeholder="@lang('translation.your_phone')">
                                         <i><img src="assets/frontend/images/about/form-phone.svg" alt="tab"></i>
                                     </div>
                                 </div>
@@ -597,7 +597,7 @@
             const total_fee = transport_fee + adults_fee + youth_fee;
 
             $('.total_price_tour').html(`${Number(total_fee).toLocaleString("vi-VN")}đ`)
-            $('#price-hidden').val(total_fee);
+            $('.price-hidden').val(total_fee);
         }
         $('.sub, .add').on('click', () => {
             calculate_price();

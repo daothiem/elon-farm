@@ -18,9 +18,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use function GuzzleHttp\Promise\all;
+use App\Traits\HandleFile;
 
 class FrontendController extends Controller
 {
+    use HandleFile;
     public function siteMap() {
         $products = Product::all();
         $news = News::all();
@@ -81,7 +83,8 @@ class FrontendController extends Controller
     public function orderSuccess($orderId): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         $order = Order::find($orderId);
-        return view('frontend.order-success', compact('order'));
+        $date_format = $this->convertDate($order->date);
+        return view('frontend.order-success', compact('order', 'date_format'));
     }
 
     public function view($alias) {
@@ -223,14 +226,15 @@ class FrontendController extends Controller
         $order = Order::create($input);
         $type = $order->type === 1 ? 'Full-day' : 'Half-day';
         $product_name = $order->product->name;
+        $date_format = $this->convertDate($order->date);
         // send mail to customer
-        Mail::send('frontend.mail.booking-confirm', ['order' => $order, 'type'=> $type, 'product_name' => $product_name], function ($m) use ($input) {
+        Mail::send('frontend.mail.booking-confirm', ['order' => $order, 'type'=> $type, 'product_name' => $product_name, 'date_format' => $date_format], function ($m) use ($input) {
             $m->from('daothiem1510@gmail.com', 'Elon farm');
             $m->to($input['customer_address_mail'], 'Elon farm')->subject('Farm Tour Booking Confirmation');
         });
 
         // send mail to admin
-        Mail::send('frontend.mail.info-book-tour', ['order' => $order, 'type'=> $type, 'product_name' => $product_name], function ($m) use ($input) {
+        Mail::send('frontend.mail.info-book-tour', ['order' => $order, 'type'=> $type, 'product_name' => $product_name, 'date_format' => $date_format], function ($m) use ($input) {
             $m->from('daothiem1510@gmail.com', 'Elon farm');
             $m->to('daothiem1510@gmail.com', 'Elon farm')->subject('New Farm Tour Booking Alert');
         });

@@ -13,15 +13,15 @@
 <ul>
     <li><strong>Tour Name:</strong> {{ $product_name }}</li>
     <li><strong>Tour Type:</strong> {{ $type }}</li>
-    <li><strong>Start Date:</strong> {{ $order->date }} </li>
-    <li><strong>Total Price:</strong> {{ $order->price }} vnd</li>
+    <li><strong>Start Date:</strong> {{ $date_format }} </li>
+    <li><strong>Total Price:</strong> {{ number_format($order->price , 0, ',', '.') }} vnd</li>
 </ul>
 
 <h3>Customer Information:</h3>
 <ul>
     <li><strong>Name:</strong> {{ $order->customer_name }}</li>
     <li><strong>Email:</strong> {{ $order->customer_address_mail }}</li>
-    <li><strong>Phone Number:</strong> {{ $order->customer_number_phone }}@if($order->special_request_text !== null && $order->special_request_text != ''), {{$order->special_request_text}}@endif</li>
+    <li><strong>Phone Number:</strong> {{ $order->customer_number_phone }}</li>
 </ul>
 
 <h3>Participants:</h3>
@@ -29,7 +29,7 @@
     <li><strong>Adults:</strong> {{ $order->adults }}</li>
     <li><strong>Youth:</strong> {{ $order->youth }}</li>
     <li><strong>Children:</strong> {{ $order->children }}</li>
-    <li><strong>Special request:</strong> {{ $order->special_request }}</li>
+    <li><strong>Special request:</strong> {{ $order->special_request }}@if($order->special_request_text !== null && $order->special_request_text != ''), {{$order->special_request_text}}@endif</li>
 </ul>
 
 <p>If you have any questions or need further assistance, feel free to contact us.</p>
