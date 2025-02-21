@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
 
 trait HandleFile
 {
@@ -59,6 +60,17 @@ trait HandleFile
     {
         if ($this->checkFileExist($pathFile)) {
             File::delete(public_path($pathFile));
+        }
+    }
+
+    public function convertDate($dateStr) {
+        try {
+            // Attempt to parse the date using the expected format
+            $date = Carbon::createFromFormat('m/d/Y', $dateStr);
+            return strtolower($date->format('d M Y'));
+        } catch (\Exception $e) {
+            // If parsing fails, return the original string (or handle accordingly)
+            return $dateStr;
         }
     }
 }

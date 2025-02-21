@@ -13,8 +13,8 @@
 <ul>
     <li><strong>Tour Name:</strong> {{ $product_name }}</li>
     <li><strong>Tour Type:</strong> {{ $type }}</li>
-    <li><strong>Start Date:</strong> {{ $order->date }}</li>
-    <li><strong>Total Price:</strong> {{ $order->price }} vnd</li>
+    <li><strong>Start Date:</strong> {{ $date_format }}</li>
+    <li><strong>Total Price:</strong> {{ number_format($order->price, 0, ',', '.')}} vnd</li>
 </ul>
 
 <h3>Customer Information:</h3>

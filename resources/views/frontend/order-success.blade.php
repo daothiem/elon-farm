@@ -101,16 +101,16 @@
 
             <h6 class="text-start highlight-text">Tour</h6>
             <p class="text-start">Tour: <strong>{{$order->product->name}}</strong></p>
-            <p class="text-start">@lang('translation.preferred_tour_date'): <strong>{{$order->date}}</strong></p>
+            <p class="text-start">@lang('translation.preferred_tour_date'): <strong>{{$date_format}}</strong></p>
             <p class="text-start">@lang('translation.adults'): <strong>{{$order->adults}}</strong></p>
             <p class="text-start">@lang('translation.youth_10_18'): <strong>{{$order->youth}}</strong></p>
             <p class="text-start">@lang('translation.children'): <strong>{{$order->children}}</strong></p>
             <p class="text-start">@lang('translation.transportation'): <strong>{{$order->is_transportation ? 'Yes' : 'No'}}</strong></p>
 
             <h6 class="text-start highlight-text">@lang('translation.specical_request')</h6>
-            @foreach(explode(',', $order->special_request) as $special)
-                <p class="text-start">@lang('translation.request'): <strong>{{$special}}</strong></p>
-            @endforeach
+            <p class="text-start">@lang('translation.request'): <strong>{{$order->special_request}}</strong></p>
+            <br>
+            <li><strong>Total Price:</strong> {{ number_format($order->price) }} vnd</li>
         </div>
 
         <div class="mx-auto mt-4 text-muted alert-success">
