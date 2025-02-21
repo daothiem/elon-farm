@@ -27,7 +27,7 @@
                             <div class="col-xl-9 col-lg-8 w-100 px-5">
                                 <div class="main-slider-four__content text-center">
                                     <h3 class="main-slider-four__title">@lang('translation.elon_with_love')</h3>
-                                    <p class="main-slider-four__text mb-5">@lang('translation.elon_with_love_content')</p><!-- /.main-slider-four__text -->
+                                    <p class="main-slider-four__text mb-5"></p><!-- /.main-slider-four__text -->
                                     <div class="main-slider-five__button">
                                         <a href="/robusta-vietnam"
                                         class="trevlo-btn trevlo-btn--two trevlo-btn--base custom-slider-button">
@@ -40,26 +40,6 @@
                         </div><!-- /.row -->
                     </div>
                 </div><!-- end item 1 -->
-                <div class="item">
-                    <div class="main-slider-four__image" style="background-image: url(assets/frontend/images/backgrounds/slider-5-2.webp);"></div>
-                    <div class="container">
-                        <div class="main-slider-four__row row gutter-y-50 align-items-center justify-content-center">
-                            <div class="col-xl-9 col-lg-8 w-100 px-5">
-                                <div class="main-slider-four__content text-center">
-                                    <h3 class="main-slider-four__title">@lang('translation.cultivating_quality')</h3>
-                                    <p class="main-slider-four__text mb-5">@lang('translation.cultivating_quality_content')</p><!-- /.main-slider-four__text -->
-                                    <div class="main-slider-five__button">
-                                        <a href="/robusta-vietnam"
-                                        class="trevlo-btn trevlo-btn--two trevlo-btn--base custom-slider-button">
-                                            <span>@lang('translation.explore_farm')</span>
-                                            <i class="trevlo-one-icon-up-right-arrow"></i>
-                                        </a><!-- /.trevlo-btn -->
-                                    </div><!-- /.main-slider-five__button -->
-                                </div>
-                            </div><!-- /.col-xl-9 col-lg-4 -->
-                        </div><!-- /.row -->
-                    </div>
-                </div><!-- end item 2 -->
 
                 <div class="item">
                     <div class="main-slider-four__image" style="background-image: url(assets/frontend/images/backgrounds/slider-5-3.jpeg);"></div>
@@ -83,7 +63,28 @@
                 </div><!-- end item 3 -->
 
                 <div class="item">
-                    <div class="main-slider-four__image" style="background-image: url(assets/frontend/images/backgrounds/slider-5-4.webp);"></div>
+                    <div class="main-slider-four__image" style="background-image: url(assets/frontend/images/backgrounds/slider-5-2.webp);"></div>
+                    <div class="container">
+                        <div class="main-slider-four__row row gutter-y-50 align-items-center justify-content-center">
+                            <div class="col-xl-9 col-lg-8 w-100 px-5">
+                                <div class="main-slider-four__content text-center">
+                                    <h3 class="main-slider-four__title">@lang('translation.cultivating_quality')</h3>
+                                    <p class="main-slider-four__text mb-5">@lang('translation.cultivating_quality_content')</p><!-- /.main-slider-four__text -->
+                                    <div class="main-slider-five__button">
+                                        <a href="/robusta-vietnam"
+                                        class="trevlo-btn trevlo-btn--two trevlo-btn--base custom-slider-button">
+                                            <span>@lang('translation.explore_farm')</span>
+                                            <i class="trevlo-one-icon-up-right-arrow"></i>
+                                        </a><!-- /.trevlo-btn -->
+                                    </div><!-- /.main-slider-five__button -->
+                                </div>
+                            </div><!-- /.col-xl-9 col-lg-4 -->
+                        </div><!-- /.row -->
+                    </div>
+                </div><!-- end item 2 -->
+
+                <div class="item">
+                    <div class="main-slider-four__image" style="background-image: url(assets/frontend/images/backgrounds/slider-5-5.jpeg);"></div>
                     <div class="container">
                         <div class="main-slider-four__row row gutter-y-50 align-items-center justify-content-center">
                             <div class="col-xl-9 col-lg-8 w-100 px-5">
@@ -103,27 +104,6 @@
                     </div>
                 </div><!-- end item 4 -->
 
-                <div class="item">
-                    <div class="main-slider-four__image" style="background-image: url(assets/frontend/images/backgrounds/slider-5-5.jpeg);"></div>
-                    <div class="container">
-                        <div class="main-slider-four__row row gutter-y-50 align-items-center justify-content-center">
-                            <div class="col-xl-9 col-lg-8 w-100 px-5">
-                                <div class="main-slider-four__content text-center">
-                                    <h3 class="main-slider-four__title">@lang('translation.more_than_tour') </h3>
-                                    <p class="main-slider-four__text mb-5">@lang('translation.more_than_tour_content')</p><!-- /.main-slider-four__text -->
-                                    <div class="main-slider-five__button">
-                                        <a href="/robusta-vietnam"
-                                        class="trevlo-btn trevlo-btn--two trevlo-btn--base custom-slider-button">
-                                            <span>@lang('translation.explore_farm')</span>
-                                            <i class="trevlo-one-icon-up-right-arrow"></i>
-                                        </a><!-- /.trevlo-btn -->
-                                    </div><!-- /.main-slider-five__button -->
-                                </div>
-                            </div><!-- /.col-xl-9 col-lg-4 -->
-                        </div><!-- /.row -->
-                    </div>
-                </div><!-- end item 5 -->
-
             </div><!-- banner-slider -->
             <div class="banner-form banner-form--two banner-form--three wow fadeInUp" data-wow-delay="300ms">
             <div class="container">
@@ -135,7 +115,7 @@
                                     <img src="assets/frontend/images/about/tour-icon.svg" alt="about">
                                 </div><!-- /.banner-form__icon -->
                                 <div class="flex-fill">
-                                    <label for="location">Tour</label>
+                                    <label for="location">@lang('translation.experience')</label>
                                     <select name="type" class="selectpicker" id="location">
                                         <option value="1">@lang('translation.full_day_tour')</option>
                                         <option value="0">@lang('translation.half_day_tour')</option>
@@ -939,13 +919,13 @@
                 <div class="col-xl-6">
                     <div class="why-choose-three__content">
                         <div class="sec-title text-left">
-                            <p class="sec-title__tagline text-white">@lang('translation.our_tour')</p><!-- /.sec-title__tagline -->
+                            <p class="sec-title__tagline text-white">@lang('translation.book_tour')</p><!-- /.sec-title__tagline -->
                             <h2 class="sec-title__title text-white">@lang('translation.our_tour1')<br> @lang('translation.our_tour2')</h2><!-- /.sec-title__title -->
                         </div><!-- /.sec-title --><!-- /.sec-title -->
                         <p class="why-choose-three__content__text text-white">
                             @lang('translation.there_are_many')
                         </p>
-                        <a href="/list-tour" class="trevlo-btn book-button">
+                        <a href="/experiences" class="trevlo-btn book-button">
                             <span>@lang('translation.book_now')</span>
                             <i class="trevlo-one-icon-up-right-arrow"></i>
                         </a><!-- /.trevlo-btn -->

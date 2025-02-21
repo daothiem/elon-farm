@@ -77,7 +77,7 @@
                     <div class="footer-widget footer-widget--links footer-widget--links-1">
                         <h2 class="footer-widget__title">@lang('translation.useful_links')</h2><!-- /.footer-widget__title -->
                         <ul class="footer-widget__links">
-                            <li><a href="/list-tour">@lang('translation.tour_listing')</a></li>
+                            <li><a href="/experiences">@lang('translation.tour_listing')</a></li>
                         </ul><!-- /.footer-widget__links -->
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-xl-3 col-md-3 -->

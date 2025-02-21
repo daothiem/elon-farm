@@ -246,12 +246,12 @@
                                     </div>
                                 </div>
                                 <div class="tour-listing-sidebar__price-ranger">
-                                    <h3 class="tour-listing-sidebar__title tour-listing-sidebar__price-ranger-title mb-3">Tour</h3>
+                                    <h3 class="tour-listing-sidebar__title tour-listing-sidebar__price-ranger-title mb-3">@lang('translation.experience')</h3>
                                      <div class="banner-form__control">
-                                        <label for="type">Tour</label>
+                                        <label for="type">@lang('translation.experience')</label>
                                         <select name="type" class="selectpicker" id="type">
-                                            <option value="1">@lang('translation.full_day_tour')</option>
-                                            <option value="0" selected>@lang('translation.half_day_tour')</option>
+                                            <option value="1" {{ $data['alias'] == 'full-day-experience' ? 'selected' : '' }}>@lang('translation.full_day_tour')</option>
+                                            <option value="0" {{ $data['alias'] == 'half-day-experience' ? 'selected' : '' }}>@lang('translation.half_day_tour')</option>
                                         </select>
                                         <i><img src="assets/frontend/images/about/form-tour.svg" alt="tab"></i>
                                     </div>
@@ -553,9 +553,9 @@
             return data;
         }
         const urlParams = getQueryParams();
+        console.log('urlParams', urlParams);
         $.each(urlParams, function (key, value) {
-            const $element = $('[name="' + key + '"]');
-
+            const $element = $(`[name="${key}"]`);
             if ($element.is(':checkbox')) {
                 if (value === 'yes' || value === '1') {
                     $element.prop('checked', true);
@@ -565,13 +565,6 @@
             } else if ($element.is('select')) {
                 // Handle select dropdown
                 $element.val(value);
-                $element.find('option').each(function () {
-                if ($(this).val() === value) {
-                    $(this).prop('selected', true);
-                } else {
-                    $(this).prop('selected', false);
-                }
-            });
             } else {
                 // Default case: handle text, number, email, etc.
                 $element.val(value);
