@@ -186,7 +186,10 @@ return [
     "answer_can_i_visit" => "Absolutely! We welcome visitors to Elon Farm for tours and coffee experiences. Please schedule your visit in advance by contacting us.",
     "how_do_i_get" => "How do I get to Elon Farm from the airport or Dalat city center?",
     "answer_how_do_i_get" => "Elon Farm is approximately 20 km from Dalat Airport. You can take a taxi or arrange a private transfer through our team. The scenic drive takes about 45 minutes and offers beautiful views of the Central Highlands",
-    "experience" => "Experience"
+    "experience" => "Experience",
+    "altitude" => 'Altitude',
+    "planting_season" => 'Planting season',
+    'seasonal_yield' => 'Seasonal yield'
 
 ];
 ?>

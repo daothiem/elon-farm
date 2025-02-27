@@ -186,7 +186,9 @@ return [
     "answer_can_i_visit" => "Chắc chắn rồi! Chúng tôi hoan nghênh du khách đến Nông trại Elon để tham quan và trải nghiệm cà phê. Vui lòng lên lịch chuyến thăm của bạn trước bằng cách liên hệ với chúng tôi.",
     "how_do_i_get" => "Làm thế nào để tôi đến Nông trại Elon từ sân bay hoặc trung tâm thành phố Đà Lạt?",
     "answer_how_do_i_get" => "Nông trại Elon cách sân bay Đà Lạt khoảng 20 km. Bạn có thể đi taxi hoặc sắp xếp xe đưa đón riêng qua đội ngũ của chúng tôi. Chuyến đi ngắm cảnh mất khoảng 45 phút và mang đến khung cảnh tuyệt đẹp của Tây Nguyên.",
-    "experience" => "Trải nghiệm"
-
+    "experience" => "Trải nghiệm",
+    "altitude" => 'Độ cao',
+    "planting_season" => 'Mùa trồng cây',
+    "seasonal_yield" => "Sản lượng vụ mùa"
 ];
 ?>
