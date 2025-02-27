@@ -38,7 +38,7 @@ return [
     "more_than_tour_content" => "At Elon Farm, we offer more than just a tour. Immerse yourself in Vietnam’s coffee heritage. Wander through our plantations, learn about local life alongside our coffee processing, and enjoy fresh brews. Join us for an experience where we share our knowledge and passion for coffee.",
     "full_day_tour" => "Full-Day Experience",
     "half_day_tour" => "Half-Day Experience",
-    "preferred_tour_date" => "Preferred Experience Date",
+    "preferred_tour_date" => "Preferred Date",
     "select_date" => "Select Date",
     "pax" => "Pax",
     "transportation" => "Transportation",

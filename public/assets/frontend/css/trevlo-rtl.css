@@ -3348,7 +3348,7 @@ path {
   height: 100%;
 }
 .destination-two__card:hover .destination-two__card-plus {
-  opacity: 1;
+  /*opacity: 1;*/
 }
 .destination-two__card:hover .destination-two__card-btn {
   transform: translateY(-30px);
@@ -9976,7 +9976,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 
 /*-----------------------------------------
-# Offer Two 
+# Offer Two
 -----------------------------------------*/
 .offer-two {
   background-color: var(--trevlo-white, #ffffff);
@@ -10087,7 +10087,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 
 /*-----------------------------------------
-# Offer Three 
+# Offer Three
 -----------------------------------------*/
 .offer-three {
   position: relative;

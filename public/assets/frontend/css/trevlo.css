@@ -3352,11 +3352,11 @@ path {
   transform: scale(1.1);
 }
 .destination-two__card:hover .destination-two__card-overlay {
-  top: 0;
-  height: 100%;
+  /*top: 0;
+  height: 100%;*/
 }
 .destination-two__card:hover .destination-two__card-plus {
-  opacity: 1;
+  /*opacity: 1;*/
 }
 .destination-two__card:hover .destination-two__card-btn {
   transform: translateY(-30px);
@@ -3817,6 +3817,13 @@ path {
   .blog-card-two .col-md-7 {
     width: 100%;
     padding-right: 15px;
+  }
+
+  .form-order .banner-form__control label {
+    font-size: 13px;
+  }
+  .form-order .banner-form__control .filter-option-inner-inner {
+    font-size: 11px;
   }
 }
 @media (max-width: 767px) {
@@ -4629,7 +4636,7 @@ path {
 }
 .banner-form--two .banner-form__wrapper {
   width: 100%;
-  max-width: 969px;
+  max-width: 1068px;
   padding: 0px 0px 0px 22px;
   border-radius: 24px;
   box-shadow: none;
@@ -4706,8 +4713,13 @@ path {
     display: none;
   }
 }
+.dropdown-menu {
+  box-shadow: 0px 2px 4px -2px #1018280F;
+  border: 1px solid #F2F4F7 !important;
+  border-radius: 8px !important;
+}
 .banner-form--two .banner-form__control--traveler {
-  padding-right: 0;
+  padding-right: 16px;
 }
 @media (max-width: 991px) {
   .banner-form--two .banner-form__control--traveler {
@@ -4720,11 +4732,11 @@ path {
 .banner-form--two .banner-form__control::after {
   content: "";
   position: absolute;
-  top: calc(50% - 1px);
+  top: calc(50% - 11px);
   right: 0;
   transform: translateY(-50%);
   width: 1px;
-  height: calc(100% - 21px);
+  height: calc(100% - 15px);
   background-color: rgba(var(--trevlo-black3-rgb), 0.15);
 }
 .banner-form__col--4 .banner-form__control::after {
@@ -4805,9 +4817,9 @@ path {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  font-size: 20px;
   color: var(--trevlo-primary, #2D2330);
   z-index: 2;
+  font-size: 14px;
 }
 .banner-form--two .banner-form__control .bootstrap-select .dropdown-menu > li > a {
   font-size: 12px;
@@ -4826,7 +4838,7 @@ path {
   position: absolute;
   top: 10px;
   line-height: 1;
-  font-size: 20px;
+  font-size: 14px;
   color: var(--trevlo-primary, #2D2330);
   z-index: 2;
 }
@@ -10842,6 +10854,9 @@ body.megamenu-popup-active .mobile-nav__content {
   .gallery-instagram-one .container-fluid {
     padding-left: 0;
     padding-right: 0;
+  }
+  .md-no-padding {
+    padding: 0 !important;
   }
 }
 .gallery-instagram-one--home-5 {
@@ -19286,7 +19301,7 @@ li:hover .footer-three__contact__list__icon {
 }
 @media (max-width: 575px) {
   .main-slider-four__carousel.owl-carousel .owl-nav {
-    
+
     right: 15px;
   }
 }
@@ -20710,6 +20725,10 @@ body.boxed-wrapper .main-header__booking-btn {
 }
 .margin-24{
   margin-top: 24px;
+}
+.margin-20{
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 .h-fit-content {
   height: fit-content;
