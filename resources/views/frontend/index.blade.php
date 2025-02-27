@@ -107,10 +107,10 @@
             </div><!-- banner-slider -->
             <div class="banner-form banner-form--two banner-form--three wow fadeInUp" data-wow-delay="300ms">
             <div class="container">
-                <form class="banner-form__wrapper" action="/">
+                <form class="banner-form__wrapper form-order" action="/">
                     <div class="row m-0">
-                        <div class="banner-form__col banner-form__col--1 margin-24">
-                            <div class="banner-form__control banner-form__control--traveler d-flex gap-3">
+                        <div class="banner-form__col col-12 col-sm-6 col-md-3 margin-20">
+                            <div class="banner-form__control d-flex gap-1">
                                 <div class="banner-form__icon">
                                     <img src="assets/frontend/images/about/tour-icon.svg" alt="about">
                                 </div><!-- /.banner-form__icon -->
@@ -123,22 +123,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="banner-form__col banner-form__col--2 margin-24">
+                        <div class="banner-form__col col-12 col-sm-6 col-md-3 margin-20">
                             <div class="banner-form__control d-flex gap-3">
                                 <div class="banner-form__icon">
                                     <img src="assets/frontend/images/about/date-icon.svg" alt="about">
                                 </div><!-- /.banner-form__icon -->
                                 <div class="flex-fill">
                                     <label for="date">@lang('translation.preferred_tour_date')</label>
-                                        <!-- <input class="trevlo-multi-datepicker" id="date" type="text" name="date"
+                                    <!-- <input class="trevlo-multi-datepicker" id="date" type="text" name="date"
                                             placeholder="@lang('translation.select_date')"> -->
-                                        <input type="text" name="date" placeholder="Select date" id="date" class="tour-listing-details__sidebar-form-date trevlo-datepicker">
+                                    <input type="text" name="date" placeholder="Select date" id="date" class="tour-listing-details__sidebar-form-date trevlo-datepicker">
                                 </div>
                                 <span class="trevlo-one-icon-chevron-down banner-form__datepicker-icon position-relative"></span>
                             </div>
                         </div>
-                        <div class="banner-form__col banner-form__col--3  margin-24">
-                            <div class="banner-form__control banner-form__control--traveler d-flex gap-3">
+                        <div class="banner-form__col col-12 col-sm-6 col-md-2 margin-20">
+                            <div class="banner-form__control d-flex gap-3">
                                 <div class="banner-form__icon">
                                     <img src="assets/frontend/images/about/pax-icon.svg" alt="about">
                                 </div>
@@ -156,9 +156,8 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="banner-form__col banner-form__col--4 margin-24">
-                            <div class="banner-form__control d-flex gap-3">
+                        <div class="banner-form__col col-12 col-sm-6 col-md-3 margin-20">
+                            <div class="banner-form__control banner-form__control--traveler d-flex gap-3">
                                 <div class="banner-form__icon">
                                     <img src="assets/frontend/images/about/transport-icon.svg" alt="about">
                                 </div><!-- /.banner-form__icon -->
@@ -171,8 +170,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="banner-form__col banner-form__col--5">
-                            <button type="submit" aria-label="search submit" class="trevlo-btn trevlo-btn--base">
+                        <div class="col-12 col-sm-12 col-md-1 m-0 text-center">
+                            <button type="submit" aria-label="search submit" class="trevlo-btn trevlo-btn--base h-100">
                                 <span>@lang('translation.book_now')</span>
                             </button>
                         </div>
