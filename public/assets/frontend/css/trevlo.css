@@ -10440,6 +10440,9 @@ body.megamenu-popup-active .mobile-nav__content {
     height: 460px;
   }
 }
+.pb-20 {
+  padding-bottom: 90px;
+}
 @media (max-width: 500px) {
   .counter-one__container .row > * {
     width: 100%;
@@ -19986,8 +19989,8 @@ body.boxed-wrapper .main-header__booking-btn {
 --------------------------------------------------------------*/
 .feature-one {
   position: relative;
-  background-color: var(--trevlo-white2, #FAF5EE);
-  padding: 115px 0 110px;
+  background-color: #F1E1D4;
+  padding: 40px 0 30px;
 }
 .feature-one__bg {
   background-repeat: no-repeat;
@@ -20032,7 +20035,6 @@ body.boxed-wrapper .main-header__booking-btn {
   height: 150%;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  background-color: var(--trevlo-base, #FF5956);
   transition: 700ms cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 .feature-one__box__icon::after {
@@ -20065,9 +20067,9 @@ body.boxed-wrapper .main-header__booking-btn {
 .feature-one__box:hover .feature-one__box__icon::before {
   top: 100%;
 }
-.feature-one__box:hover .feature-one__box__icon::after {
+/*.feature-one__box:hover .feature-one__box__icon::after {
   bottom: -50%;
-}
+}*/
 .feature-one__box__title {
   font-size: 20px;
   margin: 0 0 7px;

@@ -695,7 +695,7 @@
         </div><!-- /.container -->
     </section><!-- /.testimonial-three section-space-bottom -->
 
-    <section class="tour-listing-four section-space" id="tour">
+    <section class="tour-listing-four section-space pb-20" id="tour">
         <div class="container">
             <div class="tour-listing-four__top">
                 <div class="row">
@@ -761,6 +761,46 @@
             </div><!-- /.tour-listing-four__inner -->
         </div><!-- /.container -->
     </section><!-- /.tour-listing-four section-space -->
+
+    <!-- Feature Start -->
+    <section class="feature-one">
+        <div class="feature-one__bg" style="background-image: url(assets/frontend/images/shapes/feature-bg-1.png);"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="feature-one__box">
+                        <div class="feature-one__box__icon">
+                            <img src="assets/frontend/images/icons/icon-mount.svg" alt="tab">
+                        </div>
+                        <p class="feature-one__box__text">@lang('translation.altitude')</p>
+                        <h3 class="feature-one__box__title">900-1100 MASL</h3>
+
+                    </div><!-- feature-item -->
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                    <div class="feature-one__box">
+                        <div class="feature-one__box__icon">
+                            <img src="assets/frontend/images/icons/icon-location.png" alt="tab">
+                        </div>
+                        <p class="feature-one__box__text">@lang('translation.planting_season')</p>
+                        <h3 class="feature-one__box__title">Nam Ban, Lam Ha</h3>
+
+                    </div><!-- feature-item -->
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="feature-one__box">
+                        <div class="feature-one__box__icon">
+                            <img src="assets/frontend/images/icons/icon-hand.png" alt="tab">
+                        </div>
+
+                        <p class="feature-one__box__text">@lang("translation.seasonal_yield")</p>
+                        <h3 class="feature-one__box__title">1.8 tons</h3>
+                    </div><!-- feature-item -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Feature End -->
 
     <section class="why-choose-five section-space">
         <div class="container">
