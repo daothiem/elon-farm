@@ -49,9 +49,31 @@
                                     </ul><!-- /.blog__card-meta -->
                                     <h3 class="blog__card-title">{{ $data['title'] }}</h3>
                                     <div class="content-news">
-                                        {!! $data->content !!}
+                                        {!! $data['content'] !!}
                                     </div>
-                                </div><!-- /.blog-details__card-content -->
+                                    </div>
+                                    </div>
+                                </div><!-- /.blog-details__card-content endddd -->
+                                <div class="action-robusta">
+                                    <a href="experiences" class="main-header__button trevlo-btn trevlo-btn--two trevlo-btn--base">
+                                        <span>@lang('translation.start-booking')</span>
+                                        <i class="trevlo-one-icon-up-right-arrow"></i>
+                                    </a>
+                                    <div class="why-choose-two__box">
+                                        <div><img src="{{asset('/assets/frontend/images/about/whapsapp-icon.svg')}}" alt=""></div>
+                                        <div class="about-contact">
+                                            <div>@lang('translation.chat_on_whatsapp')</div>
+                                            <p style="margin-bottom:auto">(+84) 969285991</p>
+                                        </div>
+                                    </div>
+                                    <div class="why-choose-two__box">
+                                        <div><img src="{{asset('/assets/frontend/images/about/zalo-icon.svg')}}" alt=""></div>
+                                        <div class="about-contact">
+                                            <div>@lang('translation.chat_on_zalo')</div>
+                                            <p style="margin-bottom:auto">(+84) 969285991</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div><!-- /.blog-details__card -->
                         </div><!-- /.blog-card-three -->
                     </div><!-- /.blog-details -->
