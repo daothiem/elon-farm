@@ -346,17 +346,135 @@
             <div class="row tabs-box">
                 <div class="col-xl-5 col-lg-5">
                     <ul class="list-unstyled tab-buttons tab-one__list">
-                        <li data-tab="#tent_camping" class="tab-btn active-btn"><img src="assets/frontend/images/about/tab1-mbu.svg" alt="gallery" class="logo-img">@lang('translation.selection_of')</li>
-                        <li data-tab="#adventure_travel" class="tab-btn"><img src="assets/frontend/images/about/tab2-mbu.svg" alt="gallery" class="logo-img">@lang('translation.natural_process')</li>
-                        <li data-tab="#mountain_biking" class="tab-btn"><img src="assets/frontend/images/about/tab3-mbu.svg" alt="gallery" class="logo-img">@lang('translation.full-washed')</li>
-                        <li data-tab="#discovery_world" class="tab-btn"><img src="assets/frontend/images/about/tab4-mbu.svg" alt="gallery" class="logo-img">@lang('translation.honey_process')</li>
-                        <li data-tab="#fishing_swimming" class="tab-btn"><img src="assets/frontend/images/about/tab5-mbu.svg" alt="gallery" class="logo-img">@lang('translation.experimental_processes')</li>
-                        <li data-tab="#paragliding_tours" class="tab-btn"><img src="assets/frontend/images/about/tab6-mbu.svg" alt="gallery" class="logo-img">@lang('translation.final_drying')</li>
+                        <li data-tab="#tent_camping" class="tab-btn active-btn">
+                            <div class="tab1-content"><img src="assets/frontend/images/about/tab1-mbu.svg" alt="gallery" class="logo-img">@lang('translation.selection_of')</div>
+                            <div class="tab fadeInUp animated mobile-tab" id="tent_camping">
+                                <div class="tab-one__content">
+                                    <div class="tab-one__content__img">
+                                        <img src="assets/frontend/images/about/tab-1-1.png" alt="tab">
+                                    </div>
+                                    <h4 class="tab-one__content__title">1. @lang('translation.selection_of')</h4>
+                                    <p class="tab-one__content__text">
+                                        @lang('translation.we_carefully')
+                                    </p>
+                                    <ul class="tab-one__content__list icon-li">
+                                        <li><span class="far fa-check-circle"></span><p>@lang('translation.ripeness_checked')</p></li>
+                                        <li><span class="far fa-check-circle"></span><p>@lang('translation.impurities_inspected')</p></li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tab="#adventure_travel" class="tab-btn">
+                            <div class="tab1-content">
+                                <img src="assets/frontend/images/about/tab2-mbu.svg" alt="gallery" class="logo-img">@lang('translation.natural_process')
+                            </div>
+                            <div class="tab fadeInUp animated mobile-tab" id="adventure_travel">
+                                <div class="tab-one__content">
+                                    <div class="tab-one__content__img">
+                                        <img src="assets/frontend/images/about/tab-1-2.png" alt="tab">
+                                    </div>
+                                    <h4 class="tab-one__content__title">2. @lang('translation.natural_process')</h4>
+                                    <p class="tab-one__content__text">
+                                        @lang('translation.bold_naturally')
+                                    </p>
+                                    <ul class="tab-one__content__list icon-li">
+                                        <li><span class="far fa-check-circle"></span><p>@lang('translation.sunlight_exposure')</p></li>
+                                        <li><span class="far fa-check-circle"></span><p>@lang('translation.drying_monitored')</p></li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tab="#mountain_biking" class="tab-btn">
+                            <div class="tab1-content">
+                                <img src="assets/frontend/images/about/tab3-mbu.svg" alt="gallery" class="logo-img">@lang('translation.full-washed')
+                            </div>
+                            <div class="tab fadeInUp animated mobile-tab" id="mountain_biking">
+                                <div class="tab-one__content">
+                                    <div class="tab-one__content__img">
+                                        <img src="assets/frontend/images/about/tab-1-3.png" alt="tab">
+                                    </div>
+                                    <h4 class="tab-one__content__title">3. @lang('translation.full-washed')</h4>
+                                    <p class="tab-one__content__text">
+                                        @lang('translation.clean_bright')
+                                    </p>
+                                    <ul class="tab-one__content__list icon-li">
+                                        <li><span class="far fa-check-circle"></span><p>@lang('translation.fermentation_time')</p></li>
+                                        <li><span class="far fa-check-circle"></span><p>@lang('translation.cleanliness_checked')</p></li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tab="#discovery_world" class="tab-btn">
+                            <div class="tab1-content">
+                                <img src="assets/frontend/images/about/tab4-mbu.svg" alt="gallery" class="logo-img">@lang('translation.honey_process')
+                            </div>
+                            <div class="tab fadeInUp animated mobile-tab" id="discovery_world">
+                                <div class="tab-one__content">
+                                    <div class="tab-one__content__img">
+                                        <img src="assets/frontend/images/about/tab-1-4.png" alt="tab">
+                                    </div>
+                                    <h4 class="tab-one__content__title">4. @lang('translation.honey_process')</h4>
+                                    <p class="tab-one__content__text">
+                                        @lang('translation.sweet_smooth')
+                                    </p>
+                                    <ul class="tab-one__content__list icon-li">
+                                        <li><span class="far fa-check-circle"></span><p>@lang('translation.ingredient_ratios')</p></li>
+                                        <li><span class="far fa-check-circle"></span><p>@lang('translation.flavor_testing')</p></li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tab="#fishing_swimming" class="tab-btn">
+                            <div class="tab1-content">
+                                <img src="assets/frontend/images/about/tab5-mbu.svg" alt="gallery" class="logo-img">@lang('translation.experimental_processes')
+                            </div>
+                            <div class="tab fadeInUp animated mobile-tab" id="fishing_swimming">
+                                <div class="tab-one__content">
+                                    <div class="tab-one__content__img">
+                                        <img src="assets/frontend/images/about/tab-1-5.png" alt="tab">
+                                    </div>
+                                    <h4 class="tab-one__content__title">5. @lang('translation.experimental_processes')</h4>
+                                    <p class="tab-one__content__text">
+                                        @lang('translation.at_elon_farm')
+                                    </p>
+                                    <ul class="tab-one__content__list icon-li">
+                                        <li><span class="far fa-check-circle"></span><p>@lang('translation.ingredient_ratios')</p></li>
+                                        <li><span class="far fa-check-circle"></span><p>@lang('translation.consistency_across')</p></li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-tab="#paragliding_tours" class="tab-btn">
+                            <div class="tab1-content">
+                                <img src="assets/frontend/images/about/tab6-mbu.svg" alt="gallery" class="logo-img">@lang('translation.final_drying')
+                            </div>
+                            <div class="tab fadeInUp animated mobile-tab" id="paragliding_tours">
+                                <div class="tab-one__content">
+                                    <div class="tab-one__content__img">
+                                        <img src="assets/frontend/images/about/tab-1-6.png" alt="tab">
+                                    </div>
+                                    <h4 class="tab-one__content__title">6. @lang('translation.final_drying')</h4>
+                                    <p class="tab-one__content__text">
+                                        @lang('translation.the_bean')
+                                    </p>
+                                    <ul class="tab-one__content__list icon-li">
+                                        <li><span class="far fa-check-circle"></span><p>@lang('translation.moisture_content')</p></li>
+                                        <li><span class="far fa-check-circle"></span><p>@lang('translation.final_flavor')</p></li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </li>
                     </ul><!-- /.list-unstyledf -->
                 </div>
                 <div class="col-xl-7 col-lg-7">
-                    <div class="tabs-content">
-                        <div class="tab fadeInUp animated active-tab" id="tent_camping">
+                    <div class="tabs-content pc-tab">
+                        <div class="tab fadeInUp animated active-tab" id="tent_camping1">
                             <div class="tab-one__content">
                                 <div class="tab-one__content__img">
                                     <img src="assets/frontend/images/about/tab-1-1.png" alt="tab">
@@ -372,7 +490,7 @@
                                 <div class="clearfix"></div>
                             </div>
                         </div>
-                        <div class="tab fadeInUp animated" id="adventure_travel">
+                        <div class="tab fadeInUp animated" id="adventure_travel1">
                             <div class="tab-one__content">
                                 <div class="tab-one__content__img">
                                     <img src="assets/frontend/images/about/tab-1-2.png" alt="tab">
@@ -388,7 +506,7 @@
                                 <div class="clearfix"></div>
                             </div>
                         </div>
-                        <div class="tab fadeInUp animated" id="mountain_biking">
+                        <div class="tab fadeInUp animated" id="mountain_biking1">
                             <div class="tab-one__content">
                                 <div class="tab-one__content__img">
                                     <img src="assets/frontend/images/about/tab-1-3.png" alt="tab">
@@ -404,7 +522,7 @@
                                 <div class="clearfix"></div>
                             </div>
                         </div>
-                        <div class="tab fadeInUp animated" id="discovery_world">
+                        <div class="tab fadeInUp animated" id="discovery_world1">
                             <div class="tab-one__content">
                                 <div class="tab-one__content__img">
                                     <img src="assets/frontend/images/about/tab-1-4.png" alt="tab">
@@ -420,7 +538,7 @@
                                 <div class="clearfix"></div>
                             </div>
                         </div>
-                        <div class="tab fadeInUp animated" id="fishing_swimming">
+                        <div class="tab fadeInUp animated" id="fishing_swimming1">
                             <div class="tab-one__content">
                                 <div class="tab-one__content__img">
                                     <img src="assets/frontend/images/about/tab-1-5.png" alt="tab">
@@ -436,7 +554,7 @@
                                 <div class="clearfix"></div>
                             </div>
                         </div>
-                        <div class="tab fadeInUp animated" id="paragliding_tours">
+                        <div class="tab fadeInUp animated" id="paragliding_tours1">
                             <div class="tab-one__content">
                                 <div class="tab-one__content__img">
                                     <img src="assets/frontend/images/about/tab-1-6.png" alt="tab">
