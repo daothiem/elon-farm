@@ -51,7 +51,8 @@
                                     <div class="content-news">
                                         {!! $data['content'] !!}
                                     </div>
-                                    </div>
+                                </div>
+                                        {{--end content--}}
                                 <div class="mb-4 d-flex" style="gap:8px">
                                     <img src="{{asset('/assets/frontend/images/about/download.svg')}}" alt="">
                                     <a style="font-size:20px;" class="quotation" href="https://drive.google.com/drive/folders/1jFFWJD4vkhtZC1KaplXGosPXUoC89Lxc" target="_blank">GREEN COFFEE BEAN PRICE QUOTATION - HARVEST 2024-2025.PDF</a>
