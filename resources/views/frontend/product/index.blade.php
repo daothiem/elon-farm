@@ -248,7 +248,8 @@
                                 <h3 class="tour-listing-sidebar__title tour-listing-sidebar__price-ranger-title mb-3">@lang('translation.experience')</h3>
                                  <div class="banner-form__control">
                                     <label for="type">@lang('translation.experience')</label>
-                                    <select name="type" class="selectpicker" id="type" disabled>
+                                     <input type="hidden" name="type" value="{{ $data['alias'] == 'full-day-experience' ? '1' : '0' }}">
+                                    <select class="selectpicker" id="type" disabled>
                                         <option value="1" {{ $data['alias'] == 'full-day-experience' ? 'selected' : '' }}>@lang('translation.full_day_tour')</option>
                                         <option value="0" {{ $data['alias'] == 'half-day-experience' ? 'selected' : '' }}>@lang('translation.half_day_tour')</option>
                                     </select>
@@ -554,7 +555,6 @@
             return data;
         }
         const urlParams = getQueryParams();
-        console.log('urlParams', urlParams);
         $.each(urlParams, function (key, value) {
             const $element = $(`[name="${key}"]`);
             if ($element.is(':checkbox')) {
