@@ -9,7 +9,9 @@ use App\Models\News;
 use App\Models\NewsCategory;
 use App\Models\Order;
 use App\Models\Poster;
+use App\Models\PreviewTour;
 use App\Models\Product;
+use App\Models\ProductReview;
 use App\Models\Province;
 use App\Models\TourPlan;
 use App\Models\Amenity;
@@ -151,9 +153,16 @@ class FrontendController extends Controller
             $dataSeo['keywords'] = $data->meta_key_word;
         }
 
+        $reviews = PreviewTour::whereNotNull('content')->get()->toArray();
+
+        $show_review_news = false;
+        if ($alias === 'robusta-vietnam' && $model_name === 'News') {
+            $show_review_news = true;
+        }
+
         $tagIds = DB::table('tag_news')->where('news_id', '=', $data->id)->pluck('tag_id')->toArray();;
         $tagNames = DB::table('tags')->whereIn('id', $tagIds)->pluck('name')->toArray();
-        return view($view, compact(['data', 'dataSeo', 'tagNames']));
+        return view($view, compact(['data', 'dataSeo', 'tagNames', 'reviews', 'show_review_news']));
     }
 
     public function product_search(Request $request) {

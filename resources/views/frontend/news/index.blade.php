@@ -10,7 +10,7 @@
 
 @endsection
 @section('main-content')
-    
+
     <section class="page-header">
         <div class="page-header__bg"></div>
         <!-- /.page-header__bg -->
@@ -19,14 +19,14 @@
             <div class="page-header__breadcrumb-box">
                 <ul class="trevlo-breadcrumb">
                     <li><a href="/">@lang('translation.home')</a></li>
-                    <li>Robusta Vietnam</li>
+                    <li>{{ $data['title'] }}</li>
                 </ul><!-- /.trevlo-breadcrumb -->
             </div><!-- /.page-header__breadcrumb-box -->
         </div><!-- /.container -->
     </section><!-- /.page-header -->
 
     <!-- Blog Details Page Start -->
-    <div class="blog-details-page blog-details-page-right section-space-top">
+    <div class="blog-details-page blog-details-page-right section-space-top pb-0">
         <div class="container">
             <div class="row">
                 <div class="col-xl-8 col-lg-7">
@@ -52,8 +52,6 @@
                                         {!! $data['content'] !!}
                                     </div>
                                     </div>
-                                    </div>
-                                </div><!-- /.blog-details__card-content endddd -->
                                 <div class="mb-4 d-flex" style="gap:8px">
                                     <img src="{{asset('/assets/frontend/images/about/download.svg')}}" alt="">
                                     <a style="font-size:20px;" class="quotation" href="https://drive.google.com/drive/folders/1jFFWJD4vkhtZC1KaplXGosPXUoC89Lxc" target="_blank">GREEN COFFEE BEAN PRICE QUOTATION - HARVEST 2024-2025.PDF</a>
@@ -79,7 +77,7 @@
                                     </div>
                                 </div>
                             </div><!-- /.blog-details__card -->
-                        </div><!-- /.blog-card-three -->
+                        </div>
                     </div><!-- /.blog-details -->
                     <div class="post-info">
                         <div class="post-tag">
@@ -88,13 +86,12 @@
                                 @foreach($tagNames as $item)
                                 <a href="#" class="post-tag__text">{{$item}}</a>
                                 @if (!$loop->last)
-                                    , 
+                                    ,
                                 @endif
                                 @endforeach
                             </div><!-- /.post-tag__text-box -->
                         </div><!-- /.post-tag -->
                     </div><!-- /.post-info -->
-                    
                 </div><!-- /.col-xl-8 col-lg-7 -->
                 <div class="col-xl-4 col-lg-5">
                     <div class="sidebar-blog @@extraClassName">
@@ -118,7 +115,6 @@
                                     @endforeach
                                 </ul><!-- /.sidebar-blog__posts  -->
                             </div><!-- /.sidebar-blog__single -->
-                            
                             <div class="sidebar-blog__single sidebar-blog__single--tags wow animated fadeInUp" data-wow-delay="0.3s" data-wow-duration="1500ms">
                                 <h4 class="sidebar-blog__title">@lang('translation.tags')</h4><!-- /.sidebar-blog__title -->
                                 <div class="sidebar-blog__tags">
@@ -127,11 +123,13 @@
                                     @endforeach
                                 </div><!-- /.sidebar-blog__tags -->
                             </div><!-- /.sidebar-blog__single -->
-                            
                         </aside><!-- /.widget-area -->
                     </div><!-- /.sidebar-blog -->
                 </div><!-- /.col-xl-4 col-lg-5 -->
             </div><!-- /.row -->
+            @if($show_review_news)
+                @component('frontend.reviews.index', ['reviews' => $reviews])@endcomponent
+            @endif
         </div><!-- /.container -->
     </div><!-- /.blog-details-page -->
     <!-- Blog Details Page End -->
