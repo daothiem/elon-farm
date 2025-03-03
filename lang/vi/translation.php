@@ -189,6 +189,8 @@ return [
     "experience" => "Trải nghiệm",
     "altitude" => 'Độ cao',
     "planting_season" => 'Mùa trồng cây',
-    "seasonal_yield" => "Sản lượng vụ mùa"
+    "seasonal_yield" => "Sản lượng vụ mùa",
+    "show_more_reviews" => "Hiển thị thêm",
+    "community_blog" => "Cộng đồng Elon Farm"
 ];
 ?>

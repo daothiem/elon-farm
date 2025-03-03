@@ -7,7 +7,7 @@
             <div class="footer-three__top">
                 <div class="footer-three__logo">
                     <a href="/">
-                        <img src="assets/frontend/images/logo_footer.png" alt="Elon Farm HTML" width="187"
+                        <img src="/assets/frontend/images/logo_footer.png" alt="Elon Farm HTML" width="187"
                          class="main-header__logo__1">
                     </a>
                 </div><!-- /.footer-three__logo -->
@@ -23,7 +23,7 @@
                                     <span class="footer-three__contact__list__icon">
                                         <i class="trevlo-one-icon-telephone"></i>
                                     </span><!-- /.footer-three__contact__list__icon -->
-                            <a href="tel:+84969285991">{{$about_us->phone_number}}</a>
+                            <a href="tel:{{$about_us->phone_number}}">{{$about_us->phone_number}}</a>
                         </li>
                     </ul><!-- /.footer-three__contact__list -->
                     <div class="footer-three__newsletter">
@@ -46,19 +46,19 @@
                         <p class="footer-widget__about-text">@lang('translation.promoting_sustainable')</p><!-- /.footer-widget__about-text -->
                         <div class="social-links">
                             <a href="https://www.facebook.com/elonfarm">
-                                <img src="assets/frontend/images/facebook.svg" alt="Elon Farm HTML" />
+                                <img src="/assets/frontend/images/facebook.svg" alt="Elon Farm HTML" />
                                 <span class="sr-only">Facebook</span>
                             </a>
                             <a href="https://twitter.com/">
-                                <img src="assets/frontend/images/whatsapp.svg" alt="Elon Farm HTML" />
+                                <img src="/assets/frontend/images/whatsapp.svg" alt="Elon Farm HTML" />
                                 <span class="sr-only">Whatsapp</span>
                             </a>
                             <a href="https://www.instagram.com/elonfarm/profilecard/?igsh=MTljc3l3Z3Jtd2pidA==">
-                                <img src="assets/frontend/images/instagram.svg" alt="Elon Farm HTML" />
+                                <img src="/assets/frontend/images/instagram.svg" alt="Elon Farm HTML" />
                                 <span class="sr-only">Instagram</span>
                             </a>
                             <a href="tel:+84969285991">
-                                <img src="assets/frontend/images/zalo.svg" alt="Elon Farm HTML" />
+                                <img src="/assets/frontend/images/zalo.svg" alt="Elon Farm HTML" />
                                 <span class="sr-only">Zalo</span>
                             </a>
                         </div><!-- /.social-links -->
@@ -81,16 +81,17 @@
                         </ul><!-- /.footer-widget__links -->
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-xl-3 col-md-3 -->
-                <div class="col-xl-2 col-md-3 wow animated fadeInUp" data-wow-delay="0.2s"
+                <div class="col-xl-3 col-md-3 wow animated fadeInUp" data-wow-delay="0.2s"
                      data-wow-duration="1500ms">
                     <div class="footer-widget footer-widget--links footer-widget--links-2">
                         <h2 class="footer-widget__title">@lang('translation.tour_listing')</h2><!-- /.footer-widget__title -->
                         <ul class="footer-widget__links">
                             <li><a href="/about-us">@lang('translation.about-us')</a></li>
+                            <li><a href="/list-blog">@lang('translation.community_blog')</a></li>
                         </ul><!-- /.footer-widget__links -->
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-xl-2 col-md-3 -->
-                <div class="col-xl-4 col-md-6 wow animated fadeInUp" data-wow-delay="0.3s"
+                <div class="col-xl-3 col-md-6 wow animated fadeInUp" data-wow-delay="0.3s"
                      data-wow-duration="1500ms">
                     <div class="footer-widget footer-widget--gallery">
                         <h2 class="footer-widget__title">@lang('translation.gallery')</h2><!-- /.footer-widget__title -->

@@ -12472,8 +12472,11 @@ body.megamenu-popup-active .mobile-nav__content {
     padding-bottom: 70px;
   }
 }
+.pt-10 {
+  padding-top: 10px;
+}
 .tour-listing-details-right {
-  padding-bottom: 110px;
+  padding-bottom: 55px;
 }
 @media (max-width: 1199px) {
   .tour-listing-details-right {
@@ -20372,6 +20375,19 @@ body.boxed-wrapper .main-header__booking-btn {
   position: relative;
   text-align: center;
   z-index: 1;
+}
+.show_more_link {
+  color: #1960DC;
+  font-size: 14px;
+  text-decoration: underline;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0;
+  text-decoration-style: solid;
+  text-decoration-offset: Auto;
+  text-decoration-thickness: Auto;
+  text-decoration-skip-ink: auto;
+
 }
 .video-one .video-popup {
   width: 89px;

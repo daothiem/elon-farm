@@ -189,7 +189,9 @@ return [
     "experience" => "Experience",
     "altitude" => 'Altitude',
     "planting_season" => 'Planting season',
-    'seasonal_yield' => 'Seasonal yield'
+    'seasonal_yield' => 'Seasonal yield',
+    "show_more_reviews" => "Show more reviews",
+    "community_blog" => "Community Blog"
 
 ];
 ?>
