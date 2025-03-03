@@ -110,7 +110,7 @@
                 <form class="banner-form__wrapper form-order" action="/">
                     <div class="row m-0">
                         <div class="banner-form__col col-12 col-sm-6 col-md-3 margin-20">
-                            <div class="banner-form__control d-flex gap-1">
+                            <div class="banner-form__control d-flex gap-3">
                                 <div class="banner-form__icon">
                                     <img src="assets/frontend/images/about/tour-icon.svg" alt="about">
                                 </div><!-- /.banner-form__icon -->
@@ -193,7 +193,7 @@
                         </div><!-- /.about-six__image__one -->
                         <div class="about-six__image__two">
                             <img src="assets/frontend/images/about/about-6-4.png" alt="about">
-                            <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="video-btn video-popup">
+                            <a href="https://photos.google.com/share/AF1QipOvh7Uw-qvzyvoY4MjB5vM7dZ4pv8d-W0vVzCR-wz47AYePm8LdGhYvNzN2MDAMZw?key=cXdWdjNaR3I2WWtyd05lVkZCUmR2YUhwNzM3c21B" target="_blank" class="video-btn">
                                 <i class="fas fa-play"></i>
                                 <span></span>
                                 <span></span>
@@ -420,6 +420,7 @@
                                     <p class="tab-one__content__text">
                                         @lang('translation.sweet_smooth')
                                     </p>
+                                    <a class="quotation-inside" href="https://drive.google.com/drive/folders/1jFFWJD4vkhtZC1KaplXGosPXUoC89Lxc" target="_blank">Robusta Green Coffee Beans Quotation.pdf </a>
                                     <ul class="tab-one__content__list icon-li">
                                         <li><span class="far fa-check-circle"></span><p>@lang('translation.ingredient_ratios')</p></li>
                                         <li><span class="far fa-check-circle"></span><p>@lang('translation.flavor_testing')</p></li>
@@ -531,6 +532,7 @@
                                 <p class="tab-one__content__text">
                                     @lang('translation.sweet_smooth')
                                 </p>
+                                <a class="quotation" href="https://drive.google.com/drive/folders/1jFFWJD4vkhtZC1KaplXGosPXUoC89Lxc" target="_blank">Robusta Green Coffee Beans Quotation.pdf </a>
                                 <ul class="tab-one__content__list">
                                     <li><span class="far fa-check-circle"></span>@lang('translation.ingredient_ratios')</li>
                                     <li><span class="far fa-check-circle"></span>@lang('translation.flavor_testing')</li>
@@ -882,7 +884,7 @@
 
     <!-- Feature Start -->
     <section class="feature-one">
-        <div class="feature-one__bg" style="background-image: url(assets/frontend/images/shapes/feature-bg-1.png);"></div>
+        <div class="feature-one__bg" style="background-image: url(assets/frontend/images/shapes/feature-bg-2.png);"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">

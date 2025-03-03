@@ -54,6 +54,10 @@
                                     </div>
                                     </div>
                                 </div><!-- /.blog-details__card-content endddd -->
+                                <div class="mb-4 d-flex" style="gap:8px">
+                                    <img src="{{asset('/assets/frontend/images/about/download.svg')}}" alt="">
+                                    <a style="font-size:20px;" class="quotation" href="https://drive.google.com/drive/folders/1jFFWJD4vkhtZC1KaplXGosPXUoC89Lxc" target="_blank">GREEN COFFEE BEAN PRICE QUOTATION - HARVEST 2024-2025.PDF</a>
+                                </div>
                                 <div class="action-robusta">
                                     <a href="experiences" class="main-header__button trevlo-btn trevlo-btn--two trevlo-btn--base">
                                         <span>@lang('translation.start-booking')</span>

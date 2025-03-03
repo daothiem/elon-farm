@@ -15305,17 +15305,7 @@ body.megamenu-popup-active .mobile-nav__content {
   opacity: 1;
   transition: all 500ms ease;
 }
-.destination-five .owl-item:hover {
-  z-index: 10;
-}
-.destination-five .owl-item:hover + .owl-item {
-  opacity: 0;
-}
-@media (max-width: 499px) {
-  .destination-five .owl-item:hover + .owl-item {
-    opacity: 1;
-  }
-}
+
 .destination-five__card {
   position: relative;
   z-index: 1;
@@ -19792,9 +19782,17 @@ body.boxed-wrapper .main-header__booking-btn {
   background-color: white;
   padding: 190px 0 125px;
 }
+@media (max-width: 990px) {
+  .tab-one {
+    padding: 280px 0 80px;
+  }
+}
 @media (max-width: 767px) {
   .tab-one {
-    padding: 383px 0 80px;
+    padding: 300px 0 80px;
+  }
+  .owl-dots{
+    display: none !important;
   }
 }
 .tab-one .sec-title__title,
@@ -19952,6 +19950,7 @@ body.boxed-wrapper .main-header__booking-btn {
 .tab-one__content__list {
   margin: 0;
   padding: 0;
+  margin-top: 10px;
 }
 .tab-one__content__list li {
   display: flex;
@@ -20858,6 +20857,16 @@ body.boxed-wrapper .main-header__booking-btn {
   height: 58px;
 }
 
+.quotation-inside {
+  text-decoration: underline;
+  color: white;
+}
+
+.quotation {
+  text-decoration: underline;
+  color: #1960DC;
+}
+
 .pc-tab {
   display: block;
 }
@@ -20891,6 +20900,9 @@ body.boxed-wrapper .main-header__booking-btn {
         display: block;
         opacity: 1;
         animation: fadeIn 0.5s ease-in-out;
+    }
+    .main-slider-four__image {
+      min-height: 1500px;
     }
 }
 
