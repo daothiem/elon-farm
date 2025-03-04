@@ -1,6 +1,6 @@
 <footer class="footer-three section-space-top">
     <div class="elfsight-app-ffd5caab-ba62-49db-90f0-b2b5f2ea2d39" data-elfsight-app-lazy></div>
-    <div class="footer-three__bg" style="background-image: url(assets/frontend/images/shapes/footer-bg-3-1.png);"></div>
+    <div class="footer-three__bg" style="background-image: url(assets/frontend/images/shapes/Footer.png);"></div>
     <div class="footer-three__inner">
         <!-- /.footer-three__bg -->
         <div class="container">
@@ -84,10 +84,10 @@
                 <div class="col-xl-3 col-md-3 wow animated fadeInUp" data-wow-delay="0.2s"
                      data-wow-duration="1500ms">
                     <div class="footer-widget footer-widget--links footer-widget--links-2">
-                        <h2 class="footer-widget__title">@lang('translation.tour_listing')</h2><!-- /.footer-widget__title -->
+                        <h2 class="footer-widget__title">Credit</h2><!-- /.footer-widget__title -->
                         <ul class="footer-widget__links">
-                            <li><a href="/about-us">@lang('translation.about-us')</a></li>
-                            <li><a href="/list-blog">@lang('translation.community_blog')</a></li>
+                            <li><a href="https://www.instagram.com/elonfarm/" target="_blank">@Elonfarm</a></li>
+                            <li><a href="https://www.instagram.com/ivr56_/">@IVORSANGALA</a></li>
                         </ul><!-- /.footer-widget__links -->
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-xl-2 col-md-3 -->

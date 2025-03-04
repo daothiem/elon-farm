@@ -19792,10 +19792,15 @@ body.boxed-wrapper .main-header__booking-btn {
 }
 @media (max-width: 767px) {
   .tab-one {
-    padding: 300px 0 80px;
+    padding: 200px 0 80px;
   }
   .owl-dots{
     display: none !important;
+  }
+}
+@media (max-width: 575px) {
+  .tab-one {
+    padding: 500px 0 80px;
   }
 }
 .tab-one .sec-title__title,

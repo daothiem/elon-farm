@@ -135,6 +135,18 @@
             localStorage.setItem("scrollToGallery", "true");
             window.location.href = "/about-us";
         });
+        $("#navigate-footer").on("click", function (event) {
+            console.log('event', event);
+            event.preventDefault(); 
+            localStorage.setItem("scrollToGallery", "true");
+            window.location.href = "/about-us";
+        });
+        $("#navigate-footer1").on("click", function (event) {
+            console.log('event', event);
+            event.preventDefault(); 
+            localStorage.setItem("scrollToGallery", "true");
+            window.location.href = "/about-us";
+        });
     })
 </script>
 @yield('scripts')
