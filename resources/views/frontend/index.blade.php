@@ -420,7 +420,7 @@
                                     <p class="tab-one__content__text">
                                         @lang('translation.sweet_smooth')
                                     </p>
-                                    <a class="quotation-inside" href="https://drive.google.com/drive/folders/1jFFWJD4vkhtZC1KaplXGosPXUoC89Lxc" target="_blank">Robusta Green Coffee Beans Quotation.pdf </a>
+                                    <a class="quotation-inside" href="javascript:void(0);" target="_blank">Robusta Green Coffee Beans Quotation.pdf </a>
                                     <ul class="tab-one__content__list icon-li">
                                         <li><span class="far fa-check-circle"></span><p>@lang('translation.ingredient_ratios')</p></li>
                                         <li><span class="far fa-check-circle"></span><p>@lang('translation.flavor_testing')</p></li>
@@ -1127,6 +1127,10 @@
             if (locationValue) {
                 window.location.href = `/${locationValue}?${params.toString()}`;
             }
+        });
+
+        $(".quotation-inside").on("click", function() {
+            window.open("https://drive.google.com/drive/folders/1jFFWJD4vkhtZC1KaplXGosPXUoC89Lxc", "_blank");
         });
     });
 </script>

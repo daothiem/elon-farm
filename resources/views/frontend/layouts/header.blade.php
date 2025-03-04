@@ -14,17 +14,17 @@
                             <a href="/">@lang('translation.home')</a>
                         </li>
                         <li>
-                            <a href="robusta-vietnam">Robusta Vietnam</a>
+                            <a href="/robusta-vietnam">Robusta Vietnam</a>
                         </li>
                         <li>
-                            <a href="experiences">@lang('translation.farm-tour')</a>
+                            <a href="/experiences">@lang('translation.farm-tour')</a>
                         </li>
                         <li>
-                            <a href="about-us">@lang('translation.about-us')</a>
+                            <a href="/about-us">@lang('translation.about-us')</a>
                         </li>
                     </ul>
                 </nav><!-- /.main-header__nav -->
-                <a href="experiences"
+                <a href="/experiences"
                    class="main-header__button trevlo-btn trevlo-btn--two trevlo-btn--base">
                     <span>@lang('translation.start-booking')</span>
                     <i class="trevlo-one-icon-up-right-arrow"></i>
