@@ -145,9 +145,9 @@
                             <div class="item">
                                 <div class="destination-two__card">
                                     <div class="destination-two__card-img-box destination-two__card-img-box--round">
-                                        <img src="assets/frontend/images/about/destination-2-2.png" alt="destination" class="destination-two__card-img destination-two__card-img--round">
+                                        <img src="/assets/frontend/images/about/destination-2-2.png" alt="destination" class="destination-two__card-img destination-two__card-img--round">
                                         <div class="destination-two__card-overlay destination-two__card-overlay--round">
-                                            <a href="assets/frontend/images/about/destination-2-2.png" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
+                                            <a href="/assets/frontend/images/about/destination-2-2.png" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
                                         </div><!-- /.destination-two__card-overlay destination-two__card-overlay--round -->
                                     </div><!-- /.destination-two__card-img-box -->
                                     <div class="destination-two__card-title-box">
@@ -158,9 +158,9 @@
                             <div class="item">
                                 <div class="destination-two__card">
                                     <div class="destination-two__card-img-box destination-two__card-img-box--circle">
-                                        <img src="assets/frontend/images/about/destination-2-3.png" alt="destination" class="destination-two__card-img destination-two__card-img--circle">
+                                        <img src="/assets/frontend/images/about/destination-2-3.png" alt="destination" class="destination-two__card-img destination-two__card-img--circle">
                                         <div class="destination-two__card-overlay destination-two__card-overlay--circle">
-                                            <a href="assets/frontend/images/about/destination-2-3.png" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
+                                            <a href="/assets/frontend/images/about/destination-2-3.png" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
                                         </div><!-- /.destination-two__card-overlay destination-two__card-overlay--circle -->
                                     </div><!-- /.destination-two__card-img-box -->
                                     <div class="destination-two__card-title-box">
@@ -171,9 +171,9 @@
                             <div class="item">
                                 <div class="destination-two__card">
                                     <div class="destination-two__card-img-box destination-two__card-img-box--round">
-                                        <img src="assets/frontend/images/about/destination-2-4.png" alt="destination" class="destination-two__card-img destination-two__card-img--round">
+                                        <img src="/assets/frontend/images/about/destination-2-4.png" alt="destination" class="destination-two__card-img destination-two__card-img--round">
                                         <div class="destination-two__card-overlay destination-two__card-overlay--round">
-                                            <a href="assets/frontend/images/about/destination-2-4.png" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
+                                            <a href="/assets/frontend/images/about/destination-2-4.png" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
                                         </div><!-- /.destination-two__card-overlay destination-two__card-overlay--round -->
                                     </div><!-- /.destination-two__card-img-box -->
                                     <div class="destination-two__card-title-box">
@@ -184,9 +184,9 @@
                             <div class="item">
                                 <div class="destination-two__card">
                                     <div class="destination-two__card-img-box destination-two__card-img-box--circle">
-                                        <img src="assets/frontend/images/about/destination-2-5.png" alt="destination" class="destination-two__card-img destination-two__card-img--circle">
+                                        <img src="/assets/frontend/images/about/destination-2-5.png" alt="destination" class="destination-two__card-img destination-two__card-img--circle">
                                         <div class="destination-two__card-overlay destination-two__card-overlay--circle">
-                                            <a href="assets/frontend/images/about/destination-2-5.png" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
+                                            <a href="/assets/frontend/images/about/destination-2-5.png" class="destination-two__card-plus img-popup"><span class="icon-plus"></span></a>
                                         </div><!-- /.destination-two__card-overlay destination-two__card-overlay--circle -->
                                     </div><!-- /.destination-two__card-img-box -->
                                     <div class="destination-two__card-title-box">
