@@ -323,7 +323,7 @@
                             <input type="hidden" name="price" class="price-hidden">
                             <div class="tour-listing-sidebar__btn-box">
                                 <button type="submit" class="tour-listing-sidebar__btn trevlo-btn trevlo-btn--base">
-                                    <span>@lang('translation.book_now')</span>
+                                    <span>@lang('translation.request1')</span>
                                 </button>
                             </div><!-- /.tour-listing-sidebar__btn-box -->
                         </form><!-- /.tour-listing-sidebar__form tour-listing-sidebar__item -->

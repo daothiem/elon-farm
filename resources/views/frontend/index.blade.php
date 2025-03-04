@@ -193,7 +193,7 @@
                         </div><!-- /.about-six__image__one -->
                         <div class="about-six__image__two">
                             <img src="assets/frontend/images/about/about-6-4.png" alt="about">
-                            <a href="https://photos.google.com/share/AF1QipOvh7Uw-qvzyvoY4MjB5vM7dZ4pv8d-W0vVzCR-wz47AYePm8LdGhYvNzN2MDAMZw?key=cXdWdjNaR3I2WWtyd05lVkZCUmR2YUhwNzM3c21B" target="_blank" class="video-btn">
+                            <a href="/" id="navigate-footer" class="video-btn">
                                 <i class="fas fa-play"></i>
                                 <span></span>
                                 <span></span>
@@ -871,7 +871,7 @@
                                 <h3 class="tour-listing-four__image__price">{{ number_format($tour['price'], 0, ',', '.') }}đ</h3>
                                 <!-- /.tour-listing-four__image__price -->
                             </div><!-- /.tour-listing-four__image__left -->
-                            <a href="tour-listing-details-right.html" class="tour-listing-four__image__btn trevlo-btn trevlo-btn--white">
+                            <a href="/{{ $tour['alias'] }}" class="tour-listing-four__image__btn trevlo-btn trevlo-btn--white">
                                 <i class="trevlo-one-icon-up-right-arrow"></i>
                             </a><!-- /.tour-listing-four__image__btn -->
                         </div><!-- /.tour-listing-four__image__inner -->
@@ -914,7 +914,7 @@
                         </div>
 
                         <p class="feature-one__box__text">@lang("translation.seasonal_yield")</p>
-                        <h3 class="feature-one__box__title">1.8 tons</h3>
+                        <h3 class="feature-one__box__title">40 tons</h3>
                     </div><!-- feature-item -->
                 </div>
             </div>
@@ -928,7 +928,7 @@
                 <div class="col-lg-5 d-flex flex-column">
                     <div class="why-six__image__two mb-3">
                         <img src="assets/frontend/images/about/why-video.png" alt="about">
-                        <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="video-btn video-popup">
+                        <a href="/" id="navigate-footer1" class="video-btn">
                             <i class="fas fa-play"></i>
                             <span></span>
                             <span></span>
