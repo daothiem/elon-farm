@@ -19783,16 +19783,16 @@ body.boxed-wrapper .main-header__booking-btn {
 .tab-one {
   position: relative;
   background-color: white;
-  padding: 190px 0 125px;
+  padding: 220px 0 125px;
 }
 @media (max-width: 990px) {
   .tab-one {
-    padding: 280px 0 80px;
+    padding: 300px 0 80px;
   }
 }
 @media (max-width: 767px) {
   .tab-one {
-    padding: 200px 0 80px;
+    padding: 220px 0 80px;
   }
   .owl-dots{
     display: none !important;
