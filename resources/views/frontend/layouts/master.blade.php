@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Coffee farm in Vietnam">
     <link rel="shortcut icon" type="image/x-icon" href="{{asset($about_us->logo_mobile)}}">
     <link rel="canonical" href="/"/>
 
@@ -21,14 +21,14 @@
 
     <meta name="description"
           content="@if(isset($dataSeo) && isset($dataSeo['description']) && strlen($dataSeo['description'])){{$dataSeo['description']}}@else Visit our vibrant coffee farm and immerse yourself in the local culture. Not only will you experience our coffee, but you’ll also have the opportunity to explore the local culture through silk worm raising activities, visiting Linh An Pagoda, and viewing the majestic Elephant Waterfall. @endif">
-    <link rel="alternate" type="application/rss+xml" title=" "
+    <link rel="alternate" type="application/rss+xml" title="coffee farm in Vietnam"
           href="https://elonfarm.vn">
     <meta name="keywords"
-          content="@if(isset($dataSeo) && isset($dataSeo['keywords']) && strlen($dataSeo['keywords'])){{$dataSeo['keywords']}} @else elonfarm @endif"/>
+          content="@if(isset($dataSeo) && isset($dataSeo['keywords']) && strlen($dataSeo['keywords'])){{$dataSeo['keywords']}} @else elonfarm, coffee farm in Vietnam, coffee farm @endif"/>
     @if(isset($dataSeo) && isset($dataSeo['title']) && strlen($dataSeo['title']))
         <title>{{$dataSeo['title']}}</title>
     @else
-        <title></title>
+        <title>Coffee farm in Vietnam</title>
     @endif
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -127,23 +127,23 @@
                 {
                     scrollTop: $("#gallery_about_us").offset().top,
                 },
-                800 
+                800
             );
         }
         $(".footer-widget__gallery__link").on("click", function (event) {
-            event.preventDefault(); 
+            event.preventDefault();
             localStorage.setItem("scrollToGallery", "true");
             window.location.href = "/about-us";
         });
         $("#navigate-footer").on("click", function (event) {
             console.log('event', event);
-            event.preventDefault(); 
+            event.preventDefault();
             localStorage.setItem("scrollToGallery", "true");
             window.location.href = "/about-us";
         });
         $("#navigate-footer1").on("click", function (event) {
             console.log('event', event);
-            event.preventDefault(); 
+            event.preventDefault();
             localStorage.setItem("scrollToGallery", "true");
             window.location.href = "/about-us";
         });
