@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
-    <meta name="description" content="">
     <meta name="author" content="Coffee farm in Vietnam">
     <link rel="shortcut icon" type="image/x-icon" href="{{asset($about_us->logo_mobile)}}">
     <link rel="canonical" href="/"/>
@@ -15,7 +14,7 @@
     <meta property="og:title" itemprop="headline"
           content="@if(isset($dataSeo) && isset($dataSeo['title']) && strlen($dataSeo['title'])){{$dataSeo['title']}}@else Elon Farm with love from Center highland @endif">
     <meta property="og:image" itemprop="thumbnailUrl"
-          content="@if(isset($dataSeo) && isset($dataSeo['image'])){{asset($dataSeo['image'])}} @else {{asset($about_us->logo_mobile)}} @endif?w=480&amp;h=280">
+          content="{{asset($about_us->logo_mobile)}}?w=480&amp;h=280">
     <meta name="og:description"
           content="@if(isset($dataSeo) && isset($dataSeo['description']) && strlen($dataSeo['description'])){{$dataSeo['description']}}@else Visit our vibrant coffee farm and immerse yourself in the local culture. Not only will you experience our coffee, but you’ll also have the opportunity to explore the local culture through silk worm raising activities, visiting Linh An Pagoda, and viewing the majestic Elephant Waterfall. @endif "/>
 
