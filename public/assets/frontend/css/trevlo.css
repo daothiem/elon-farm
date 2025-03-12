@@ -20972,3 +20972,15 @@ body.boxed-wrapper .main-header__booking-btn {
 .mobile-tab .tab-one__list li + li{
   margin-top: 0;
 }
+
+.whatsapp-quick{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.whatsapp-quick img{
+  width: 50px;
+}
