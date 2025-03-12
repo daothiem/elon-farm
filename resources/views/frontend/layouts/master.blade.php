@@ -76,6 +76,10 @@
 
     <div class="page-wrapper">
 
+        <div class="whatsapp-quick" id="whatsappQuick">
+            <img src="/assets/frontend/images/whatsapp-icon.png" alt="Elon Farm HTML" />
+        </div>
+
         @include('frontend.layouts.header')
         <!-- Content -->
         @yield('main-content')
@@ -110,7 +114,7 @@
 <!-- template js -->
 <script type="text/javascript" src="{{ URL::asset('/assets/frontend/vendors/jquery-lettering/jquery.lettering.min.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
-<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<!-- <script src="https://static.elfsight.com/platform/platform.js" async></script> -->
 <script>
   lottie.loadAnimation({
     container: document.getElementById('lottie-container'),
@@ -145,6 +149,9 @@
             event.preventDefault();
             localStorage.setItem("scrollToGallery", "true");
             window.location.href = "/about-us";
+        });
+        $("#whatsappQuick").on("click", function (event) {
+            window.open("https://wa.me/84969285991", "_blank");
         });
     })
 </script>
