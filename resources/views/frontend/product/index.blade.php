@@ -59,26 +59,50 @@
             }
         }
         }'>
-                        <div class="tour-listing-details__top-carousel-item item">
-                        <div class="tour-listing-details__top-carousel-image">
-                                <img src="/assets/frontend/images/about/gallery-1-1.png" alt="gallery">
-                        </div><!-- /.tour-listing-details__top-carousel-image -->
+                        @if ($data['alias'] === 'full-day-experience')
+                            <div class="tour-listing-details__top-carousel-item item">
+                            <div class="tour-listing-details__top-carousel-image">
+                                    <img src="/assets/frontend/images/about/full1.png" alt="gallery">
+                            </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         <div class="tour-listing-details__top-carousel-item item">
-                        <div class="tour-listing-details__top-carousel-image">
-                                <img src="/assets/frontend/images/about/gallery-1-2.png" alt="gallery">
-                        </div><!-- /.tour-listing-details__top-carousel-image -->
+                            <div class="tour-listing-details__top-carousel-image">
+                                    <img src="/assets/frontend/images/about/full2.png" alt="gallery">
+                            </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         <div class="tour-listing-details__top-carousel-item item">
-                        <div class="tour-listing-details__top-carousel-image">
-                                <img src="/assets/frontend/images/about/gallery-1-3.png" alt="gallery">
-                        </div><!-- /.tour-listing-details__top-carousel-image -->
+                            <div class="tour-listing-details__top-carousel-image">
+                                    <img src="/assets/frontend/images/about/full3.png" alt="gallery">
+                            </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         <div class="tour-listing-details__top-carousel-item item">
-                        <div class="tour-listing-details__top-carousel-image">
-                                <img src="/assets/frontend/images/about/gallery-1-4.png" alt="gallery">
-                        </div><!-- /.tour-listing-details__top-carousel-image -->
+                            <div class="tour-listing-details__top-carousel-image">
+                                    <img src="/assets/frontend/images/about/full4.png" alt="gallery">
+                            </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
+                        @elseif ($data['alias'] === 'half-day-experience')
+                            <div class="tour-listing-details__top-carousel-item item">
+                            <div class="tour-listing-details__top-carousel-image">
+                                    <img src="/assets/frontend/images/about/half1.png" alt="gallery">
+                            </div><!-- /.tour-listing-details__top-carousel-image -->
+                        </div><!-- /.tour-listing-details__top-carousel-item item -->
+                        <div class="tour-listing-details__top-carousel-item item">
+                            <div class="tour-listing-details__top-carousel-image">
+                                    <img src="/assets/frontend/images/about/half2.png" alt="gallery">
+                            </div><!-- /.tour-listing-details__top-carousel-image -->
+                        </div><!-- /.tour-listing-details__top-carousel-item item -->
+                        <div class="tour-listing-details__top-carousel-item item">
+                            <div class="tour-listing-details__top-carousel-image">
+                                    <img src="/assets/frontend/images/about/half3.png" alt="gallery">
+                            </div><!-- /.tour-listing-details__top-carousel-image -->
+                        </div><!-- /.tour-listing-details__top-carousel-item item -->
+                        <div class="tour-listing-details__top-carousel-item item">
+                            <div class="tour-listing-details__top-carousel-image">
+                                    <img src="/assets/frontend/images/about/half4.png" alt="gallery">
+                            </div><!-- /.tour-listing-details__top-carousel-image -->
+                        </div><!-- /.tour-listing-details__top-carousel-item item -->
+                        @endif
+                        
                 </div><!-- /.tour-listing-details__top-carousel-wrapper -->
         </div><!-- /.tour-listing-details__top-carousel -->
         <div class="tour-listing-details__destination">
@@ -390,115 +414,115 @@
     }'>
                 <div class="destination-five__card choice item india">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/coffee1.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/coffee1.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item india">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/coffee2.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/coffee2.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item india">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/coffee3.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/coffee3.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item india">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/coffee4.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/coffee4.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item india">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/coffee5.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/coffee5.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item india">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/coffee6.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/coffee6.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item india">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/coffee7.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/coffee7.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item maldives">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/ms1.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/ms1.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item maldives">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/ms2.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/ms2.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item maldives">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/ms3.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/ms3.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item maldives">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/ms4.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/ms4.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item maldives">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/ms5.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/ms5.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item mauritius">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/home1.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/home1.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item mauritius">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/home2.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/home2.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item mauritius">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/home3.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/home3.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item mauritius">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/home4.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/home4.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item mauritius">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/home5.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/home5.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item mauritius">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/home6.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/home6.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
                 <div class="destination-five__card choice item mauritius">
                     <div class="destination-five__card__inner">
-                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/home7.png);">
+                        <div class="destination-five__card__top" style="background-image: url(assets/images/memories/home7.jpg);">
                         </div><!-- /.accordian-title -->
                     </div><!-- /.destination-five__card__inner -->
                 </div><!-- /.destination-five__card -->
