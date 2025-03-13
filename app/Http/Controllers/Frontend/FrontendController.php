@@ -238,14 +238,14 @@ class FrontendController extends Controller
         $date_format = $this->convertDate($order->date);
         // send mail to customer
         Mail::send('frontend.mail.booking-confirm', ['order' => $order, 'type'=> $type, 'product_name' => $product_name, 'date_format' => $date_format], function ($m) use ($input) {
-            $m->from('daothiem1510@gmail.com', 'Elon farm');
+            $m->from('elonfarmstay@gmail.com', 'Elon farm');
             $m->to($input['customer_address_mail'], 'Elon farm')->subject('Farm Tour Booking Confirmation');
         });
 
         // send mail to admin
         Mail::send('frontend.mail.info-book-tour', ['order' => $order, 'type'=> $type, 'product_name' => $product_name, 'date_format' => $date_format], function ($m) use ($input) {
-            $m->from('daothiem1510@gmail.com', 'Elon farm');
-            $m->to('daothiem1510@gmail.com', 'Elon farm')->subject('New Farm Tour Booking Alert');
+            $m->from('elonfarmstay@gmail.com', 'Elon farm');
+            $m->to('elonfarmstay@gmail.com', 'Elon farm')->subject('New Farm Tour Booking Alert');
         });
 
         return redirect()->route('frontend.order-success', ['orderId' => $order->id]);
