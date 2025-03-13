@@ -43,7 +43,7 @@ class OrderController extends Controller
             ['value' => 'cancel', 'label' => 'Huỷ đơn'],
         ];
         $arraySendTo = [
-            ['value' => 'daothiem1510@gmail.com', 'label' => 'Loại 1'],
+            ['value' => 'elonfarmstay@gmail.com', 'label' => 'Loại 1'],
             ['value' => '2', 'label' => 'Loại 2'],
         ];
         $selectStatus = $input['status'] ?? '';

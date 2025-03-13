@@ -26,7 +26,7 @@ class Frontend
         $products = Product::where('id', '>', 0)->orderBy('ordering', 'ASC')->get();
         $infoBasic = ['email' => 'hanhoan.work2023@gmail.com', 'phoneNumber' => '038.358.0815', 'address' => 'Mỹ Đình Hà Nội'];
         if ($request->getHost() != 'phaohoasukien.vn'  && $request->getHost() != 'hanhoan.vn') {
-            $infoBasic = ['email' => 'daothiem1510@gmail.com', 'phoneNumber' => '0987.234.972', 'address' => 'Tân Hưng Vĩnh Bảo tp.Hải Phòng'];
+            $infoBasic = ['email' => 'elonfarmstay@gmail.com', 'phoneNumber' => '0987.234.972', 'address' => 'Tân Hưng Vĩnh Bảo tp.Hải Phòng'];
         }
 
         $support_customer = Service::where('type', 1)->orderBy('ordering', 'ASC')->get();
