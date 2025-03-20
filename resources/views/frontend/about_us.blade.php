@@ -429,6 +429,10 @@
         <h4 class="title-about-us">@lang('translation.photo_lib')</h4>
         <div class="guide-one__grid">
             <?php for ($i = 1; $i <= 42; $i++): ?>
+            @if ($i === 17)
+                @continue
+            @endif
+
             <div class="guide-one__item">
                 <div class="guide-single">
                     <div class="guide-single__image-box">
