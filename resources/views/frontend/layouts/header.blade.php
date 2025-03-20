@@ -57,7 +57,7 @@
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:+84397529379">(+84) 397529379</a>
+                    <a href="tel:+84969285991">{{$about_us->phone_number}}</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="social-links">
