@@ -85,7 +85,9 @@
                      data-wow-duration="1500ms">
                     <div class="footer-widget footer-widget--links footer-widget--links-2">
                         <h2 class="footer-widget__title">Credit</h2><!-- /.footer-widget__title -->
+
                         <ul class="footer-widget__links">
+                            <li>And other beautiful moments captured by out cherished guests</li>
                             <li><a href="https://www.instagram.com/elonfarm/" target="_blank">@Elonfarm</a></li>
                             <li><a href="https://www.instagram.com/ivr56_/">@IVORSANGALA</a></li>
                         </ul><!-- /.footer-widget__links -->
