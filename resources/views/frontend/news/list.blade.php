@@ -10,7 +10,7 @@
 
 @endsection
 @section('main-content')
-    
+
     <section class="page-header">
         <div class="page-header__bg"></div>
         <!-- /.page-header__bg -->
@@ -36,8 +36,8 @@
                             <div class="col-12 wow animated fadeInUp" data-wow-delay="0s" data-wow-duration="1500ms">
                                 <div class="blog-card-three blog-list-card">
                                     <div class="blog__card">
-                                        <a href="blog-details-right.html" class="blog__card-img">
-                                            <img src="{{ asset($item['avatar']) }}" alt="{{ $item['title'] }}">
+                                        <a href="/{{ $item['alias'] }}" class="blog__card-img">
+                                            <img src="{{ asset($item['avatar']) }}" alt="{{ $item['title'] }}" style="max-height: 379px">
                                             <div class="blog__card-date">
                                                 <h4 class="blog__card-date-number">{{ \Carbon\Carbon::parse($item['created_at'])->format('d') }}</h4>
                                                 <p class="blog__card-date-month">{{ \Carbon\Carbon::parse($item['created_at'])->format('M, Y') }}</p>
@@ -48,10 +48,6 @@
                                                 <li>
                                                     <span class="blog__card-meta-icon icon-user"></span>
                                                     <span class="blog__card-meta-author">@lang('translation.by') {{ $item['createdBy']['name'] }}</span>
-                                                </li>
-                                                <li>
-                                                    <span class="blog__card-meta-icon icon-chat"></span>
-                                                    <span class="blog__card-meta-author">2 Comment</span>
                                                 </li>
                                             </ul><!-- /.blog__card-meta -->
                                             <h3 class="blog__card-title"><a href="/{{ $item['alias'] }}">{{ $item['title'] }}</a></h3>

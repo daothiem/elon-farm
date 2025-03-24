@@ -34,7 +34,7 @@
                         <div class="blog-card-three">
                             <div class="blog__card">
                                 <div class="blog__card-img wow animated fadeInUp" data-wow-delay="0s" data-wow-duration="1500ms">
-                                    <img src="{{ asset($data['avatar']) }}" alt="{{ $data['title'] }}">
+                                    <img src="{{ asset($data['avatar']) }}" alt="{{ $data['title'] }}" style="max-height: 500px;">
                                     <div class="blog__card-date">
                                         <h4 class="blog__card-date-number">{{ \Carbon\Carbon::parse($data['created_at'])->format('d') }}</h4>
                                         <p class="blog__card-date-month">{{ \Carbon\Carbon::parse($data['created_at'])->format('M') }} {{ \Carbon\Carbon::parse($data['created_at'])->format('Y') }}</p>
