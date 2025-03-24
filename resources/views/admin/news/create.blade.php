@@ -204,7 +204,7 @@
                         data.push(tag);
                     }
                 });
-            }, 100)
+            }, 1000)
 
 
             $('.select2_select-tags').on('select2:select', async function (e) {
