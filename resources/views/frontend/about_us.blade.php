@@ -215,7 +215,7 @@
                             </div><!-- /.destination-two__card -->
                         </div>
 
-                        {{--<div class="item">
+                        <div class="item">
                                 <div class="destination-two__card">
                                     <div class="destination-two__card-img-box destination-two__card-img-box--round">
                                         <img src="assets/frontend/images/about/destination-2-6.png" alt="destination" class="destination-two__card-img destination-two__card-img--round">
@@ -319,7 +319,7 @@
                                         <h4 class="destination-two__card-title"><a href="javascript:void(0)">Relaxing</a></h4>
                                     </div><!-- /.destination-two__card-title-box -->
                                 </div><!-- /.destination-two__card -->
-                            </div>--}}
+                            </div>
                     </div>
                 </div>
             </div>
