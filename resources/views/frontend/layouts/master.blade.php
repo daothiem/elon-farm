@@ -11,6 +11,8 @@
 
     <meta property="og:locale" content="vi_VN">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:site_name" content="elonfarm.com">
     <meta property="og:title" itemprop="headline"
           content="@if(isset($dataSeo) && isset($dataSeo['title']) && strlen($dataSeo['title'])){{$dataSeo['title']}}@else Elon Farm with love from Center highland @endif">
     <meta property="og:image" itemprop="thumbnailUrl"
@@ -21,9 +23,9 @@
     <meta name="description"
           content="@if(isset($dataSeo) && isset($dataSeo['description']) && strlen($dataSeo['description'])){{$dataSeo['description']}}@else Visit our vibrant coffee farm and immerse yourself in the local culture. Not only will you experience our coffee, but you’ll also have the opportunity to explore the local culture through silk worm raising activities, visiting Linh An Pagoda, and viewing the majestic Elephant Waterfall. @endif">
     <link rel="alternate" type="application/rss+xml" title="coffee farm in Vietnam"
-          href="https://elonfarm.vn">
+          href="https://elonfarm.com">
     <meta name="keywords"
-          content="@if(isset($dataSeo) && isset($dataSeo['keywords']) && strlen($dataSeo['keywords'])){{$dataSeo['keywords']}} @else elonfarm, coffee farm in Vietnam, coffee farm @endif"/>
+          content="@if(isset($dataSeo) && isset($dataSeo['keywords']) && strlen($dataSeo['keywords'])){{$dataSeo['keywords']}} @else dalat coffee farm, dalat coffee tour, what to do in dalat, top things to do in dalat, vietnam coffee tour, vietnam best coffee tour, elonfarm, coffee farm in Vietnam, coffee farm @endif"/>
     @if(isset($dataSeo) && isset($dataSeo['title']) && strlen($dataSeo['title']))
         <title>{{$dataSeo['title']}}</title>
     @else

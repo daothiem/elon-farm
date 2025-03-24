@@ -16,9 +16,9 @@ class CheckDomain
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->getHost() === 'elonfarm.vn') {
+        /*if ($request->getHost() === 'elonfarm.vn') {
             return response()->view('frontend.maintenance.index');
-        }
+        }*/
         return $next($request);
     }
 }
