@@ -239,7 +239,7 @@ class FrontendController extends Controller
         // send mail to customer
         Mail::send('frontend.mail.booking-confirm', ['order' => $order, 'type'=> $type, 'product_name' => $product_name, 'date_format' => $date_format], function ($m) use ($input) {
             $m->from('elonfarmstay@gmail.com', 'Elon farm');
-            $m->to($input['customer_address_mail'], 'Elon farm')->subject('Farm Tour Booking Confirmation');
+            $m->to($input['customer_address_mail'], 'Elon farm')->subject('We’ve Received Your Booking Request');
         });
 
         // send mail to admin
