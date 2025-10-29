@@ -29,13 +29,7 @@ class OrderController extends Controller
         }
 
         $data = $query->paginate($limit)->withQueryString();
-        foreach ($data as $item) {
-            $total_price = 0;
-            foreach ($item->orderDetails as $detail) {
-                $total_price += $detail->price_discount * $detail->quantity;
-            }
-            $item->total_price = $total_price;
-        }
+
         $arrayStatus = [
             ['value' => 'progress', 'label' => 'Đang hoàn thiện'],
             ['value' => 'done', 'label' => 'Đã hoành thành'],
