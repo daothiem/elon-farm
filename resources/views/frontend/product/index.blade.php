@@ -102,7 +102,7 @@
                             </div><!-- /.tour-listing-details__top-carousel-image -->
                         </div><!-- /.tour-listing-details__top-carousel-item item -->
                         @endif
-                        
+
                 </div><!-- /.tour-listing-details__top-carousel-wrapper -->
         </div><!-- /.tour-listing-details__top-carousel -->
         <div class="tour-listing-details__destination">
@@ -270,7 +270,7 @@
                             </div>
                             <div class="tour-listing-sidebar__price-ranger">
                                 <h3 class="tour-listing-sidebar__title tour-listing-sidebar__price-ranger-title mb-3">@lang('translation.experience')</h3>
-                                 <div class="banner-form__control">
+                                 <div class="banner-form__control" id="tour-price-data" data-price-value="{{$data->price}}">
                                     <label for="type">@lang('translation.experience')</label>
                                      <input type="hidden" name="type" value="{{ $data['alias'] == 'full-day-experience' ? '1' : '0' }}">
                                     <select class="selectpicker" id="type" disabled>
@@ -598,6 +598,7 @@
 
         const calculate_price = () => {
             const all_values = $('#form-booking-tour').serializeArray();
+            const tourDataElement = document.getElementById('tour-price-data');
             let keysToExtract = ["adults", "youth", "type", "transportation"];
             let selectedValues = {};
             all_values.forEach(item => {
@@ -605,7 +606,7 @@
                     selectedValues[item.name] = item.value;
                 }
             });
-            selectedValues.price = selectedValues.type.toString() === "1" ? 1800000 : 800000;
+            selectedValues.price = parseFloat(tourDataElement.getAttribute('data-price-value'));
             let transport_fee = 0;
             if (selectedValues.hasOwnProperty("transportation")) {
                 transport_fee = 300000;

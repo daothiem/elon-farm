@@ -16,7 +16,7 @@
 
     <div class="card mt-2">
         <div class="card-body">
-            <form action="/admin/don-hang" method="get">
+            <form action="/admin/order" method="get">
                 @foreach(request()->query() as $key => $value)
                     @if($key != 'name' && $key != 'root_id')
                         <input type="hidden" name="{{ $key }}" value="{{ $value }}">
@@ -27,23 +27,11 @@
                         <label for="search-name" class="m-0">Tên khách hàng</label>
                         <input class="form-control" value="@if(isset($input['name'])){{$input['name']}}@endif" placeholder="Nhập tên khách hàng" name="name" id="search-name"/>
                     </div>
-                    <div class="col-12 col-md-3">
-                        <label for="choices-sex-input" class="form-label" style="clear: both; display: inline-block; white-space: nowrap;">Phân loại đơn hàng</label>
-                        <select class="form-select" name="send_to" id="choices-sex-input">
-                            {!! $send_to_html !!}
-                        </select>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <label for="choices-sex-input" class="form-label" style="clear: both; display: inline-block; white-space: nowrap;">Trạng thái</label>
-                        <select class="form-select" name="status" id="choices-sex-input">
-                            {!! $status_html !!}
-                        </select>
-                    </div>
                     <div class="col-4 col-md-2 mt-2">
                         <button type="submit" class="btn btn-primary btn-search"><i class="bx bx-search fs-17"></i>Tìm kiếm</button>
                     </div>
-                    <div class="col-3 col-md-1 d-flex align-items-center flex-column p-0">
-                        <label for="ordering" class="form-label" style="clear: both; display: inline-block">Sắp xếp</label>
+                    <div class="col-3 col-md-1 d-flex align-items-center flex-row p-0" style="min-width: 250px">
+                        <label for="ordering" class="form-label" style="clear: both; display: inline-block; min-width: 100px">Sắp xếp</label>
                         <select class="form-select select_ordering" name="ordering" id="ordering">
                             <option value="ASC" @if((isset($input['ordering']) && $input['ordering'] === 'ASC') || !isset($input['ordering'])) selected @endif>Tăng dần</option>
                             <option value="DESC" @if((isset($input['ordering']) && $input['ordering'] === 'DESC')) selected @endif>Giảm dần</option>
@@ -56,11 +44,10 @@
                     <thead class="table-light">
                     <tr>
                         <th>#</th>
+                        <th  data-sort="customer_name">Tên tour</th>
                         <th  data-sort="customer_name">Tên khách hàng</th>
                         <th  data-sort="customer_name">Số điện thoại</th>
-                        <th  data-sort="address">Địa chỉ</th>
-                        <th  data-sort="address">Trạng thái</th>
-                        <th  data-sort="address">Send mail tới</th>
+                        <th  data-sort="address">Email khách hàng</th>
                         <th  data-sort="address">Ngày lập đơn</th>
                         <th  data-sort="address">Tổng tiền</th>
                         <th  data-sort="action">Thay đổi trạng thái</th>
@@ -70,23 +57,12 @@
                     @foreach($data as $index => $item)
                         <tr>
                             <td class="customer_name">{{ ++$index }}</td>
+                            <td class="customer_name">{{ $item->product->name }}</td>
                             <td class="customer_name">{{ $item->customer_name }}</td>
-                            <td class="customer_name">{{ $item->customer_phone }}</td>
-                            <td class="customer_name">{{ $item->other_address }}, {{ $item->ward?->full_name }}, {{ $item->district?->full_name }}, {{ $item->province?->full_name }}</td>
-                            <td class="status-order-tr">
-                                @if($item->status === 'progress')
-                                    <span class="badge badge-info">Đang hoàn thiện</span>
-                                @elseif($item->status === 'done')
-                                    <span class="badge badge-success">Đã hoành thành</span>
-                                @elseif($item->status === 'pending')
-                                    <span class="badge badge-Secondary">Chờ giải quyết</span>
-                                @else
-                                    <span class="badge badge-danger">Huỷ đơn</span>
-                                @endif
-                            </td>
-                            <td class="customer_name">{{ $item->send_to }}</td>
+                            <td class="customer_name">{{ $item->customer_number_phone }}</td>
+                            <td class="customer_name">{{ $item->customer_address_mail }}</td>
                             <td class="customer_name">{{ $item->created_at->format('d-m-Y H:i') }}</td>
-                            <td class="customer_name">{{ number_format($item->total_price) }}</td>
+                            <td class="customer_name">{{ number_format($item->price) }}</td>
                             <td>
                                 <a class="nav-link menu-link" href="javascript:void(0)" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="ri-more-2-line"></i>
